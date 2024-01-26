@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=16 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
 [ext_resource type="Shader" path="res://shader/floor.gdshader" id="1_nogja"]
 [ext_resource type="Texture2D" uid="uid://cbq4cqacsd2c6" path="res://resources/ui_elements/cursor_place_holder.png" id="3_bybqi"]
 [ext_resource type="Texture2D" uid="uid://c3xpomkfbgyv0" path="res://resources/skybox_02.png" id="4_lttkr"]
 [ext_resource type="PackedScene" uid="uid://dgustjqc2lpbx" path="res://prefabs/tree.tscn" id="5_putjd"]
+[ext_resource type="Script" path="res://addons/Mirror/Mirror/Mirror.gd" id="6_nt65x"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nac1q"]
 render_priority = 0
@@ -17,8 +18,8 @@ shader_parameter/borderColor = Color(1, 0, 0, 1)
 material = SubResource("ShaderMaterial_nac1q")
 center_offset = Vector3(0, 0.01, 0)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ijr37"]
-data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_yxh3n"]
+data = PackedVector3Array(1, 0.01, 1, -1, 0.01, 1, 1, 0.01, -1, -1, 0.01, 1, -1, 0.01, -1, 1, 0.01, -1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_4611m"]
 
@@ -35,8 +36,9 @@ sky_material = SubResource("PanoramaSkyMaterial_elx5j")
 background_mode = 2
 sky = SubResource("Sky_ywdeo")
 ambient_light_color = Color(1, 1, 1, 1)
-fog_enabled = true
-volumetric_fog_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ksxyt"]
+size = Vector3(1.99805, 2.00684, 0.102295)
 
 [node name="main" type="Node3D"]
 
@@ -73,7 +75,7 @@ mesh = SubResource("PlaneMesh_gjccg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
-shape = SubResource("ConcavePolygonShape3D_ijr37")
+shape = SubResource("ConcavePolygonShape3D_yxh3n")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.506515, 0.862231, 0, -0.862231, 0.506515, 0, 3, 0)
@@ -155,3 +157,15 @@ player = NodePath("../../player")
 [node name="tree13" parent="Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -14.1889, -0.0433266, -4.23288)
 player = NodePath("../../player")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.86488, -20.9046)
+
+[node name="Mirror" type="Node3D" parent="StaticBody3D"]
+script = ExtResource("6_nt65x")
+ResolutionPerUnit = 1000
+MainCamPath = NodePath("../../player/Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00317383, -0.00439453, -0.0516357)
+shape = SubResource("BoxShape3D_ksxyt")
