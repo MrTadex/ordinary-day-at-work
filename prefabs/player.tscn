@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://pk368nidnrxg"]
+
+[ext_resource type="Script" path="res://scripts/playerController.gd" id="1_rrrvu"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_3fkqi"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1xf1e"]
+
+[node name="player" type="CharacterBody3D"]
+script = ExtResource("1_rrrvu")
+mouse_sensitivity = 0.1
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+top_level = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_3fkqi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_1xf1e")
