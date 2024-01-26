@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=13 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
 [ext_resource type="Shader" path="res://shader/floor.gdshader" id="1_nogja"]
 [ext_resource type="Texture2D" uid="uid://cbq4cqacsd2c6" path="res://resources/ui_elements/cursor_place_holder.png" id="3_bybqi"]
+[ext_resource type="Texture2D" uid="uid://c3xpomkfbgyv0" path="res://resources/skybox_02.png" id="4_lttkr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nac1q"]
 render_priority = 0
@@ -22,6 +23,16 @@ data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_67ygj"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_elx5j"]
+panorama = ExtResource("4_lttkr")
+
+[sub_resource type="Sky" id="Sky_ywdeo"]
+sky_material = SubResource("PanoramaSkyMaterial_elx5j")
+
+[sub_resource type="Environment" id="Environment_7xour"]
+background_mode = 2
+sky = SubResource("Sky_ywdeo")
 
 [node name="main" type="Node3D"]
 
@@ -76,3 +87,6 @@ mesh = SubResource("BoxMesh_4611m")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shop"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 5.94116, -27.6803)
 shape = SubResource("ConcavePolygonShape3D_67ygj")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7xour")
