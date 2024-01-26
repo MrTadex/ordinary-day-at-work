@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=14 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
 [ext_resource type="Shader" path="res://shader/floor.gdshader" id="1_nogja"]
 [ext_resource type="Texture2D" uid="uid://cbq4cqacsd2c6" path="res://resources/ui_elements/cursor_place_holder.png" id="3_bybqi"]
 [ext_resource type="Texture2D" uid="uid://c3xpomkfbgyv0" path="res://resources/skybox_02.png" id="4_lttkr"]
+[ext_resource type="PackedScene" uid="uid://dgustjqc2lpbx" path="res://prefabs/tree.tscn" id="5_putjd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nac1q"]
 render_priority = 0
@@ -33,6 +34,9 @@ sky_material = SubResource("PanoramaSkyMaterial_elx5j")
 [sub_resource type="Environment" id="Environment_7xour"]
 background_mode = 2
 sky = SubResource("Sky_ywdeo")
+ambient_light_color = Color(1, 1, 1, 1)
+fog_enabled = true
+volumetric_fog_enabled = true
 
 [node name="main" type="Node3D"]
 
@@ -72,7 +76,14 @@ transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_ijr37")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.108346, 0.994113, 0, -0.994113, 0.108346, 0, 3, 0)
+transform = Transform3D(1, 0, 0, 0, 0.506515, 0.862231, 0, -0.862231, 0.506515, 0, 3, 0)
+light_color = Color(0.960784, 0.952941, 0.909804, 1)
+shadow_enabled = true
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.750711, -0.569616, 0.33462, 0, 0.506515, 0.862231, -0.660631, 0.647286, -0.380247, 0, 3, -6.00116)
+light_color = Color(0.960784, 0.952941, 0.909804, 1)
+light_energy = 0.6
 shadow_enabled = true
 
 [node name="player" parent="." instance=ExtResource("1_a7ose")]
@@ -90,3 +101,57 @@ shape = SubResource("ConcavePolygonShape3D_67ygj")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_7xour")
+
+[node name="Forest" type="Node3D" parent="."]
+
+[node name="tree" parent="Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -16, 0.957879, -15.9457)
+player = NodePath("../../player")
+
+[node name="tree2" parent="Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -22.0002, 0.957879, -15.9457)
+player = NodePath("../../player")
+
+[node name="tree3" parent="Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -22.0002, 0.957879, -11.4856)
+player = NodePath("../../player")
+
+[node name="tree4" parent="Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -18.8466, 0.957879, -11.4856)
+player = NodePath("../../player")
+
+[node name="tree5" parent="Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -14.9911, 0.957879, -11.4856)
+player = NodePath("../../player")
+
+[node name="tree6" parent="Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -14.9911, 0.957879, -7.33938)
+player = NodePath("../../player")
+
+[node name="tree7" parent="Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -21.5267, 0.957879, -7.33938)
+player = NodePath("../../player")
+
+[node name="tree8" parent="Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -25.9796, 0.957879, -9.12752)
+player = NodePath("../../player")
+
+[node name="tree9" parent="Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -25.9796, 0.957879, -11.9067)
+player = NodePath("../../player")
+
+[node name="tree10" parent="Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -25.9796, 0.957879, -16.1696)
+player = NodePath("../../player")
+
+[node name="tree11" parent="Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -25.9796, 0.957879, -5.66145)
+player = NodePath("../../player")
+
+[node name="tree12" parent="Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -20.6793, 0.957879, -5.66145)
+player = NodePath("../../player")
+
+[node name="tree13" parent="Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -14.1889, -0.0433266, -4.23288)
+player = NodePath("../../player")
