@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://yduall5llvun"]
+
+[ext_resource type="Texture2D" uid="uid://h66ymddvjuu7" path="res://resources/tree.png" id="2_tla4i"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2qnp2"]
+height = 2.05242
+radius = 0.0323458
+
+[node name="tree" type="StaticBody3D"]
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.279379, 0, 0, 0, 1, 0, 0.271842, 0)
+shape = SubResource("CylinderShape3D_2qnp2")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0171194, 0.431476, 0)
+pixel_size = 0.0005
+shaded = true
+alpha_cut = 2
+texture = ExtResource("2_tla4i")
