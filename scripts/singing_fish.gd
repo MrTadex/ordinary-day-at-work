@@ -1,4 +1,4 @@
-extends Node3D
+extends StaticBody3D
 
 @export var count:int = 3
 @export var min_time:int = 5

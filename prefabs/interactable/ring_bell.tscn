@@ -1,60 +1,29 @@
-[gd_scene load_steps=9 format=3 uid="uid://dfk2g4crwafs"]
+[gd_scene load_steps=6 format=3 uid="uid://dfk2g4crwafs"]
 
-[ext_resource type="Texture2D" uid="uid://blby6anqsfxyv" path="res://resources/singing_fish.png" id="1_33ylr"]
-[ext_resource type="Script" path="res://scripts/lookAt.gd" id="1_qiwal"]
+[ext_resource type="Script" path="res://scripts/bell.gd" id="1_j3ebc"]
 [ext_resource type="Texture2D" uid="uid://unaban5n83ow" path="res://resources/objects/zvončič.png" id="2_km5mn"]
+[ext_resource type="Script" path="res://scripts/lookAtSprite.gd" id="3_4v1ie"]
 [ext_resource type="AudioStream" uid="uid://bnjy8gbp1rdsc" path="res://resources/sound_music/ring_bell.wav" id="4_gjowe"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4vbyl"]
-atlas = ExtResource("1_33ylr")
-region = Rect2(0, 202, 290, 202)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_am2xa"]
-atlas = ExtResource("1_33ylr")
-region = Rect2(0, 404, 290, 202)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ic4q1"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_km5mn")
-}],
-"loop": true,
-"name": &"Idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4vbyl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_am2xa")
-}],
-"loop": true,
-"name": &"Talking",
-"speed": 5.0
-}]
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_trutb"]
-size = Vector3(2.58594, 3.11351, 1)
+size = Vector3(2.58594, 2.4746, 1)
 
 [node name="ring_bell" type="StaticBody3D" groups=["Interactable"]]
-script = ExtResource("1_qiwal")
-player = NodePath("")
+script = ExtResource("1_j3ebc")
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+[node name="Sprite3D" type="Sprite3D" parent="."]
+pixel_size = 0.0003
 shaded = true
 alpha_cut = 2
-sprite_frames = SubResource("SpriteFrames_ic4q1")
-animation = &"Idle"
-autoplay = "Idle"
+texture = ExtResource("2_km5mn")
+script = ExtResource("3_4v1ie")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_gjowe")
 max_distance = 15.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(4.285, 0, 0, 0, 3.16, 0, 0, 0, 0.901, -0.0846947, -0.460027, 0)
+transform = Transform3D(0.128, 0, 0, 0, 0.106, 0, 0, 0, 0.128, 0, -0.0339093, 0)
 shape = SubResource("BoxShape3D_trutb")
 
 [connection signal="finished" from="AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]

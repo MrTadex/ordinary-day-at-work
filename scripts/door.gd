@@ -4,9 +4,15 @@ extends StaticBody3D
 @export var open_deg:float
 @export var closed_deg:float
 
+@export var speed = 5
 
 func _process(delta):
 	if open:
-		rotation_degrees.y = open_deg
+		if rotation_degrees.y > open_deg:
+			rotation_degrees.y += speed * delta
+			#print(rotation_degrees.y)
 	else:
-		rotation_degrees.y = closed_deg
+		if rotation_degrees.y < closed_deg:
+			rotation_degrees.y -= speed * delta
+			#print(rotation_degrees.y)
+		
