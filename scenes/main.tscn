@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=28 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
 [ext_resource type="Texture2D" uid="uid://dbdypo0n2qh3w" path="res://resources/ui_elements/kurzor.png" id="1_hs404"]
@@ -9,8 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://c187jba8cyp46" path="res://prefabs/interactable/singing_fish.tscn" id="7_p3lnd"]
 [ext_resource type="PackedScene" uid="uid://dv8d25yq1je34" path="res://prefabs/house.tscn" id="8_3mivp"]
 [ext_resource type="PackedScene" path="res://prefabs/objects/ball.tscn" id="9_k3ktp"]
+[ext_resource type="Texture2D" uid="uid://6i41ddtgls64" path="res://resources/textures/cabin wall.jpg" id="10_1d80j"]
 [ext_resource type="PackedScene" uid="uid://cdvk3t7kb8c7c" path="res://prefabs/objects/beans.tscn" id="10_b18vh"]
 [ext_resource type="PackedScene" uid="uid://bteobam7ogikl" path="res://prefabs/window.tscn" id="11_67w7t"]
+[ext_resource type="Texture2D" uid="uid://b44v443dy3hay" path="res://resources/objects/zaveza.png" id="11_p45aq"]
 [ext_resource type="PackedScene" uid="uid://dsdpiy4qsh41o" path="res://prefabs/shelf.tscn" id="12_00r37"]
 [ext_resource type="PackedScene" uid="uid://cmssui21mqdhn" path="res://prefabs/counter.tscn" id="13_kc2k6"]
 [ext_resource type="PackedScene" uid="uid://dr3wokdj1k7fe" path="res://prefabs/door.tscn" id="14_c7doo"]
@@ -27,8 +29,8 @@ background_mode = 2
 sky = SubResource("Sky_ywdeo")
 ambient_light_source = 3
 ambient_light_color = Color(0.85098, 0.815686, 0.772549, 1)
-ambient_light_sky_contribution = 0.5
-ambient_light_energy = 0.5
+ambient_light_sky_contribution = 0.15
+ambient_light_energy = 0.1
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nac1q"]
 render_priority = 0
@@ -43,6 +45,9 @@ center_offset = Vector3(0, 0.01, 0)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_yxh3n"]
 data = PackedVector3Array(1, 0.01, 1, -1, 0.01, 1, 1, 0.01, -1, -1, 0.01, 1, -1, 0.01, -1, 1, 0.01, -1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fj5vf"]
+albedo_texture = ExtResource("10_1d80j")
 
 [sub_resource type="BoxMesh" id="BoxMesh_dhid1"]
 size = Vector3(0.125, 2, 2)
@@ -339,10 +344,16 @@ shape = SubResource("ConcavePolygonShape3D_yxh3n")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0683, 2.34414, -33.5274)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="World/ClothingBooth"]
+material_override = SubResource("StandardMaterial3D_fj5vf")
 mesh = SubResource("BoxMesh_dhid1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/ClothingBooth"]
 shape = SubResource("ConcavePolygonShape3D_nhvc4")
+
+[node name="Sprite3D" type="Sprite3D" parent="World/ClothingBooth"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75563, -0.0507042, 0.979176)
+pixel_size = 0.0025
+texture = ExtResource("11_p45aq")
 
 [node name="Items" type="Node" parent="."]
 
@@ -383,12 +394,7 @@ open_deg = 110.0
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Light"]
 transform = Transform3D(1, 0, 0, 0, 0.812195, 0.583386, 0, -0.583386, 0.812195, 0, 2.99228, -0.00453266)
 light_color = Color(0.831373, 0.8, 0.647059, 1)
-light_energy = 0.797
 shadow_enabled = true
 
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Light"]
-transform = Transform3D(-0.750711, -0.569616, 0.33462, 0, 0.506515, 0.862231, -0.660631, 0.647286, -0.380247, 0, 3, -6.00116)
-visible = false
-light_color = Color(0.960784, 0.952941, 0.909804, 1)
-light_energy = 0.6
-shadow_enabled = true
+[node name="SpotLight3D" type="SpotLight3D" parent="Light"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.4717, 4.31845, -23.1561)
