@@ -15,6 +15,10 @@ run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[blockflow]
+
+settings/commands/custom_commands=[]
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/Mirror/plugin.cfg", "res://addons/phantom_camera/plugin.cfg")
