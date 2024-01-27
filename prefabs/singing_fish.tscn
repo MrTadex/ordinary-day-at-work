@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/singing_fish.gd" id="1_3gvjc"]
 [ext_resource type="Texture2D" uid="uid://blby6anqsfxyv" path="res://resources/singing_fish.png" id="1_33ylr"]
-[ext_resource type="AudioStream" uid="uid://dk2sswo7vumwh" path="res://resources/sound_music/sea shanty.wav" id="2_4r3iw"]
+[ext_resource type="AudioStream" uid="uid://c6gmnm5o6agt1" path="res://resources/sound_music/sea shanty.wav" id="2_4r3iw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vftp5"]
 atlas = ExtResource("1_33ylr")
@@ -39,13 +39,14 @@ animations = [{
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_trutb"]
-size = Vector3(2.58594, 1.69067, 1)
+size = Vector3(1.28918, 0.853332, 1)
 
 [node name="fish" type="StaticBody3D" groups=["Interactable"]]
 script = ExtResource("1_3gvjc")
 max_time = 30
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 shaded = true
 alpha_cut = 2
 sprite_frames = SubResource("SpriteFrames_ic4q1")
@@ -57,7 +58,7 @@ stream = ExtResource("2_4r3iw")
 max_distance = 15.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.3, 0.107422, 0.0252686, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.3, 0.0449842, 0.0116888, 0)
 shape = SubResource("BoxShape3D_trutb")
 
 [node name="Timer" type="Timer" parent="."]
