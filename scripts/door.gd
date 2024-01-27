@@ -16,3 +16,8 @@ func _process(delta):
 			rotation_degrees.y -= speed * delta
 			#print(rotation_degrees.y)
 		
+
+
+func _on_eventer_event(eventName):
+	if eventName == "Start":
+		open = !open

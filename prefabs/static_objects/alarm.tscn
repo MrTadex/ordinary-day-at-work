@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://w5j7mfdfmk4l"]
+
+[ext_resource type="Texture2D" uid="uid://dxmph5vi38lxt" path="res://resources/objects/luč rudeča siren.png" id="1_hhygg"]
+[ext_resource type="Script" path="res://scripts/alarm.gd" id="1_ju17u"]
+[ext_resource type="AudioStream" uid="uid://cbkbgw8lw8ef6" path="res://resources/sound_music/alarm_noise.wav" id="3_wtbws"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8f6en"]
+atlas = ExtResource("1_hhygg")
+region = Rect2(0, 0, 590, 571)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76uhj"]
+atlas = ExtResource("1_hhygg")
+region = Rect2(0, 571, 590, 571)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrenj"]
+atlas = ExtResource("1_hhygg")
+region = Rect2(0, 0, 590, 571)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s1362"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8f6en")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76uhj")
+}],
+"loop": true,
+"name": &"Alarm",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrenj")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="alarm" type="Node3D"]
+script = ExtResource("1_ju17u")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+pixel_size = 0.001
+sprite_frames = SubResource("SpriteFrames_s1362")
+animation = &"Idle"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_wtbws")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=38 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
 [ext_resource type="Texture2D" uid="uid://dbdypo0n2qh3w" path="res://resources/ui_elements/kurzor.png" id="1_hs404"]
@@ -18,18 +18,16 @@
 [ext_resource type="PackedScene" uid="uid://cmssui21mqdhn" path="res://prefabs/counter.tscn" id="13_kc2k6"]
 [ext_resource type="PackedScene" path="res://prefabs/hedge.tscn" id="14_1q581"]
 [ext_resource type="PackedScene" uid="uid://dr3wokdj1k7fe" path="res://prefabs/door.tscn" id="14_c7doo"]
-[ext_resource type="PackedScene" uid="uid://fjlxt2v2be5g" path="res://prefabs/static_objects/intercom.tscn" id="17_liwq8"]
+[ext_resource type="PackedScene" uid="uid://dnvm75kd26qa6" path="res://prefabs/static_objects/intercom.tscn" id="17_liwq8"]
 [ext_resource type="PackedScene" uid="uid://yduall5llvun" path="res://prefabs/fence.tscn" id="19_v8lx4"]
 [ext_resource type="PackedScene" uid="uid://b3ey61awn25d6" path="res://prefabs/car.tscn" id="21_0lrcf"]
 [ext_resource type="PackedScene" uid="uid://dfk2g4crwafs" path="res://prefabs/interactable/ring_bell.tscn" id="22_fo05x"]
 [ext_resource type="Script" path="res://scripts/Eventer.gd" id="23_7rvqx"]
 [ext_resource type="PackedScene" path="res://prefabs/interactable/radio.tscn" id="24_rcamu"]
+[ext_resource type="PackedScene" uid="uid://w5j7mfdfmk4l" path="res://prefabs/static_objects/alarm.tscn" id="25_pfxgi"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_elx5j"]
-resource_local_to_scene = false
-resource_name = ""
 panorama = ExtResource("3_j2l4q")
-filter = true
 
 [sub_resource type="Sky" id="Sky_ywdeo"]
 sky_material = SubResource("PanoramaSkyMaterial_elx5j")
@@ -872,6 +870,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.54
 
 [node name="Items" type="Node" parent="."]
 
+[node name="alarm" parent="Items" instance=ExtResource("25_pfxgi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.410054, 3.81264, -21.0186)
+
 [node name="fish" parent="Items" instance=ExtResource("7_p3lnd")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.92038, 3.48112, -32.5516)
 
@@ -929,18 +930,10 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.4717, 4.27679, -23.1561)
 
 [node name="Timer" type="Timer" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-editor_description = ""
-process_callback = 1
-wait_time = 1.0
 one_shot = true
-autostart = false
-script = null
 
 [node name="Eventer" type="Node" parent="."]
 script = ExtResource("23_7rvqx")
+
+[connection signal="Event" from="Eventer" to="Items/alarm" method="_on_eventer_event"]
+[connection signal="Event" from="Eventer" to="Items/door" method="_on_eventer_event"]
