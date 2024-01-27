@@ -2,9 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b4wn4i31mrom3" path="res://resources/objects/military_shirt.png" id="1_878c3"]
 
-[node name="panties" type="RigidBody3D"]
-collision_layer = 4
-collision_mask = 7
+[node name="military_shirt" type="Node3D"]
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 pixel_size = 0.0015

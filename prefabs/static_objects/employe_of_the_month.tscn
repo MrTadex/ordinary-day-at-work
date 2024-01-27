@@ -2,9 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cv2fvpp27e0vi" path="res://resources/objects/employee of the month.png" id="1_1dly7"]
 
-[node name="employe_of_the_month" type="RigidBody3D"]
-collision_layer = 4
-collision_mask = 7
+[node name="employe_of_the_month" type="Node3D"]
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 pixel_size = 0.0015
