@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi18wr2j0c7kn"]
+
+[ext_resource type="Script" path="res://scripts/lookAtSprite.gd" id="2_kp2qh"]
+[ext_resource type="Texture2D" uid="uid://bsfh0h52ck5xx" path="res://resources/objects/flour.png" id="2_u8oru"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t4j8h"]
+
+[node name="flour" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 7
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(4.89296, 0, 0, 0, 4.89952, 0, 0, 0, 1, 0, -0.00141869, 0)
+pixel_size = 0.0001
+alpha_cut = 2
+texture = ExtResource("2_u8oru")
+script = ExtResource("2_kp2qh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.358778, 0, 0, 0, 0.545288, 0, 0, 0, 0.242294, 0, 0.00349745, 0)
+shape = SubResource("BoxShape3D_t4j8h")

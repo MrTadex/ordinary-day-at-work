@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0ter2bbek638"]
+
+[ext_resource type="Texture2D" uid="uid://byga4qh2pykkt" path="res://resources/objects/detergent.png" id="1_0kdj4"]
+[ext_resource type="Script" path="res://scripts/lookAtSprite.gd" id="2_e6q6x"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_26g64"]
+height = 0.310605
+radius = 0.106958
+
+[node name="detergent" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 7
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(7.46076, 0, 0, 0, 6.57023, 0, 0, 0, 1, 0, -0.00141869, 0)
+pixel_size = 0.0001
+alpha_cut = 2
+texture = ExtResource("1_0kdj4")
+script = ExtResource("2_e6q6x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2.36494, 0, 0, 0, 2.36494, 0, 0, 0, 1, 0, 0.00349745, 0)
+shape = SubResource("CylinderShape3D_26g64")

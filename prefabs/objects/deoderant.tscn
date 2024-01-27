@@ -7,7 +7,7 @@
 height = 0.310605
 radius = 0.106958
 
-[node name="beans" type="RigidBody3D"]
+[node name="deoderant" type="RigidBody3D"]
 collision_layer = 4
 collision_mask = 7
 
