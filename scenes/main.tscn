@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c187jba8cyp46" path="res://prefabs/interactable/singing_fish.tscn" id="7_p3lnd"]
 [ext_resource type="PackedScene" uid="uid://dv8d25yq1je34" path="res://prefabs/house.tscn" id="8_3mivp"]
 [ext_resource type="Texture2D" uid="uid://c1dwaoyxnpo2q" path="res://resources/textures/grass.png" id="9_brbew"]
-[ext_resource type="PackedScene" path="res://prefabs/objects/ball.tscn" id="9_k3ktp"]
+[ext_resource type="PackedScene" uid="uid://dvuh0ybvideua" path="res://prefabs/objects/ball.tscn" id="9_k3ktp"]
 [ext_resource type="Texture2D" uid="uid://6i41ddtgls64" path="res://resources/textures/cabin wall.jpg" id="10_1d80j"]
 [ext_resource type="PackedScene" uid="uid://cdvk3t7kb8c7c" path="res://prefabs/objects/beans.tscn" id="10_b18vh"]
 [ext_resource type="PackedScene" uid="uid://bteobam7ogikl" path="res://prefabs/window.tscn" id="11_67w7t"]
@@ -915,6 +915,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.58905, 2.64559, -34.3316)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.47153, 2.27939, -32.5906)
 timer = NodePath("../../Timer")
 
+[node name="radio" parent="Items" instance=ExtResource("24_rcamu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.745433, 2.56349, -25.4123)
+
 [node name="Light" type="Node" parent="."]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Light"]
@@ -941,6 +944,3 @@ script = null
 
 [node name="Eventer" type="Node" parent="."]
 script = ExtResource("23_7rvqx")
-
-[node name="radio" parent="." instance=ExtResource("24_rcamu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.745433, 2.56349, -25.4123)
