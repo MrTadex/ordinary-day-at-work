@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=21 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
 [ext_resource type="Texture2D" uid="uid://dbdypo0n2qh3w" path="res://resources/ui_elements/kurzor.png" id="1_hs404"]
@@ -8,9 +8,8 @@
 [ext_resource type="Script" path="res://addons/Mirror/Mirror/Mirror.gd" id="6_nt65x"]
 [ext_resource type="PackedScene" path="res://prefabs/singing_fish.tscn" id="7_p3lnd"]
 [ext_resource type="AudioStream" uid="uid://dk2sswo7vumwh" path="res://resources/sound_music/sea shanty.wav" id="8_0irxt"]
-[ext_resource type="PackedScene" uid="uid://c187jba8cyp46" path="res://prefabs/singing_fish.tscn" id="7_p3lnd"]
-[ext_resource type="PackedScene" uid="uid://ckyqundwwrqps" path="res://prefabs/house.tscn" id="8_3mivp"]
-[ext_resource type="PackedScene" uid="uid://cj0h6vq4imwpy" path="res://prefabs/ball.tscn" id="9_k3ktp"]
+[ext_resource type="PackedScene" path="res://prefabs/house.tscn" id="8_3mivp"]
+[ext_resource type="PackedScene" path="res://prefabs/ball.tscn" id="9_k3ktp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nac1q"]
 render_priority = 0
@@ -181,9 +180,10 @@ shape = SubResource("BoxShape3D_ksxyt")
 [node name="fish" parent="." instance=ExtResource("7_p3lnd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0214584, 4.10748, -22.3463)
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="fish"]
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="fish"]
 stream = ExtResource("8_0irxt")
 unit_size = 2.0
+
 [node name="house" parent="." instance=ExtResource("8_3mivp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, -11)
 
