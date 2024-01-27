@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://fpdvks0a1x0g"]
+
+[ext_resource type="Texture2D" uid="uid://uwltg02ngiud" path="res://resources/objects/coffee.png" id="2_oqckg"]
+[ext_resource type="Script" path="res://scripts/lookAtSprite.gd" id="2_ptrfj"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_26g64"]
+height = 0.395262
+radius = 0.106715
+
+[node name="coffee" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 7
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+pixel_size = 0.0005
+alpha_cut = 2
+texture = ExtResource("2_oqckg")
+script = ExtResource("2_ptrfj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00207876, 0)
+shape = SubResource("CylinderShape3D_26g64")

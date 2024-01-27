@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3hqukj0xmx6v"]
+
+[ext_resource type="Script" path="res://scripts/lookAtSprite.gd" id="2_7mng5"]
+[ext_resource type="Texture2D" uid="uid://dhb7x7pwop35f" path="res://resources/objects/Custom-Cereal-Box.png" id="2_tnamk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nswdp"]
+size = Vector3(0.461109, 0.619476, 0.171371)
+
+[node name="cereal_box" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 7
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+pixel_size = 0.0009
+alpha_cut = 2
+texture = ExtResource("2_tnamk")
+script = ExtResource("2_7mng5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0388011, 0.0117376, -0.000113457)
+shape = SubResource("BoxShape3D_nswdp")
