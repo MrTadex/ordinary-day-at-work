@@ -13,6 +13,7 @@ script = ExtResource("1_4r1dg")
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(16.7232, 0, 0, 0, 15.6125, 0, 0, 0, 1, 0, 0, 0)
 pixel_size = 0.0001
+shaded = true
 alpha_cut = 2
 texture = ExtResource("1_xjat0")
 

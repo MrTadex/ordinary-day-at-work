@@ -10,6 +10,7 @@ func clicked():
 	if start:
 		timer.start(900)
 		start = false
+		get_tree().call_group("EventListeners", "_on_event", "Start")
 
 	_audio.playing = true
 
