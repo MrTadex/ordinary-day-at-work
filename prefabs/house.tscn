@@ -1,8 +1,13 @@
-[gd_scene load_steps=65 format=3 uid="uid://dv8d25yq1je34"]
+[gd_scene load_steps=67 format=3 uid="uid://dv8d25yq1je34"]
 
 [ext_resource type="Texture2D" uid="uid://r5wyvgv71pvp" path="res://resources/textures/ploščice.png" id="1_fmkcv"]
 [ext_resource type="Texture2D" uid="uid://ce363ap1iyg2i" path="res://resources/textures/wood.jpg" id="1_lp03o"]
+[ext_resource type="Texture2D" uid="uid://bxladqdsxdwem" path="res://resources/textures/roof.jpeg" id="1_unox0"]
 [ext_resource type="Texture2D" uid="uid://cng6tvuv6fm3s" path="res://resources/textures/stena.png" id="1_vrcs7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igoqm"]
+albedo_texture = ExtResource("1_unox0")
+uv1_scale = Vector3(1.08, 2.985, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ocaox"]
 
@@ -530,6 +535,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00266743, 0.0396311, -0.01
 
 [node name="roof" type="MeshInstance3D" parent="."]
 transform = Transform3D(5.98439, 0, 0, 0, 1.75, 0, 0, 0, 7.86482, -1.73027, 2.48754, -7.8153)
+material_override = SubResource("StandardMaterial3D_igoqm")
 mesh = SubResource("ArrayMesh_hdnah")
 skeleton = NodePath("")
 
