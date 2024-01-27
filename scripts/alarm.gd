@@ -16,7 +16,7 @@ func _process(delta):
 
 
 func _on_eventer_event(eventName):
-	if eventName == "Start":
+	if eventName == "Start" or eventName == "Start Alarm":
 		alarm = true
 		
 	if eventName == "Stop Alarm":

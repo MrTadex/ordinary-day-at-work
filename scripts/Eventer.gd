@@ -9,9 +9,6 @@ signal Event(eventName)
 func call_event(eventName):
 	if current_event == null:
 		Event.emit(eventName)
-	
-func end_event(eventName):
-	Event.emit(eventName)
 
 func _process(delta):
 	var timeLeft = timer.time_left
