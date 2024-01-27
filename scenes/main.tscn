@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=34 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
 [ext_resource type="Texture2D" uid="uid://dbdypo0n2qh3w" path="res://resources/ui_elements/kurzor.png" id="1_hs404"]
@@ -9,15 +9,18 @@
 [ext_resource type="PackedScene" uid="uid://c187jba8cyp46" path="res://prefabs/interactable/singing_fish.tscn" id="7_p3lnd"]
 [ext_resource type="PackedScene" uid="uid://dv8d25yq1je34" path="res://prefabs/house.tscn" id="8_3mivp"]
 [ext_resource type="Texture2D" uid="uid://c1dwaoyxnpo2q" path="res://resources/textures/grass.png" id="9_brbew"]
-[ext_resource type="PackedScene" path="res://prefabs/objects/ball.tscn" id="9_k3ktp"]
+[ext_resource type="PackedScene" uid="uid://bnvl4sqvqypg6" path="res://prefabs/objects/ball.tscn" id="9_k3ktp"]
 [ext_resource type="Texture2D" uid="uid://6i41ddtgls64" path="res://resources/textures/cabin wall.jpg" id="10_1d80j"]
 [ext_resource type="PackedScene" uid="uid://cdvk3t7kb8c7c" path="res://prefabs/objects/beans.tscn" id="10_b18vh"]
-[ext_resource type="PackedScene" uid="uid://bteobam7ogikl" path="res://prefabs/window.tscn" id="11_67w7t"]
+[ext_resource type="PackedScene" path="res://prefabs/window.tscn" id="11_67w7t"]
 [ext_resource type="Texture2D" uid="uid://b44v443dy3hay" path="res://resources/objects/zaveza.png" id="11_p45aq"]
-[ext_resource type="PackedScene" uid="uid://dsdpiy4qsh41o" path="res://prefabs/shelf.tscn" id="12_00r37"]
-[ext_resource type="PackedScene" uid="uid://cmssui21mqdhn" path="res://prefabs/counter.tscn" id="13_kc2k6"]
-[ext_resource type="PackedScene" uid="uid://dr3wokdj1k7fe" path="res://prefabs/door.tscn" id="14_c7doo"]
-[ext_resource type="PackedScene" uid="uid://fjlxt2v2be5g" path="res://prefabs/static_objects/intercom.tscn" id="17_liwq8"]
+[ext_resource type="PackedScene" path="res://prefabs/shelf.tscn" id="12_00r37"]
+[ext_resource type="PackedScene" path="res://prefabs/counter.tscn" id="13_kc2k6"]
+[ext_resource type="PackedScene" uid="uid://bwwd1ts2ry1v8" path="res://prefabs/hedge.tscn" id="14_1q581"]
+[ext_resource type="PackedScene" path="res://prefabs/door.tscn" id="14_c7doo"]
+[ext_resource type="PackedScene" uid="uid://dnvm75kd26qa6" path="res://prefabs/static_objects/intercom.tscn" id="17_liwq8"]
+[ext_resource type="PackedScene" uid="uid://yduall5llvun" path="res://prefabs/fence.tscn" id="19_v8lx4"]
+[ext_resource type="PackedScene" uid="uid://bexf5s0e276kn" path="res://prefabs/car.tscn" id="21_0lrcf"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_elx5j"]
 panorama = ExtResource("3_j2l4q")
@@ -363,6 +366,504 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75563, -0.0507042, 0.979176
 pixel_size = 0.0025
 texture = ExtResource("11_p45aq")
 
+[node name="Fence" type="Node" parent="World"]
+
+[node name="fence" parent="World/Fence" instance=ExtResource("19_v8lx4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.39438, 0.999999, -20.5363)
+
+[node name="fence2" parent="World/Fence" instance=ExtResource("19_v8lx4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6536, 0.999999, -20.5363)
+
+[node name="fence3" parent="World/Fence" instance=ExtResource("19_v8lx4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0076, 0.999999, -20.5814)
+
+[node name="fence4" parent="World/Fence" instance=ExtResource("19_v8lx4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.2327, 0.999999, -20.5814)
+
+[node name="fence5" parent="World/Fence" instance=ExtResource("19_v8lx4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2174, 0.999999, -20.5814)
+
+[node name="fence6" parent="World/Fence" instance=ExtResource("19_v8lx4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.4799, 0.999999, -20.5814)
+
+[node name="fence7" parent="World/Fence" instance=ExtResource("19_v8lx4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.7433, 0.999999, -20.5814)
+
+[node name="fence8" parent="World/Fence" instance=ExtResource("19_v8lx4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.9601, 0.999999, -20.5814)
+
+[node name="Hedge" type="Node" parent="World"]
+
+[node name="hedge" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.0049, -0.0176849, 9.69751)
+
+[node name="hedge2" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.8122, -0.0176849, 9.69751)
+
+[node name="hedge3" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6284, -0.0176849, 9.69751)
+
+[node name="hedge4" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.4441, -0.0176849, 9.69751)
+
+[node name="hedge5" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.311, -0.0176849, 9.69751)
+
+[node name="hedge6" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.143, -0.0176849, 9.69751)
+
+[node name="hedge7" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.9757, -0.0176849, 9.69751)
+
+[node name="hedge8" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.783, -0.0176849, 9.69751)
+
+[node name="hedge9" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5992, -0.0176849, 9.69751)
+
+[node name="hedge10" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4149, -0.0176849, 9.69751)
+
+[node name="hedge11" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.28179, -0.0176849, 9.69751)
+
+[node name="hedge12" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1138, -0.0176849, 9.69751)
+
+[node name="hedge13" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.89447, -0.0176849, 9.69751)
+
+[node name="hedge14" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.70176, -0.0176849, 9.69751)
+
+[node name="hedge15" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.517963, -0.0176849, 9.69751)
+
+[node name="hedge16" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.66632, -0.0176849, 9.69751)
+
+[node name="hedge17" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.79947, -0.0176849, 9.69751)
+
+[node name="hedge18" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.96745, -0.0176849, 9.69751)
+
+[node name="hedge19" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.13472, -0.0176849, 9.69751)
+
+[node name="hedge20" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3274, -0.0176849, 9.69751)
+
+[node name="hedge21" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5112, -0.0176849, 9.69751)
+
+[node name="hedge22" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6955, -0.0176849, 9.69751)
+
+[node name="hedge23" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8287, -0.0176849, 9.69751)
+
+[node name="hedge24" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9966, -0.0176849, 9.69751)
+
+[node name="hedge25" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.0766, -0.0176849, 9.69751)
+
+[node name="hedge26" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.2693, -0.0176849, 9.69751)
+
+[node name="hedge27" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.4531, -0.0176849, 9.69751)
+
+[node name="hedge28" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.6374, -0.0176849, 9.69751)
+
+[node name="hedge29" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.7705, -0.0176849, 9.69751)
+
+[node name="hedge30" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.9385, -0.0176849, 9.69751)
+
+[node name="hedge31" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.1058, -0.0176849, 9.69751)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="World/Hedge"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_iqi58")
+mesh = SubResource("PlaneMesh_gjccg")
+
+[node name="hedge32" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.0049, -0.0176849, 9.69751)
+
+[node name="hedge33" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.8122, -0.0176849, 9.69751)
+
+[node name="hedge34" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6284, -0.0176849, 9.69751)
+
+[node name="hedge35" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.4441, -0.0176849, 9.69751)
+
+[node name="hedge36" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.311, -0.0176849, 9.69751)
+
+[node name="hedge37" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.143, -0.0176849, 9.69751)
+
+[node name="hedge38" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.9757, -0.0176849, 9.69751)
+
+[node name="hedge39" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.783, -0.0176849, 9.69751)
+
+[node name="hedge40" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5992, -0.0176849, 9.69751)
+
+[node name="hedge41" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4149, -0.0176849, 9.69751)
+
+[node name="hedge42" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.28179, -0.0176849, 9.69751)
+
+[node name="hedge43" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1138, -0.0176849, 9.69751)
+
+[node name="hedge44" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.89447, -0.0176849, 9.69751)
+
+[node name="hedge45" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.70176, -0.0176849, 9.69751)
+
+[node name="hedge46" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.517963, -0.0176849, 9.69751)
+
+[node name="hedge47" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.66632, -0.0176849, 9.69751)
+
+[node name="hedge48" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.79947, -0.0176849, 9.69751)
+
+[node name="hedge49" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.96745, -0.0176849, 9.69751)
+
+[node name="hedge50" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.13472, -0.0176849, 9.69751)
+
+[node name="hedge51" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3274, -0.0176849, 9.69751)
+
+[node name="hedge52" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5112, -0.0176849, 9.69751)
+
+[node name="hedge53" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6955, -0.0176849, 9.69751)
+
+[node name="hedge54" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8287, -0.0176849, 9.69751)
+
+[node name="hedge55" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9966, -0.0176849, 9.69751)
+
+[node name="hedge56" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.0766, -0.0176849, 9.69751)
+
+[node name="hedge57" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.2693, -0.0176849, 9.69751)
+
+[node name="hedge58" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.4531, -0.0176849, 9.69751)
+
+[node name="hedge59" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.6374, -0.0176849, 9.69751)
+
+[node name="hedge60" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.7705, -0.0176849, 9.69751)
+
+[node name="hedge61" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.9385, -0.0176849, 9.69751)
+
+[node name="hedge62" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.1058, -0.0176849, 9.69751)
+
+[node name="hedge63" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, 8.66542)
+
+[node name="hedge64" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, 6.4727)
+
+[node name="hedge65" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, 4.28891)
+
+[node name="hedge66" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, 2.10462)
+
+[node name="hedge67" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -0.0285225)
+
+[node name="hedge68" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -2.19651)
+
+[node name="hedge69" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -4.36377)
+
+[node name="hedge70" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -6.55649)
+
+[node name="hedge71" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -8.74028)
+
+[node name="hedge72" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -10.9246)
+
+[node name="hedge73" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -13.0577)
+
+[node name="hedge74" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -15.2257)
+
+[node name="hedge75" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -17.445)
+
+[node name="hedge76" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -19.6377)
+
+[node name="hedge77" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -21.8215)
+
+[node name="hedge78" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -24.0058)
+
+[node name="hedge79" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -26.139)
+
+[node name="hedge80" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -28.3069)
+
+[node name="hedge81" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -30.4742)
+
+[node name="hedge82" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -32.6669)
+
+[node name="hedge83" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -34.8507)
+
+[node name="hedge84" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -37.035)
+
+[node name="hedge85" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -39.1682)
+
+[node name="hedge86" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -41.3361)
+
+[node name="hedge87" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -43.4161)
+
+[node name="hedge88" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -45.6088)
+
+[node name="hedge89" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -47.7926)
+
+[node name="hedge90" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -49.9769)
+
+[node name="hedge91" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -52.11)
+
+[node name="hedge92" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -54.278)
+
+[node name="hedge93" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.0012, -0.0176849, -56.4453)
+
+[node name="hedge126" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 32.5954, -0.0176849, -57.938)
+
+[node name="hedge127" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 30.4116, -0.0176849, -57.938)
+
+[node name="hedge128" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 28.2273, -0.0176849, -57.938)
+
+[node name="hedge129" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 26.0942, -0.0176849, -57.938)
+
+[node name="hedge130" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 23.9262, -0.0176849, -57.938)
+
+[node name="hedge131" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 21.7589, -0.0176849, -57.938)
+
+[node name="hedge132" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 19.5662, -0.0176849, -57.938)
+
+[node name="hedge133" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 17.3824, -0.0176849, -57.938)
+
+[node name="hedge134" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 15.1981, -0.0176849, -57.938)
+
+[node name="hedge135" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 13.065, -0.0176849, -57.938)
+
+[node name="hedge136" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 10.897, -0.0176849, -57.938)
+
+[node name="hedge137" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 8.67767, -0.0176849, -57.938)
+
+[node name="hedge138" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 6.48495, -0.0176849, -57.938)
+
+[node name="hedge139" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 4.30116, -0.0176849, -57.938)
+
+[node name="hedge140" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 2.11687, -0.0176849, -57.938)
+
+[node name="hedge141" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -0.016273, -0.0176849, -57.938)
+
+[node name="hedge142" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -2.18426, -0.0176849, -57.938)
+
+[node name="hedge143" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -4.35153, -0.0176849, -57.938)
+
+[node name="hedge144" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -6.54425, -0.0176849, -57.938)
+
+[node name="hedge145" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -8.72804, -0.0176849, -57.938)
+
+[node name="hedge146" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -10.9123, -0.0176849, -57.938)
+
+[node name="hedge147" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -13.0455, -0.0176849, -57.938)
+
+[node name="hedge148" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -15.2135, -0.0176849, -57.938)
+
+[node name="hedge149" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -17.2934, -0.0176849, -57.938)
+
+[node name="hedge150" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -19.4861, -0.0176849, -57.938)
+
+[node name="hedge151" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -21.6699, -0.0176849, -57.938)
+
+[node name="hedge152" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -23.8542, -0.0176849, -57.938)
+
+[node name="hedge153" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -25.9873, -0.0176849, -57.938)
+
+[node name="hedge154" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -28.1553, -0.0176849, -57.938)
+
+[node name="hedge155" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -30.3226, -0.0176849, -57.938)
+
+[node name="hedge94" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, 8.30089)
+
+[node name="hedge125" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, 10.3501)
+
+[node name="hedge95" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, 6.10817)
+
+[node name="hedge96" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, 3.92438)
+
+[node name="hedge97" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, 1.7401)
+
+[node name="hedge98" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -0.393047)
+
+[node name="hedge99" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -2.56103)
+
+[node name="hedge100" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -4.7283)
+
+[node name="hedge101" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -6.92102)
+
+[node name="hedge102" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -9.10481)
+
+[node name="hedge103" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -11.2891)
+
+[node name="hedge104" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -13.4222)
+
+[node name="hedge105" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -15.5902)
+
+[node name="hedge106" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -17.8096)
+
+[node name="hedge107" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -20.0023)
+
+[node name="hedge108" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -22.1861)
+
+[node name="hedge109" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -24.3703)
+
+[node name="hedge110" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -26.5035)
+
+[node name="hedge111" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -28.6715)
+
+[node name="hedge112" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -30.8387)
+
+[node name="hedge113" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -33.0315)
+
+[node name="hedge114" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -35.2153)
+
+[node name="hedge115" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -37.3995)
+
+[node name="hedge116" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -39.5327)
+
+[node name="hedge117" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -41.7007)
+
+[node name="hedge118" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -43.7806)
+
+[node name="hedge119" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -45.9733)
+
+[node name="hedge120" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -48.1571)
+
+[node name="hedge121" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -50.3414)
+
+[node name="hedge122" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -52.4746)
+
+[node name="hedge123" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -54.6425)
+
+[node name="hedge124" parent="World/Hedge" instance=ExtResource("14_1q581")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5448, -0.0176849, -56.8098)
+
 [node name="Items" type="Node" parent="."]
 
 [node name="fish" parent="Items" instance=ExtResource("7_p3lnd")]
@@ -409,3 +910,6 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.471
 
 [node name="intercom" parent="." instance=ExtResource("17_liwq8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.58905, 2.64559, -34.3316)
+
+[node name="car" parent="." instance=ExtResource("21_0lrcf")]
+transform = Transform3D(0.751859, 0, 0, 0, 0.879696, 0, 0, 0, 1, -0.0641479, 0.969908, 5.22819)

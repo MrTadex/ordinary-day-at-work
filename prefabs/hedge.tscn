@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwwd1ts2ry1v8"]
+
+[ext_resource type="Texture2D" uid="uid://cwabvopjlb4gn" path="res://resources/hedge.png" id="1_p8l7f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q7336"]
+size = Vector3(0.371597, 3.35591, 1)
+
+[node name="hedge" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0287813, 0)
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(7.02675, 0, 0, 0, 1.77937, 0, 0, 0, 0.0910467, 0.14776, 2.94357, 0)
+shape = SubResource("BoxShape3D_q7336")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(12.4318, 0, 0, 0, 11.0605, 0, 0, 0, 1, 0.114676, 2.96894, 0)
+pixel_size = 0.0005
+shaded = true
+alpha_cut = 2
+texture = ExtResource("1_p8l7f")

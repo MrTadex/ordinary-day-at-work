@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bexf5s0e276kn"]
+
+[ext_resource type="Texture2D" uid="uid://dbbckp0en4dxt" path="res://resources/car.png" id="1_iuy3s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q7336"]
+size = Vector3(1.10847, 1.3777, 1)
+
+[node name="car" type="StaticBody3D"]
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(7.02675, 0, 0, 0, 1.77937, 0, 0, 0, 0.0174616, 0.112378, 1.23293, 0)
+shape = SubResource("BoxShape3D_q7336")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(12.4318, 0, 0, 0, 11.0605, 0, 0, 0, 1, 0.114676, 1.1586, 0)
+pixel_size = 0.0005
+shaded = true
+alpha_cut = 2
+texture = ExtResource("1_iuy3s")

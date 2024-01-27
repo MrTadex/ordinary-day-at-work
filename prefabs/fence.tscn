@@ -3,14 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://bcxvpm22oylpk" path="res://resources/objects/fence.png" id="1_bsrfs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_q7336"]
-size = Vector3(0.91803, 0.954956, 1)
+size = Vector3(0.91803, 2.34576, 1)
 
-[node name="tree" type="StaticBody3D"]
+[node name="fence" type="StaticBody3D"]
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(7.02675, 0, 0, 0, 1.77937, 0, 0, 0, 0.0174616, -0.0975049, 0.807469, 0)
+transform = Transform3D(7.02675, 0, 0, 0, 1.77937, 0, 0, 0, 0.0174616, -0.0975049, 2.04485, 0)
 shape = SubResource("BoxShape3D_q7336")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]

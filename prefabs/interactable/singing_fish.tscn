@@ -55,7 +55,7 @@ autoplay = "Idle"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("2_4r3iw")
-max_distance = 30.0
+max_distance = 15.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.3, 0.0449842, 0.0116888, 0)

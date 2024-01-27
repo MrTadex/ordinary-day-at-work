@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://fjlxt2v2be5g"]
+[gd_scene load_steps=4 format=3 uid="uid://dnvm75kd26qa6"]
 
-[ext_resource type="Texture2D" uid="uid://6t3p0fihhccw" path="res://resources/objects/intercom.png" id="1_xjat0"]
-[ext_resource type="AudioStream" uid="uid://c6gmnm5o6agt1" path="res://resources/sound_music/sea shanty.wav" id="2_3mo6e"]
+[ext_resource type="Texture2D" uid="uid://c2br2smve862c" path="res://resources/objects/intercom.png" id="1_xjat0"]
+[ext_resource type="AudioStream" uid="uid://dk2sswo7vumwh" path="res://resources/sound_music/sea shanty.wav" id="2_3mo6e"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l6heb"]
 
