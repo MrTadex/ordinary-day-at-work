@@ -65,6 +65,7 @@ func _process(_delta):
 			#_audioNarrator.stream = array[0]
 			#_audioNarrator.volume_db = -5
 			#_audioNarrator.playing = true
+			pass
 	
 	if Input.is_action_just_pressed("left_click"):
 		if held_object:

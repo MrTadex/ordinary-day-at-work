@@ -14,4 +14,4 @@ func clicked():
 
 func _on_event(eventName):
 	if eventName == "Start" and _animator.animation == "Off":
-		get_tree().call_group("EventListeners", "_on_event", "Start Alarm")
+		get_tree().call_group("EventListeners", "_on_event", "Stop Alarm")
