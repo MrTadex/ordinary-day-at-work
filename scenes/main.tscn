@@ -1,13 +1,16 @@
-[gd_scene load_steps=18 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=20 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
+[ext_resource type="Texture2D" uid="uid://dbdypo0n2qh3w" path="res://resources/ui_elements/kurzor.png" id="1_hs404"]
 [ext_resource type="Shader" path="res://shader/floor.gdshader" id="1_nogja"]
-[ext_resource type="Texture2D" uid="uid://cbq4cqacsd2c6" path="res://resources/ui_elements/cursor_place_holder.png" id="3_bybqi"]
 [ext_resource type="Texture2D" uid="uid://c3xpomkfbgyv0" path="res://resources/skybox_02.png" id="4_lttkr"]
 [ext_resource type="PackedScene" uid="uid://dgustjqc2lpbx" path="res://prefabs/tree.tscn" id="5_putjd"]
 [ext_resource type="Script" path="res://addons/Mirror/Mirror/Mirror.gd" id="6_nt65x"]
 [ext_resource type="PackedScene" path="res://prefabs/singing_fish.tscn" id="7_p3lnd"]
 [ext_resource type="AudioStream" uid="uid://dk2sswo7vumwh" path="res://resources/sound_music/sea shanty.wav" id="8_0irxt"]
+[ext_resource type="PackedScene" uid="uid://c187jba8cyp46" path="res://prefabs/singing_fish.tscn" id="7_p3lnd"]
+[ext_resource type="PackedScene" uid="uid://ckyqundwwrqps" path="res://prefabs/house.tscn" id="8_3mivp"]
+[ext_resource type="PackedScene" uid="uid://cj0h6vq4imwpy" path="res://prefabs/ball.tscn" id="9_k3ktp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nac1q"]
 render_priority = 0
@@ -42,6 +45,9 @@ ambient_light_color = Color(1, 1, 1, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ksxyt"]
 size = Vector3(1.99805, 2.00684, 0.102295)
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_34nxj"]
+bounce = 0.5
+
 [node name="main" type="Node3D"]
 
 [node name="Control" type="Control" parent="."]
@@ -60,13 +66,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -16.0
-offset_top = -16.0
-offset_right = 16.0
-offset_bottom = 16.0
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_bybqi")
+texture = ExtResource("1_hs404")
 expand_mode = 1
 
 [node name="Floor" type="StaticBody3D" parent="."]
@@ -178,3 +184,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0214584, 4.10748, -22.3463
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="fish"]
 stream = ExtResource("8_0irxt")
 unit_size = 2.0
+[node name="house" parent="." instance=ExtResource("8_3mivp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, -11)
+
+[node name="ball" parent="." instance=ExtResource("9_k3ktp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 8.28301, -17)
+physics_material_override = SubResource("PhysicsMaterial_34nxj")

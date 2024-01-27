@@ -1,26 +1,38 @@
-[gd_scene load_steps=5 format=3 uid="uid://c187jba8cyp46"]
+[gd_scene load_steps=6 format=3 uid="uid://c187jba8cyp46"]
 
 [ext_resource type="Texture2D" uid="uid://blby6anqsfxyv" path="res://resources/singing_fish.png" id="1_33ylr"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mwlri"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vftp5"]
 atlas = ExtResource("1_33ylr")
 region = Rect2(0, 0, 290, 202)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xm1tm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vbyl"]
 atlas = ExtResource("1_33ylr")
 region = Rect2(0, 202, 290, 202)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_am2xa"]
+atlas = ExtResource("1_33ylr")
+region = Rect2(0, 404, 290, 202)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ic4q1"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mwlri")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xm1tm")
+"texture": SubResource("AtlasTexture_vftp5")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vbyl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_am2xa")
+}],
+"loop": true,
+"name": &"Talking",
 "speed": 5.0
 }]
 
@@ -28,5 +40,9 @@ animations = [{
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 shaded = true
+alpha_cut = 2
 sprite_frames = SubResource("SpriteFrames_ic4q1")
-autoplay = "default"
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
