@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=39 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
 [ext_resource type="Texture2D" uid="uid://dbdypo0n2qh3w" path="res://resources/ui_elements/kurzor.png" id="1_hs404"]
@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dvuh0ybvideua" path="res://prefabs/objects/ball.tscn" id="9_k3ktp"]
 [ext_resource type="Texture2D" uid="uid://6i41ddtgls64" path="res://resources/textures/cabin wall.jpg" id="10_1d80j"]
 [ext_resource type="PackedScene" uid="uid://cdvk3t7kb8c7c" path="res://prefabs/objects/beans.tscn" id="10_b18vh"]
-[ext_resource type="PackedScene" path="res://prefabs/window.tscn" id="11_67w7t"]
+[ext_resource type="PackedScene" uid="uid://bteobam7ogikl" path="res://prefabs/window.tscn" id="11_67w7t"]
 [ext_resource type="Texture2D" uid="uid://b44v443dy3hay" path="res://resources/objects/zaveza.png" id="11_p45aq"]
 [ext_resource type="PackedScene" uid="uid://dsdpiy4qsh41o" path="res://prefabs/shelf.tscn" id="12_00r37"]
 [ext_resource type="PackedScene" uid="uid://cmssui21mqdhn" path="res://prefabs/counter.tscn" id="13_kc2k6"]
@@ -25,6 +25,7 @@
 [ext_resource type="Script" path="res://scripts/Eventer.gd" id="23_7rvqx"]
 [ext_resource type="PackedScene" path="res://prefabs/interactable/radio.tscn" id="24_rcamu"]
 [ext_resource type="PackedScene" uid="uid://w5j7mfdfmk4l" path="res://prefabs/static_objects/alarm.tscn" id="25_pfxgi"]
+[ext_resource type="PackedScene" uid="uid://d1aanlqmjtxby" path="res://prefabs/static_objects/switch.tscn" id="26_qt6vl"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_elx5j"]
 panorama = ExtResource("3_j2l4q")
@@ -919,6 +920,10 @@ timer = NodePath("../../Timer")
 [node name="radio" parent="Items" instance=ExtResource("24_rcamu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.745433, 2.56349, -25.4123)
 
+[node name="switch" parent="Items" node_paths=PackedStringArray("Eventer") instance=ExtResource("26_qt6vl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.01279, 1.74014, -34.1256)
+Eventer = NodePath("../../Eventer")
+
 [node name="Light" type="Node" parent="."]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Light"]
@@ -937,3 +942,4 @@ script = ExtResource("23_7rvqx")
 
 [connection signal="Event" from="Eventer" to="Items/alarm" method="_on_eventer_event"]
 [connection signal="Event" from="Eventer" to="Items/door" method="_on_eventer_event"]
+[connection signal="Event" from="Eventer" to="Items/switch" method="_on_eventer_event"]

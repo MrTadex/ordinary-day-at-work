@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1aanlqmjtxby"]
+
+[ext_resource type="Texture2D" uid="uid://6epbpmccvq1t" path="res://resources/stikalo.png" id="1_enj3m"]
+[ext_resource type="Script" path="res://prefabs/static_objects/switch.gd" id="1_fhlcv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_auc24"]
+atlas = ExtResource("1_enj3m")
+region = Rect2(0, 0, 258, 378)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3yv2"]
+atlas = ExtResource("1_enj3m")
+region = Rect2(0, 378, 258, 378)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tjuw1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_auc24")
+}],
+"loop": true,
+"name": &"Off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3yv2")
+}],
+"loop": true,
+"name": &"On",
+"speed": 5.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tcic3"]
+
+[node name="switch" type="StaticBody3D" groups=["Interactable"]]
+script = ExtResource("1_fhlcv")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+pixel_size = 0.0005
+shaded = true
+alpha_cut = 2
+sprite_frames = SubResource("SpriteFrames_tjuw1")
+animation = &"On"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.11, 0, 0, 0, 0.18, 0, 0, 0, 0.02, 0, 0, 0)
+shape = SubResource("BoxShape3D_tcic3")
