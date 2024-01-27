@@ -2,6 +2,8 @@ extends CharacterBody3D
 
 @export var mouse_sensitivity := 0.05 
 
+var held_object: Object
+
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
@@ -9,6 +11,8 @@ const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @onready var _camera:Camera3D = $Camera3D
+@onready var _raycast:RayCast3D = _camera.get_node("./RayCast3D")
+@onready var _holdPoint:Node3D = _camera.get_node("./HoldPoint")
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -38,7 +42,23 @@ func _physics_process(delta):
 	
 func _process(delta):
 	_camera.position = Vector3(position.x, position.y + 0.6, position.z)
-	pass
+	
+	if Input.is_action_just_pressed("left_click"):
+		if held_object:
+			held_object.freeze = false
+			held_object = null
+		else:
+			if _raycast.get_collider():
+				if(_raycast.get_collider().get_class() == "RigidBody3D"):
+					held_object = _raycast.get_collider()
+					held_object.freeze = true
+				elif(_raycast.get_collider().is_in_group("Interactable")):
+					_raycast.get_collider().clicked()
+					#print(_raycast.get_collider())
+	
+	if held_object:
+		held_object.position = _holdPoint.global_transform.origin
+	
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
