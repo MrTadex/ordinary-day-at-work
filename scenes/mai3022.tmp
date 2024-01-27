@@ -178,3 +178,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0214584, 4.10748, -22.3463
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="fish"]
 stream = ExtResource("8_0irxt")
 unit_size = 2.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="fish"]
