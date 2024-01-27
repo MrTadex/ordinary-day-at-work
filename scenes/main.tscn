@@ -7,9 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://dgustjqc2lpbx" path="res://prefabs/tree.tscn" id="5_putjd"]
 [ext_resource type="Script" path="res://addons/Mirror/Mirror/Mirror.gd" id="6_nt65x"]
 [ext_resource type="PackedScene" uid="uid://c187jba8cyp46" path="res://prefabs/singing_fish.tscn" id="7_p3lnd"]
-[ext_resource type="AudioStream" uid="uid://c6gmnm5o6agt1" path="res://resources/sound_music/sea shanty.wav" id="8_0irxt"]
-[ext_resource type="PackedScene" uid="uid://ckyqundwwrqps" path="res://prefabs/house.tscn" id="8_3mivp"]
+[ext_resource type="PackedScene" uid="uid://dv8d25yq1je34" path="res://prefabs/house.tscn" id="8_3mivp"]
 [ext_resource type="PackedScene" uid="uid://cj0h6vq4imwpy" path="res://prefabs/ball.tscn" id="9_k3ktp"]
+[ext_resource type="Texture2D" uid="uid://r5wyvgv71pvp" path="res://resources/textures/ploščice.png" id="10_pl3lg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nac1q"]
 render_priority = 0
@@ -25,11 +25,6 @@ center_offset = Vector3(0, 0.01, 0)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_yxh3n"]
 data = PackedVector3Array(1, 0.01, 1, -1, 0.01, 1, 1, 0.01, -1, -1, 0.01, 1, -1, 0.01, -1, 1, 0.01, -1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_4611m"]
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_67ygj"]
-data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
-
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_elx5j"]
 panorama = ExtResource("4_lttkr")
 
@@ -39,13 +34,24 @@ sky_material = SubResource("PanoramaSkyMaterial_elx5j")
 [sub_resource type="Environment" id="Environment_7xour"]
 background_mode = 2
 sky = SubResource("Sky_ywdeo")
+ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.05
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ksxyt"]
 size = Vector3(1.99805, 2.00684, 0.102295)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_34nxj"]
 bounce = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i8lod"]
+albedo_texture = ExtResource("10_pl3lg")
+uv1_scale = Vector3(10, 10, 10)
+point_size = 0.1
+
+[sub_resource type="BoxMesh" id="BoxMesh_4gcip"]
+material = SubResource("StandardMaterial3D_i8lod")
+size = Vector3(10, 1, 10)
 
 [node name="main" type="Node3D"]
 
@@ -86,27 +92,19 @@ shape = SubResource("ConcavePolygonShape3D_yxh3n")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.506515, 0.862231, 0, -0.862231, 0.506515, 0, 3, 0)
+visible = false
 light_color = Color(0.960784, 0.952941, 0.909804, 1)
 shadow_enabled = true
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.750711, -0.569616, 0.33462, 0, 0.506515, 0.862231, -0.660631, 0.647286, -0.380247, 0, 3, -6.00116)
+visible = false
 light_color = Color(0.960784, 0.952941, 0.909804, 1)
 light_energy = 0.6
 shadow_enabled = true
 
 [node name="player" parent="." instance=ExtResource("1_a7ose")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55026, 4)
-
-[node name="Shop" type="StaticBody3D" parent="."]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Shop"]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 5.94116, -27.6803)
-mesh = SubResource("BoxMesh_4611m")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Shop"]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 5.94116, -27.6803)
-shape = SubResource("ConcavePolygonShape3D_67ygj")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_7xour")
@@ -166,7 +164,7 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -14.1889, -0.0433266, -4.2
 player = NodePath("../../player")
 
 [node name="Mirror" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000441074, 1.91034, -22.6297)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000441074, 1.91034, -16.295)
 
 [node name="Mirror" type="Node3D" parent="Mirror"]
 script = ExtResource("6_nt65x")
@@ -178,15 +176,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00317383, -0.00439453, -0.0
 shape = SubResource("BoxShape3D_ksxyt")
 
 [node name="fish" parent="." instance=ExtResource("7_p3lnd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0214584, 4.10748, -22.3463)
-
-[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="fish"]
-stream = ExtResource("8_0irxt")
-unit_size = 2.0
-
-[node name="house" parent="." instance=ExtResource("8_3mivp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, -11)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0214584, 4.10748, -16.5264)
 
 [node name="ball" parent="." instance=ExtResource("9_k3ktp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 8.28301, -17)
 physics_material_override = SubResource("PhysicsMaterial_34nxj")
+
+[node name="house" parent="." instance=ExtResource("8_3mivp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.88177, 0.335269, -19.91)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18.5562, 0)
+mesh = SubResource("BoxMesh_4gcip")
