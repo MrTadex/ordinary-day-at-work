@@ -7,12 +7,11 @@ extends StaticBody3D
 func clicked():
 	if _animator.animation == "On":
 		_animator.play("Off")
-		Eventer.call_event("Stop Alarm")
+		get_tree().call_group("EventListeners", "_on_event", "Stop Alarm")
 	elif _animator.animation == "Off":
 		_animator.play("On")
-		Eventer.call_event("Start Alarm")
+		get_tree().call_group("EventListeners", "_on_event", "Start Alarm")
 
-
-func _on_eventer_event(eventName):
+func _on_event(eventName):
 	if eventName == "Start" and _animator.animation == "Off":
-		Eventer.call_event("Stop Alarm")
+		get_tree().call_group("EventListeners", "_on_event", "Start Alarm")

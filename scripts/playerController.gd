@@ -58,7 +58,7 @@ func _physics_process(delta):
 func _process(_delta):
 	_camera.position = Vector3(position.x, position.y + 0.6, position.z)
 	
-	print(_raycast.get_collider())
+	#print(_raycast.get_collider())
 	if _raycast.get_collider():
 		if _raycast.get_collider().name == 'fish':
 			_audioNarrator.stream = array[0]

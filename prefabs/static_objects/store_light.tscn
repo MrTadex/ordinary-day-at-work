@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://b443u28fysqbm"]
+
+[ext_resource type="Texture2D" uid="uid://beaqjtyogunrd" path="res://resources/objects/luč stropna.png" id="1_1bldk"]
+[ext_resource type="Script" path="res://scripts/store_light.gd" id="1_2ta6u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_705de"]
+atlas = ExtResource("1_1bldk")
+region = Rect2(0, 0, 1864, 1919)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ncbi"]
+atlas = ExtResource("1_1bldk")
+region = Rect2(0, 1919, 1864, 1919)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vt6wh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_705de")
+}],
+"loop": true,
+"name": &"Off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ncbi")
+}],
+"loop": true,
+"name": &"On",
+"speed": 5.0
+}]
+
+[node name="store_light" type="Node3D"]
+script = ExtResource("1_2ta6u")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+pixel_size = 0.0001
+alpha_cut = 2
+sprite_frames = SubResource("SpriteFrames_vt6wh")
+animation = &"On"
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+light_color = Color(1, 0.870588, 0.666667, 1)
+light_energy = 5.0
+light_indirect_energy = 16.0
+light_size = 1.0
+light_bake_mode = 0
+shadow_enabled = true
+spot_angle = 89.99

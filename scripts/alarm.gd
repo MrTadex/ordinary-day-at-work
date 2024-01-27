@@ -15,7 +15,7 @@ func _process(delta):
 		_animation.play("Idle")
 
 
-func _on_eventer_event(eventName):
+func _on_event(eventName):
 	if eventName == "Start" or eventName == "Start Alarm":
 		alarm = true
 		
