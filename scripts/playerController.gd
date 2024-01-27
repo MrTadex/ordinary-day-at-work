@@ -52,6 +52,7 @@ func _process(delta):
 				if(_raycast.get_collider().get_class() == "RigidBody3D"):
 					held_object = _raycast.get_collider()
 					held_object.freeze = true
+					print(held_object)
 				elif(_raycast.get_collider().is_in_group("Interactable")):
 					_raycast.get_collider().clicked()
 					#print(_raycast.get_collider())
