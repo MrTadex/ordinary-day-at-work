@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bexf5s0e276kn"]
+[gd_scene load_steps=5 format=3 uid="uid://b3ey61awn25d6"]
 
 [ext_resource type="Script" path="res://scripts/objectMakeSound.gd" id="1_b5uwc"]
 [ext_resource type="Texture2D" uid="uid://dbbckp0en4dxt" path="res://resources/car.png" id="1_iuy3s"]

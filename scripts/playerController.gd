@@ -14,6 +14,8 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var _raycast:RayCast3D = _camera.get_node("./RayCast3D")
 @onready var _holdPoint:Node3D = _camera.get_node("./HoldPoint")
 
+@onready var _audio = $AudioStreamPlayer3D
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	pass
@@ -34,9 +36,12 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+		if !_audio.playing:
+			_audio.play()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
+		_audio.stop()
 
 	move_and_slide()
 	
