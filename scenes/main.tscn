@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=17 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
 [ext_resource type="Shader" path="res://shader/floor.gdshader" id="1_nogja"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c3xpomkfbgyv0" path="res://resources/skybox_02.png" id="4_lttkr"]
 [ext_resource type="PackedScene" uid="uid://dgustjqc2lpbx" path="res://prefabs/tree.tscn" id="5_putjd"]
 [ext_resource type="Script" path="res://addons/Mirror/Mirror/Mirror.gd" id="6_nt65x"]
+[ext_resource type="PackedScene" uid="uid://c187jba8cyp46" path="res://prefabs/singing_fish.tscn" id="7_p3lnd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nac1q"]
 render_priority = 0
@@ -158,14 +159,17 @@ player = NodePath("../../player")
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -14.1889, -0.0433266, -4.23288)
 player = NodePath("../../player")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.86488, -20.9046)
+[node name="Mirror" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000441074, 1.91034, -22.6297)
 
-[node name="Mirror" type="Node3D" parent="StaticBody3D"]
+[node name="Mirror" type="Node3D" parent="Mirror"]
 script = ExtResource("6_nt65x")
 ResolutionPerUnit = 1000
 MainCamPath = NodePath("../../player/Camera3D")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mirror"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00317383, -0.00439453, -0.0516357)
 shape = SubResource("BoxShape3D_ksxyt")
+
+[node name="fish" parent="." instance=ExtResource("7_p3lnd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0214584, 4.10748, -22.3463)
