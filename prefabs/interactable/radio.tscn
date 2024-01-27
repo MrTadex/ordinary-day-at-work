@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cjrtwsuwmxoik"]
 
 [ext_resource type="Script" path="res://scripts/radio_play.gd" id="1_uc381"]
-[ext_resource type="Texture2D" uid="uid://csp2s5pp03f8d" path="res://resources/objects/radijo.png" id="2_xyvcy"]
+[ext_resource type="Texture2D" uid="uid://b2c2awm1qkqbs" path="res://resources/objects/radijo.png" id="2_xyvcy"]
 [ext_resource type="Script" path="res://scripts/lookAtSprite.gd" id="3_2yh5x"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_trutb"]
@@ -19,7 +19,7 @@ texture = ExtResource("2_xyvcy")
 script = ExtResource("3_2yh5x")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-volume_db = -9.571
+volume_db = -25.905
 autoplay = true
 max_distance = 60.0
 

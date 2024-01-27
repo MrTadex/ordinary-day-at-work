@@ -4,6 +4,6 @@ extends Node
 
 
 func _process(delta):
-	if timer.time_left > 0:
-		# 
+	#if timer.time_left > 0:
+		## 
 		pass

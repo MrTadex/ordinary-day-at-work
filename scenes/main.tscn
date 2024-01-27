@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=37 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
 [ext_resource type="Texture2D" uid="uid://dbdypo0n2qh3w" path="res://resources/ui_elements/kurzor.png" id="1_hs404"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://bexf5s0e276kn" path="res://prefabs/car.tscn" id="21_0lrcf"]
 [ext_resource type="PackedScene" uid="uid://dfk2g4crwafs" path="res://prefabs/interactable/ring_bell.tscn" id="22_fo05x"]
 [ext_resource type="Script" path="res://scripts/Eventer.gd" id="23_7rvqx"]
+[ext_resource type="PackedScene" uid="uid://cjrtwsuwmxoik" path="res://prefabs/interactable/radio.tscn" id="24_rcamu"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_elx5j"]
 panorama = ExtResource("3_j2l4q")
@@ -926,3 +927,6 @@ one_shot = true
 
 [node name="Eventer" type="Node" parent="."]
 script = ExtResource("23_7rvqx")
+
+[node name="radio" parent="." instance=ExtResource("24_rcamu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.745433, 2.56349, -25.4123)

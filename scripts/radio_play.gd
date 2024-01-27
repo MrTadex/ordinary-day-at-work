@@ -12,8 +12,10 @@ func clicked():
 	if _audio.playing:
 		_audio.playing = false
 	else:
-		_audio.stream = array[randi_range(0,3)]
+		_audio.stream = array[randi_range(0,2)]
+		_audio.volume_db = -5
 		_audio.playing = true
-	
-func _process(_delta):
-	pass
+
+func _on_audio_stream_player_3d_finished():
+	_audio.stream = array[randi_range(0,2)]
+	_audio.playing = true
