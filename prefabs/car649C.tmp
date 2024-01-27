@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3ey61awn25d6"]
+[gd_scene load_steps=5 format=3 uid="uid://b3ey61awn25d6"]
 
 [ext_resource type="Script" path="res://scripts/objectMakeSound.gd" id="1_b5uwc"]
 [ext_resource type="Texture2D" uid="uid://dbbckp0en4dxt" path="res://resources/car.png" id="1_iuy3s"]
 [ext_resource type="AudioStream" uid="uid://hs0aqp00n587" path="res://resources/sound_music/car_sound.wav" id="3_ftrra"]
-[ext_resource type="AudioStream" uid="uid://cemlh7pe0rbla" path="res://resources/sound_music/player_sound/script_29_vroom.ogg" id="4_xddnc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_q7336"]
 size = Vector3(1.10847, 1.3777, 1)
@@ -29,9 +28,5 @@ stream = ExtResource("3_ftrra")
 volume_db = -5.0
 max_db = 0.0
 max_distance = 15.0
-
-[node name="AudioStreamPlayer_P" type="AudioStreamPlayer" parent="AudioStreamPlayer3D"]
-stream = ExtResource("4_xddnc")
-volume_db = 5.0
 
 [connection signal="finished" from="AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]
