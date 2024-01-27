@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6t3p0fihhccw"
-path.s3tc="res://.godot/imported/intercom.png-98e23f809503f2d40629b954382a7da0.s3tc.ctex"
+uid="uid://c1dwaoyxnpo2q"
+path.s3tc="res://.godot/imported/grass.png-094a35ba07bbcb73e591b9af9b936e57.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://resources/objects/intercom.png"
-dest_files=["res://.godot/imported/intercom.png-98e23f809503f2d40629b954382a7da0.s3tc.ctex"]
+source_file="res://resources/textures/grass.png"
+dest_files=["res://.godot/imported/grass.png-094a35ba07bbcb73e591b9af9b936e57.s3tc.ctex"]
 
 [params]
 

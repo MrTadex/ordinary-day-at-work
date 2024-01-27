@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=31 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
 [ext_resource type="Texture2D" uid="uid://dbdypo0n2qh3w" path="res://resources/ui_elements/kurzor.png" id="1_hs404"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://addons/Mirror/Mirror/Mirror.gd" id="6_nt65x"]
 [ext_resource type="PackedScene" uid="uid://c187jba8cyp46" path="res://prefabs/interactable/singing_fish.tscn" id="7_p3lnd"]
 [ext_resource type="PackedScene" uid="uid://dv8d25yq1je34" path="res://prefabs/house.tscn" id="8_3mivp"]
+[ext_resource type="Texture2D" uid="uid://c1dwaoyxnpo2q" path="res://resources/textures/grass.png" id="9_brbew"]
 [ext_resource type="PackedScene" path="res://prefabs/objects/ball.tscn" id="9_k3ktp"]
 [ext_resource type="Texture2D" uid="uid://6i41ddtgls64" path="res://resources/textures/cabin wall.jpg" id="10_1d80j"]
 [ext_resource type="PackedScene" uid="uid://cdvk3t7kb8c7c" path="res://prefabs/objects/beans.tscn" id="10_b18vh"]
@@ -16,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dsdpiy4qsh41o" path="res://prefabs/shelf.tscn" id="12_00r37"]
 [ext_resource type="PackedScene" uid="uid://cmssui21mqdhn" path="res://prefabs/counter.tscn" id="13_kc2k6"]
 [ext_resource type="PackedScene" uid="uid://dr3wokdj1k7fe" path="res://prefabs/door.tscn" id="14_c7doo"]
+[ext_resource type="PackedScene" uid="uid://fjlxt2v2be5g" path="res://prefabs/static_objects/intercom.tscn" id="17_liwq8"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_elx5j"]
 panorama = ExtResource("3_j2l4q")
@@ -31,6 +33,11 @@ ambient_light_source = 3
 ambient_light_color = Color(0.85098, 0.815686, 0.772549, 1)
 ambient_light_sky_contribution = 0.15
 ambient_light_energy = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iqi58"]
+albedo_texture = ExtResource("9_brbew")
+uv1_scale = Vector3(10, 10, 10)
+uv1_triplanar = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nac1q"]
 render_priority = 0
@@ -334,6 +341,7 @@ player = NodePath("../../../player")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="World/Floor"]
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_iqi58")
 mesh = SubResource("PlaneMesh_gjccg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/Floor"]
@@ -397,4 +405,7 @@ light_color = Color(0.831373, 0.8, 0.647059, 1)
 shadow_enabled = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Light"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.4717, 4.31845, -23.1561)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.4717, 4.27679, -23.1561)
+
+[node name="intercom" parent="." instance=ExtResource("17_liwq8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.58905, 2.64559, -34.3316)

@@ -40,7 +40,7 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-func _process(delta):
+func _process(_delta):
 	_camera.position = Vector3(position.x, position.y + 0.6, position.z)
 	
 	if Input.is_action_just_pressed("left_click"):
