@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=25 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
 [ext_resource type="Texture2D" uid="uid://dbdypo0n2qh3w" path="res://resources/ui_elements/kurzor.png" id="1_hs404"]
@@ -6,10 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://d0t1t8dr3o7ws" path="res://resources/skybox_05.png" id="3_j2l4q"]
 [ext_resource type="PackedScene" uid="uid://dgustjqc2lpbx" path="res://prefabs/tree.tscn" id="5_putjd"]
 [ext_resource type="Script" path="res://addons/Mirror/Mirror/Mirror.gd" id="6_nt65x"]
-[ext_resource type="PackedScene" uid="uid://c187jba8cyp46" path="res://prefabs/singing_fish.tscn" id="7_p3lnd"]
+[ext_resource type="PackedScene" uid="uid://c187jba8cyp46" path="res://prefabs/interactable/singing_fish.tscn" id="7_p3lnd"]
 [ext_resource type="PackedScene" uid="uid://dv8d25yq1je34" path="res://prefabs/house.tscn" id="8_3mivp"]
-[ext_resource type="PackedScene" uid="uid://cj0h6vq4imwpy" path="res://prefabs/ball.tscn" id="9_k3ktp"]
+[ext_resource type="PackedScene" path="res://prefabs/objects/ball.tscn" id="9_k3ktp"]
 [ext_resource type="PackedScene" uid="uid://cdvk3t7kb8c7c" path="res://prefabs/objects/beans.tscn" id="10_b18vh"]
+[ext_resource type="PackedScene" uid="uid://bteobam7ogikl" path="res://prefabs/window.tscn" id="11_67w7t"]
+[ext_resource type="PackedScene" uid="uid://dsdpiy4qsh41o" path="res://prefabs/shelf.tscn" id="12_00r37"]
+[ext_resource type="PackedScene" uid="uid://cmssui21mqdhn" path="res://prefabs/counter.tscn" id="13_kc2k6"]
+[ext_resource type="PackedScene" uid="uid://dr3wokdj1k7fe" path="res://prefabs/door.tscn" id="14_c7doo"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_elx5j"]
 panorama = ExtResource("3_j2l4q")
@@ -40,11 +44,17 @@ center_offset = Vector3(0, 0.01, 0)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_yxh3n"]
 data = PackedVector3Array(1, 0.01, 1, -1, 0.01, 1, 1, 0.01, -1, -1, 0.01, 1, -1, 0.01, -1, 1, 0.01, -1)
 
+[sub_resource type="BoxMesh" id="BoxMesh_dhid1"]
+size = Vector3(0.125, 2, 2)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nhvc4"]
+data = PackedVector3Array(-0.0625, 1, 1, 0.0625, 1, 1, -0.0625, -1, 1, 0.0625, 1, 1, 0.0625, -1, 1, -0.0625, -1, 1, 0.0625, 1, -1, -0.0625, 1, -1, 0.0625, -1, -1, -0.0625, 1, -1, -0.0625, -1, -1, 0.0625, -1, -1, 0.0625, 1, 1, 0.0625, 1, -1, 0.0625, -1, 1, 0.0625, 1, -1, 0.0625, -1, -1, 0.0625, -1, 1, -0.0625, 1, -1, -0.0625, 1, 1, -0.0625, -1, -1, -0.0625, 1, 1, -0.0625, -1, 1, -0.0625, -1, -1, 0.0625, 1, 1, -0.0625, 1, 1, 0.0625, 1, -1, -0.0625, 1, 1, -0.0625, 1, -1, 0.0625, 1, -1, -0.0625, -1, 1, 0.0625, -1, 1, -0.0625, -1, -1, 0.0625, -1, 1, 0.0625, -1, -1, -0.0625, -1, -1)
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_34nxj"]
 bounce = 0.5
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ksxyt"]
-size = Vector3(1.99805, 2.00684, 0.102295)
+size = Vector3(1.00098, 2.00684, 0.102295)
 
 [node name="main" type="Node3D"]
 
@@ -84,7 +94,28 @@ environment = SubResource("Environment_7xour")
 [node name="house" parent="World" instance=ExtResource("8_3mivp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.88177, 0.335269, -19.91)
 
-[node name="Forest" type="Node3D" parent="World"]
+[node name="window" parent="World" instance=ExtResource("11_67w7t")]
+transform = Transform3D(1, 0, 0, 0, 1.1, 0, 0, 0, 1, -1.89188, 2.61116, -20.7613)
+
+[node name="window2" parent="World" instance=ExtResource("11_67w7t")]
+transform = Transform3D(1, 0, 0, 0, 1.1, 0, 0, 0, 1, 2.55104, 2.61116, -20.7613)
+
+[node name="shelf" parent="World" instance=ExtResource("12_00r37")]
+transform = Transform3D(-2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, -5.5, 1.5, -24.1442)
+
+[node name="shelf3" parent="World" instance=ExtResource("12_00r37")]
+transform = Transform3D(-0.5, 0, 4.37114e-08, 0, 0.5, 0, -4.37114e-08, 0, -0.5, 0.179569, 1.5, -25.6442)
+
+[node name="shelf4" parent="World" instance=ExtResource("12_00r37")]
+transform = Transform3D(0.5, 0, -8.74228e-08, 0, 0.5, 0, 8.74228e-08, 0, 0.5, 0.551886, 1.5, -26.499)
+
+[node name="shelf2" parent="World" instance=ExtResource("12_00r37")]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 6.18683, 1.5, -24.5175)
+
+[node name="counter" parent="World" instance=ExtResource("13_kc2k6")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -3.67685, 1.43555, -33.4007)
+
+[node name="Forest" type="Node" parent="World"]
 
 [node name="tree" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -16, 0.957879, -15.9457)
@@ -138,6 +169,162 @@ player = NodePath("../../../player")
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -14.1889, -0.0433266, -4.23288)
 player = NodePath("../../../player")
 
+[node name="tree14" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 24.1737, 0.957879, -15.9457)
+player = NodePath("../../../player")
+
+[node name="tree15" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 18.1735, 0.957879, -15.9457)
+player = NodePath("../../../player")
+
+[node name="tree16" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 18.1735, 0.957879, -11.4856)
+player = NodePath("../../../player")
+
+[node name="tree17" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 21.3271, 0.957879, -11.4856)
+player = NodePath("../../../player")
+
+[node name="tree18" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 25.1826, 0.957879, -11.4856)
+player = NodePath("../../../player")
+
+[node name="tree19" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 25.1826, 0.957879, -7.33938)
+player = NodePath("../../../player")
+
+[node name="tree20" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 18.647, 0.957879, -7.33938)
+player = NodePath("../../../player")
+
+[node name="tree21" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 14.1941, 0.957879, -9.12752)
+player = NodePath("../../../player")
+
+[node name="tree22" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 14.1941, 0.957879, -11.9067)
+player = NodePath("../../../player")
+
+[node name="tree23" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 14.1941, 0.957879, -16.1696)
+player = NodePath("../../../player")
+
+[node name="tree24" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 14.1941, 0.957879, -5.66145)
+player = NodePath("../../../player")
+
+[node name="tree25" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 19.4944, 0.957879, -5.66145)
+player = NodePath("../../../player")
+
+[node name="tree26" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 25.9848, -0.0433266, -4.23288)
+player = NodePath("../../../player")
+
+[node name="tree27" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 22.1848, 0.957879, -31.9752)
+player = NodePath("../../../player")
+
+[node name="tree28" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 16.1846, 0.957879, -31.9752)
+player = NodePath("../../../player")
+
+[node name="tree29" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 16.1846, 0.957879, -27.5151)
+player = NodePath("../../../player")
+
+[node name="tree30" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 19.3382, 0.957879, -27.5151)
+player = NodePath("../../../player")
+
+[node name="tree31" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 23.1937, 0.957879, -27.5151)
+player = NodePath("../../../player")
+
+[node name="tree32" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 23.1937, 0.957879, -23.3689)
+player = NodePath("../../../player")
+
+[node name="tree33" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 16.6581, 0.957879, -23.3689)
+player = NodePath("../../../player")
+
+[node name="tree34" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 12.2052, 0.957879, -25.157)
+player = NodePath("../../../player")
+
+[node name="tree35" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 12.2052, 0.957879, -27.9362)
+player = NodePath("../../../player")
+
+[node name="tree36" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 12.2052, 0.957879, -32.1991)
+player = NodePath("../../../player")
+
+[node name="tree37" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 12.2052, 0.957879, -21.6909)
+player = NodePath("../../../player")
+
+[node name="tree38" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 17.5055, 0.957879, -21.6909)
+player = NodePath("../../../player")
+
+[node name="tree39" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 23.9959, -0.0433266, -20.2624)
+player = NodePath("../../../player")
+
+[node name="tree40" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -14.0664, 0.957879, -30.445)
+player = NodePath("../../../player")
+
+[node name="tree41" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -20.0666, 0.957879, -30.445)
+player = NodePath("../../../player")
+
+[node name="tree42" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -20.0666, 0.957879, -25.985)
+player = NodePath("../../../player")
+
+[node name="tree43" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -16.913, 0.957879, -25.985)
+player = NodePath("../../../player")
+
+[node name="tree44" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -13.0575, 0.957879, -25.985)
+player = NodePath("../../../player")
+
+[node name="tree45" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -13.0575, 0.957879, -21.8387)
+player = NodePath("../../../player")
+
+[node name="tree46" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -19.5931, 0.957879, -21.8387)
+player = NodePath("../../../player")
+
+[node name="tree47" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -24.046, 0.957879, -23.6269)
+player = NodePath("../../../player")
+
+[node name="tree48" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -24.046, 0.957879, -26.406)
+player = NodePath("../../../player")
+
+[node name="tree49" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -24.046, 0.957879, -30.6689)
+player = NodePath("../../../player")
+
+[node name="tree50" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -24.046, 0.957879, -20.1608)
+player = NodePath("../../../player")
+
+[node name="tree51" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -18.7457, 0.957879, -20.1608)
+player = NodePath("../../../player")
+
+[node name="tree52" parent="World/Forest" node_paths=PackedStringArray("player") instance=ExtResource("5_putjd")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -12.2553, -0.0433266, -18.7322)
+player = NodePath("../../../player")
+
 [node name="Floor" type="StaticBody3D" parent="World"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="World/Floor"]
@@ -148,26 +335,48 @@ mesh = SubResource("PlaneMesh_gjccg")
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_yxh3n")
 
+[node name="ClothingBooth" type="StaticBody3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0683, 2.34414, -33.5274)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="World/ClothingBooth"]
+mesh = SubResource("BoxMesh_dhid1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/ClothingBooth"]
+shape = SubResource("ConcavePolygonShape3D_nhvc4")
+
 [node name="Items" type="Node" parent="."]
 
 [node name="fish" parent="Items" instance=ExtResource("7_p3lnd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.17096, 2.74855, -20.5211)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.92038, 3.48112, -32.5516)
 
 [node name="ball" parent="Items" instance=ExtResource("9_k3ktp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 8.28301, -17)
 physics_material_override = SubResource("PhysicsMaterial_34nxj")
 
 [node name="Mirror" type="StaticBody3D" parent="Items"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5623, 2.13767, -20.5434)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.92044, 2.28509, -34.4889)
 
 [node name="Mirror" type="Node3D" parent="Items/Mirror"]
 script = ExtResource("6_nt65x")
+size = Vector2(1, 2)
 ResolutionPerUnit = 1000
 MainCamPath = NodePath("../../../player/Camera3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Items/Mirror"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00317383, -0.00439453, -0.0516357)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00122118, -0.00439453, -0.0516357)
 shape = SubResource("BoxShape3D_ksxyt")
+
+[node name="beans" parent="Items" instance=ExtResource("10_b18vh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, -18)
+
+[node name="door" parent="Items" instance=ExtResource("14_c7doo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18531, 1.09048, -20.8515)
+open_deg = -110.0
+
+[node name="door2" parent="Items" instance=ExtResource("14_c7doo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1723, 1.09048, -34.7129)
+open = false
+open_deg = 110.0
 
 [node name="Light" type="Node" parent="."]
 
@@ -183,6 +392,3 @@ visible = false
 light_color = Color(0.960784, 0.952941, 0.909804, 1)
 light_energy = 0.6
 shadow_enabled = true
-
-[node name="beans" parent="." instance=ExtResource("10_b18vh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, -18)

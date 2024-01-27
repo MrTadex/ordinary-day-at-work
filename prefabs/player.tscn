@@ -9,6 +9,7 @@
 disable_mode = 2
 collision_layer = 2
 collision_mask = 3
+safe_margin = 0.002
 script = ExtResource("1_rrrvu")
 mouse_sensitivity = 0.1
 
@@ -19,7 +20,7 @@ current = true
 fov = 90.0
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
-target_position = Vector3(0, 0, -3)
+target_position = Vector3(0, 0, -2)
 collision_mask = 7
 
 [node name="HoldPoint" type="Node3D" parent="Camera3D"]
