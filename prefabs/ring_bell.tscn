@@ -1,12 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://c187jba8cyp46"]
+[gd_scene load_steps=9 format=3 uid="uid://dfk2g4crwafs"]
 
-[ext_resource type="Script" path="res://scripts/singing_fish.gd" id="1_3gvjc"]
 [ext_resource type="Texture2D" uid="uid://blby6anqsfxyv" path="res://resources/singing_fish.png" id="1_33ylr"]
-[ext_resource type="AudioStream" uid="uid://dk2sswo7vumwh" path="res://resources/sound_music/sea shanty.wav" id="2_4r3iw"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vftp5"]
-atlas = ExtResource("1_33ylr")
-region = Rect2(0, 0, 290, 202)
+[ext_resource type="Script" path="res://scripts/lookAt.gd" id="1_qiwal"]
+[ext_resource type="Texture2D" uid="uid://unaban5n83ow" path="res://resources/objects/zvončič.png" id="2_km5mn"]
+[ext_resource type="AudioStream" uid="uid://bnjy8gbp1rdsc" path="res://resources/sound_music/ring_bell.wav" id="4_gjowe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4vbyl"]
 atlas = ExtResource("1_33ylr")
@@ -20,7 +17,7 @@ region = Rect2(0, 404, 290, 202)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vftp5")
+"texture": ExtResource("2_km5mn")
 }],
 "loop": true,
 "name": &"Idle",
@@ -39,11 +36,11 @@ animations = [{
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_trutb"]
-size = Vector3(2.58594, 1.69067, 1)
+size = Vector3(2.58594, 3.11351, 1)
 
-[node name="fish" type="StaticBody3D" groups=["Interactable"]]
-script = ExtResource("1_3gvjc")
-max_time = 30
+[node name="ring_bell" type="StaticBody3D" groups=["Interactable"]]
+script = ExtResource("1_qiwal")
+player = NodePath("")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 shaded = true
@@ -53,14 +50,11 @@ animation = &"Idle"
 autoplay = "Idle"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("2_4r3iw")
+stream = ExtResource("4_gjowe")
 max_distance = 15.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.3, 0.107422, 0.0252686, 0)
+transform = Transform3D(4.285, 0, 0, 0, 3.16, 0, 0, 0, 0.901, -0.0846947, -0.460027, 0)
 shape = SubResource("BoxShape3D_trutb")
 
-[node name="Timer" type="Timer" parent="."]
-
 [connection signal="finished" from="AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
