@@ -27,6 +27,7 @@ func _physics_process(delta):
 
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		_audio.stop()
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
@@ -36,8 +37,9 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
-		if !_audio.playing:
+		if !_audio.playing and is_on_floor():
 			_audio.play()
+
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
@@ -65,7 +67,6 @@ func _process(_delta):
 	if held_object:
 		held_object.position = _holdPoint.global_transform.origin
 	
-
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		

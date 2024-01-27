@@ -9,27 +9,24 @@
 [ext_resource type="PackedScene" uid="uid://c187jba8cyp46" path="res://prefabs/interactable/singing_fish.tscn" id="7_p3lnd"]
 [ext_resource type="PackedScene" uid="uid://dv8d25yq1je34" path="res://prefabs/house.tscn" id="8_3mivp"]
 [ext_resource type="Texture2D" uid="uid://c1dwaoyxnpo2q" path="res://resources/textures/grass.png" id="9_brbew"]
-[ext_resource type="PackedScene" path="res://prefabs/objects/ball.tscn" id="9_k3ktp"]
+[ext_resource type="PackedScene" uid="uid://bnvl4sqvqypg6" path="res://prefabs/objects/ball.tscn" id="9_k3ktp"]
 [ext_resource type="Texture2D" uid="uid://6i41ddtgls64" path="res://resources/textures/cabin wall.jpg" id="10_1d80j"]
 [ext_resource type="PackedScene" uid="uid://cdvk3t7kb8c7c" path="res://prefabs/objects/beans.tscn" id="10_b18vh"]
-[ext_resource type="PackedScene" uid="uid://bteobam7ogikl" path="res://prefabs/window.tscn" id="11_67w7t"]
+[ext_resource type="PackedScene" path="res://prefabs/window.tscn" id="11_67w7t"]
 [ext_resource type="Texture2D" uid="uid://b44v443dy3hay" path="res://resources/objects/zaveza.png" id="11_p45aq"]
-[ext_resource type="PackedScene" uid="uid://dsdpiy4qsh41o" path="res://prefabs/shelf.tscn" id="12_00r37"]
-[ext_resource type="PackedScene" uid="uid://cmssui21mqdhn" path="res://prefabs/counter.tscn" id="13_kc2k6"]
-[ext_resource type="PackedScene" path="res://prefabs/hedge.tscn" id="14_1q581"]
-[ext_resource type="PackedScene" uid="uid://dr3wokdj1k7fe" path="res://prefabs/door.tscn" id="14_c7doo"]
-[ext_resource type="PackedScene" uid="uid://fjlxt2v2be5g" path="res://prefabs/static_objects/intercom.tscn" id="17_liwq8"]
+[ext_resource type="PackedScene" path="res://prefabs/shelf.tscn" id="12_00r37"]
+[ext_resource type="PackedScene" path="res://prefabs/counter.tscn" id="13_kc2k6"]
+[ext_resource type="PackedScene" uid="uid://bwwd1ts2ry1v8" path="res://prefabs/hedge.tscn" id="14_1q581"]
+[ext_resource type="PackedScene" path="res://prefabs/door.tscn" id="14_c7doo"]
+[ext_resource type="PackedScene" uid="uid://dnvm75kd26qa6" path="res://prefabs/static_objects/intercom.tscn" id="17_liwq8"]
 [ext_resource type="PackedScene" uid="uid://yduall5llvun" path="res://prefabs/fence.tscn" id="19_v8lx4"]
 [ext_resource type="PackedScene" uid="uid://b3ey61awn25d6" path="res://prefabs/car.tscn" id="21_0lrcf"]
 [ext_resource type="PackedScene" uid="uid://dfk2g4crwafs" path="res://prefabs/interactable/ring_bell.tscn" id="22_fo05x"]
 [ext_resource type="Script" path="res://scripts/Eventer.gd" id="23_7rvqx"]
-[ext_resource type="PackedScene" path="res://prefabs/interactable/radio.tscn" id="24_rcamu"]
+[ext_resource type="PackedScene" uid="uid://cjrtwsuwmxoik" path="res://prefabs/interactable/radio.tscn" id="24_rcamu"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_elx5j"]
-resource_local_to_scene = false
-resource_name = ""
 panorama = ExtResource("3_j2l4q")
-filter = true
 
 [sub_resource type="Sky" id="Sky_ywdeo"]
 sky_material = SubResource("PanoramaSkyMaterial_elx5j")
@@ -926,18 +923,7 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.4717, 4.27679, -23.1561)
 
 [node name="Timer" type="Timer" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-editor_description = ""
-process_callback = 1
-wait_time = 1.0
 one_shot = true
-autostart = false
-script = null
 
 [node name="Eventer" type="Node" parent="."]
 script = ExtResource("23_7rvqx")
