@@ -43,6 +43,7 @@ size = Vector3(2.58594, 1.69067, 1)
 
 [node name="fish" type="StaticBody3D" groups=["Interactable"]]
 script = ExtResource("1_3gvjc")
+max_time = 30
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 shaded = true
@@ -58,3 +59,8 @@ max_distance = 15.0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.3, 0.107422, 0.0252686, 0)
 shape = SubResource("BoxShape3D_trutb")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="finished" from="AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
