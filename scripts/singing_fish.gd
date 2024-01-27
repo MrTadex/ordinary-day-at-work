@@ -44,5 +44,5 @@ func _on_audio_stream_player_3d_finished():
 
 func _on_input_event(camera, event, position, normal, shape_idx):
 	print('true')
-	_beforeTouch.stream = preload("res://resources/sound_music/alarm_noise.wav")
-	_beforeTouch.playing = true
+	#_beforeTouch.stream = preload("res://resources/sound_music/alarm_noise.wav")
+	#_beforeTouch.playing = true

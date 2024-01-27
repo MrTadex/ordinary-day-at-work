@@ -14,7 +14,15 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var _raycast:RayCast3D = _camera.get_node("./RayCast3D")
 @onready var _holdPoint:Node3D = _camera.get_node("./HoldPoint")
 
-@onready var _audio = $AudioStreamPlayer3D
+@onready var _audio = $AudioStreamPlayer3DWalk
+
+var array = [
+				preload("res://resources/sound_music/player_sound/script_16_fish_5_laugh1.ogg"),
+				preload("res://resources/sound_music/radio_2.ogg"),
+				preload("res://resources/sound_music/radio_3.ogg")
+			]
+
+@onready var _audioNarrator = $AudioStreamPlayerSartUp
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -49,6 +57,13 @@ func _physics_process(delta):
 	
 func _process(_delta):
 	_camera.position = Vector3(position.x, position.y + 0.6, position.z)
+	
+	print(_raycast.get_collider())
+	if _raycast.get_collider():
+		if _raycast.get_collider().name == 'fish':
+			_audioNarrator.stream = array[0]
+			_audioNarrator.volume_db = -5
+			_audioNarrator.playing = true
 	
 	if Input.is_action_just_pressed("left_click"):
 		if held_object:
