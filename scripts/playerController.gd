@@ -37,7 +37,7 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
-		if !_audio.playing and is_on_floor():
+		if !_audio.playing and is_on_floor() and velocity.y == 0:
 			_audio.play()
 
 	else:
