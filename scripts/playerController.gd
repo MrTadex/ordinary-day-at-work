@@ -33,7 +33,7 @@ var array = [
 				preload("res://resources/sound_music/player_sound/script_16_fish_5_laugh1.ogg"),
 				preload("res://resources/sound_music/player_sound/script_39_luka_on_it.ogg"),
 				preload("res://resources/sound_music/player_sound/Ring_bell_first.ogg"),
-				preload("res://resources/sound_music/player_sound/script_16_fish_5_laugh1.ogg")
+				preload("res://resources/sound_music/player_sound/script_13_fish_2.ogg")
 			]
 
 func _ready():
@@ -101,7 +101,7 @@ func _process(_delta):
 		if _audioReact.playing == false:
 			if _raycast.get_collider().name.contains("panties"):
 				get_tree().call_group("EventListeners", "_on_event", "SeePanties")
-			if _raycast.get_collider().name.contains("fish"):
+			if _raycast.get_collider().name == "fish":
 				get_tree().call_group("EventListeners", "_on_event", "SeeFish")
 	
 func _unhandled_input(event):
@@ -135,10 +135,11 @@ func _on_event(eventName):
 			_audioPlayer.playing = true
 		"SeeFish":
 			get_tree().call_group("EventListeners", "_on_event", "NarratorFishReact")
-			#_audioReact.stream = array[6]
-			#_audioReact.playing = true
 		"SeePanties":
 			_audioReact.stream = array[3]
 			_audioReact.playing = true
+		"Player intro fish react":
+			_audioPlayer.stream = array[6]
+			_audioPlayer.playing = true
 		"End":
 			queue_free()

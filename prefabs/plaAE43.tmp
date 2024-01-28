@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://pk368nidnrxg"]
+
+[ext_resource type="Script" path="res://scripts/playerController.gd" id="1_rrrvu"]
+[ext_resource type="Texture2D" uid="uid://cfidgn48bj2r4" path="res://resources/player.png" id="2_jqv4v"]
+[ext_resource type="AudioStream" uid="uid://c7vy14msmgg1h" path="res://resources/sound_music/walk.wav" id="3_48fcs"]
+[ext_resource type="AudioStream" uid="uid://bprvx2ioed3c0" path="res://resources/sound_music/player_sound/script_28_great_work_day.ogg" id="4_16kxo"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1xf1e"]
+
+[node name="player" type="CharacterBody3D" groups=["EventListeners", "Player"]]
+disable_mode = 2
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_rrrvu")
+mouse_sensitivity = 0.1
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+top_level = true
+current = true
+fov = 90.0
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
+target_position = Vector3(0, 0, -3)
+collision_mask = 7
+
+[node name="HoldPoint" type="Node3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_1xf1e")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0893214, 0.00496233, 0)
+pixel_size = 0.0015
+shaded = true
+alpha_cut = 2
+texture = ExtResource("2_jqv4v")
+
+[node name="AudioListener3D" type="AudioListener3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+
+[node name="AudioStreamPlayer3DWalk" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_48fcs")
+volume_db = -10.0
+max_db = 0.0
+
+[node name="AudioStreamPlayer3DReact" type="AudioStreamPlayer3D" parent="."]
+
+[node name="AudioStreamPlayer3DStartUp" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_16kxo")
+autoplay = true

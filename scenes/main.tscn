@@ -1852,10 +1852,9 @@ script = ExtResource("23_7rvqx")
 
 [node name="End" type="Node" parent="."]
 
-[node name="nina_spawnPoint" type="Node3D" parent="End" node_paths=PackedStringArray("end") groups=["EventListeners"]]
+[node name="nina_spawnPoint" type="Node3D" parent="End" groups=["EventListeners"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.415227, 1, -20.447)
 script = ExtResource("49_rubdf")
-end = NodePath("..")
 
 [node name="Camera3D" type="Camera3D" parent="End"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.426121, 2.3025, -24.1676)
