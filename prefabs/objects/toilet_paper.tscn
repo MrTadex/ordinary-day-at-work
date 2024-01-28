@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scripts/lookAtSprite.gd" id="2_om7t2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t4j8h"]
-size = Vector3(1.34692, 0.721619, 1)
+size = Vector3(1.34692, 0.811493, 0.596558)
 
 [node name="toilet_paper" type="RigidBody3D"]
 collision_layer = 12
@@ -23,7 +23,7 @@ texture = ExtResource("1_fwxpi")
 script = ExtResource("2_om7t2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.358778, 0, 0, 0, 0.545288, 0, 0, 0, 0.242294, -4.37964e-05, -0.0021438, 0)
+transform = Transform3D(0.311622, 0, 0, 0, 0.401946, 0, 0, 0, 0.242294, 0, -0.0180623, 0)
 shape = SubResource("BoxShape3D_t4j8h")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]

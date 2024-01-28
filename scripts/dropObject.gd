@@ -10,5 +10,5 @@ var array = [
 func _on_body_entered(_body):
 	_audio.stream = array[randi_range(0,1)]
 	#_audio.volume_db = 15
-	_audio.volume_db = -10
+	_audio.volume_db = -15
 	_audio.playing = true

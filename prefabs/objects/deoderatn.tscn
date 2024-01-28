@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgidw1g681n1d"]
+[gd_scene load_steps=5 format=3 uid="uid://kgaj3gdtwqxg"]
 
 [ext_resource type="Texture2D" uid="uid://c8b03otodfdqk" path="res://resources/objects/deodoratn.png" id="1_pdp55"]
 [ext_resource type="Script" path="res://scripts/dropObject.gd" id="1_yuo48"]
