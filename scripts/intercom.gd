@@ -8,7 +8,7 @@ extends StaticBody3D
 # Audio files of narrator
 var Audio_1 = preload("res://resources/sound_music/narrator/script_33_nina_bloody_hell.ogg")
 var Audio_2 = preload("res://resources/sound_music/narrator/intro.wav")
-var Audio_2 = preload("res://resources/sound_music/narrator/intro.wav")
+var Audio_3 = preload("res://resources/sound_music/narrator/intro.wav")
 #
 
 var play = null
@@ -45,6 +45,7 @@ func _on_event(eventName):
 	
 	if eventName == "NarratorFishReact":
 		
+		pass
 
 func _on_timer_timeout():
 	start = true

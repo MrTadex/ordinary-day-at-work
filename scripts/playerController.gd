@@ -17,7 +17,6 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var _audio = $AudioStreamPlayer3DWalk
 @onready var _audioPlayer = $AudioStreamPlayer3DStartUp
 @onready var _audioReact = $AudioStreamPlayer3DReact
-
 @onready var _timer = $Timer
 
 var jumpArray = [
@@ -128,8 +127,9 @@ func _on_event(eventName):
 			_audioPlayer.stream = array[2]
 			_audioPlayer.playing = true
 		"Player intro react":
-			_audioPlayer.stream = array[4]
-			_audioPlayer.playing = true
+			play_with_delay(array[4], 1)
+			#_audioPlayer.stream = array[4]
+			#_audioPlayer.playing = true
 		"Ring Bell Dialogue":
 			_audioPlayer.stream = array[5]
 			_audioPlayer.playing = true
@@ -142,3 +142,14 @@ func _on_event(eventName):
 			_audioReact.playing = true
 		"End":
 			queue_free()
+
+# delay func and var
+var path = null
+
+func play_with_delay(audioPath, time):
+	path = audioPath
+	_timer.start(time)
+
+func _on_timer_timeout():
+	_audioPlayer.stream = path
+	_audioPlayer.play()
