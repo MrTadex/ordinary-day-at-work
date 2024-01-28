@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dixyljc6wkstc"]
+[gd_scene load_steps=6 format=3 uid="uid://dixyljc6wkstc"]
 
+[ext_resource type="Script" path="res://scripts/dropObject.gd" id="1_dy5lx"]
 [ext_resource type="Texture2D" uid="uid://uwltg02ngiud" path="res://resources/objects/coffee.png" id="2_oqckg"]
 [ext_resource type="Script" path="res://scripts/lookAtSprite.gd" id="2_ptrfj"]
+[ext_resource type="AudioStream" uid="uid://drvicrcxd4ubx" path="res://resources/sound_music/fall_bonk_1.ogg" id="4_ma61t"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_26g64"]
 height = 0.395262
@@ -10,6 +12,9 @@ radius = 0.106715
 [node name="coffee" type="RigidBody3D"]
 collision_layer = 4
 collision_mask = 7
+max_contacts_reported = 1
+contact_monitor = true
+script = ExtResource("1_dy5lx")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 pixel_size = 0.0005
@@ -21,3 +26,9 @@ script = ExtResource("2_ptrfj")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00207876, 0)
 shape = SubResource("CylinderShape3D_26g64")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_ma61t")
+volume_db = 41.951
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

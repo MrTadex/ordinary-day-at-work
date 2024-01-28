@@ -15,3 +15,7 @@ func _process(_delta):
 		rotation_degrees.x = 0
 		rotation_degrees.y = wrapf(rotation_degrees.y, 0.0, 360.0)
 		
+
+
+func _on_beans_body_entered(body):
+	pass # Replace with function body.

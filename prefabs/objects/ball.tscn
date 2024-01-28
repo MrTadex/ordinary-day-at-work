@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bnvl4sqvqypg6"]
 
-[ext_resource type="Script" path="res://scripts/ball.gd" id="1_1sa03"]
+[ext_resource type="Script" path="res://scripts/dropObject.gd" id="1_7pkjb"]
 [ext_resource type="AudioStream" uid="uid://drvicrcxd4ubx" path="res://resources/sound_music/fall_bonk_1.ogg" id="2_eaalj"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_58nsd"]
@@ -17,7 +17,7 @@ collision_mask = 7
 physics_material_override = SubResource("PhysicsMaterial_58nsd")
 max_contacts_reported = 1
 contact_monitor = true
-script = ExtResource("1_1sa03")
+script = ExtResource("1_7pkjb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_wpd1l")

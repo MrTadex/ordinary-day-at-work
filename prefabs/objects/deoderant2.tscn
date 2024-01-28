@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgidw1g681n1d"]
+[gd_scene load_steps=5 format=3 uid="uid://cgidw1g681n1d"]
 
 [ext_resource type="Texture2D" uid="uid://c8b03otodfdqk" path="res://resources/objects/deodoratn.png" id="1_pdp55"]
+[ext_resource type="Script" path="res://scripts/dropObject.gd" id="1_yuo48"]
 [ext_resource type="Script" path="res://scripts/lookAtSprite.gd" id="2_3pmvi"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_26g64"]
@@ -10,6 +11,9 @@ radius = 0.106958
 [node name="deoderant2" type="RigidBody3D"]
 collision_layer = 4
 collision_mask = 7
+max_contacts_reported = 1
+contact_monitor = true
+script = ExtResource("1_yuo48")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.756937, 0, 0, 0, 0.551349, 0, 0, 0, 1, 0, 0, 0)
