@@ -6,4 +6,4 @@ extends StaticBody3D
 func _on_event(eventName):
 	match eventName:
 		_: 
-			print("defoult")
+			print("default")
