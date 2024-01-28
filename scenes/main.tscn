@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=74 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
 [ext_resource type="Texture2D" uid="uid://dbdypo0n2qh3w" path="res://resources/ui_elements/kurzor.png" id="1_hs404"]
@@ -48,7 +48,6 @@
 [ext_resource type="PackedScene" path="res://prefabs/objects/deoderant2.tscn" id="45_0fbbn"]
 [ext_resource type="Script" path="res://scripts/RingBellTrigger.gd" id="47_8b16u"]
 [ext_resource type="Script" path="res://scripts/nina_spawnPoint.gd" id="49_rubdf"]
-[ext_resource type="PackedScene" uid="uid://dxins27ormr5c" path="res://prefabs/objects/flour.tscn" id="50_x7pnd"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_elx5j"]
 panorama = ExtResource("3_j2l4q")
@@ -1757,181 +1756,34 @@ transform = Transform3D(-0.967674, 0, 0.252204, 0, 1, 0, -0.252204, 0, -0.967674
 transform = Transform3D(-0.967674, 0, 0.252204, 0, 1, 0, -0.252204, 0, -0.967674, -0.124492, 2.49252, -27.047)
 
 [node name="shower_gel" parent="Items/Moveble" instance=ExtResource("43_v2q68")]
-transform = Transform3D(-0.9961, 0, -0.0882336, 0, 1, 0, 0.0882336, 0, -0.9961, -1.57011, 2.71413, -26.6334)
+transform = Transform3D(-0.9961, 0, -0.0882336, 0, 1, 0, 0.0882336, 0, -0.9961, -1.57011, 2.8418, -26.6334)
 
 [node name="shower_gel2" parent="Items/Moveble" instance=ExtResource("43_v2q68")]
-transform = Transform3D(-0.9961, 0, -0.0882336, 0, 1, 0, 0.0882336, 0, -0.9961, -1.20479, 2.76984, -26.4259)
+transform = Transform3D(-0.9961, 0, -0.0882336, 0, 1, 0, 0.0882336, 0, -0.9961, -1.20479, 2.77212, -26.4259)
 
 [node name="shower_gel3" parent="Items/Moveble" instance=ExtResource("43_v2q68")]
-transform = Transform3D(-0.996513, 0, 0.0834344, 0, 1, 0, -0.0834344, 0, -0.996513, -1.20479, 2.6982, -26.8749)
+transform = Transform3D(-0.996513, 0, 0.0834344, 0, 1, 0, -0.0834344, 0, -0.996513, -1.20479, 2.75632, -26.8749)
 
 [node name="shower_gel4" parent="Items/Moveble" instance=ExtResource("43_v2q68")]
-transform = Transform3D(-0.996513, 0, 0.0834344, 0, 1, 0, -0.0834344, 0, -0.996513, -0.709373, 2.70885, -26.887)
+transform = Transform3D(-0.996513, 0, 0.0834344, 0, 1, 0, -0.0834344, 0, -0.996513, -0.709373, 2.78357, -26.887)
 
 [node name="shower_gel5" parent="Items/Moveble" instance=ExtResource("43_v2q68")]
-transform = Transform3D(0.401948, 0, 0.915662, 0, 1, 0, -0.915662, 0, 0.401948, -5.23158, 2.71617, -26.5219)
-
-[node name="shower_gel11" parent="Items/Moveble" instance=ExtResource("43_v2q68")]
-transform = Transform3D(-0.419436, 0, 0.907785, 0, 1, 0, -0.907785, 0, -0.419436, -5.33866, 2.74271, -25.878)
+transform = Transform3D(-0.996513, 0, 0.0834344, 0, 1, 0, -0.0834344, 0, -0.996513, -5.26767, 2.81385, -26.4127)
 
 [node name="shower_gel6" parent="Items/Moveble" instance=ExtResource("43_v2q68")]
 transform = Transform3D(-0.9961, 0, -0.0882336, 0, 1, 0, 0.0882336, 0, -0.9961, -2.63618, 2.72215, -26.5122)
 
 [node name="shower_gel7" parent="Items/Moveble" instance=ExtResource("43_v2q68")]
-transform = Transform3D(-0.9961, 0, -0.0882336, 0, 1, 0, 0.0882336, 0, -0.9961, -2.0985, 2.74518, -26.4259)
+transform = Transform3D(-0.9961, 0, -0.0882336, 0, 1, 0, 0.0882336, 0, -0.9961, -2.0985, 2.80976, -26.4259)
 
 [node name="shower_gel8" parent="Items/Moveble" instance=ExtResource("43_v2q68")]
-transform = Transform3D(-0.996513, 0, 0.0834344, 0, 1, 0, -0.0834344, 0, -0.996513, -2.0985, 2.68882, -26.8749)
+transform = Transform3D(-0.996513, 0, 0.0834344, 0, 1, 0, -0.0834344, 0, -0.996513, -2.0985, 2.7786, -26.8749)
 
 [node name="shower_gel9" parent="Items/Moveble" instance=ExtResource("43_v2q68")]
-transform = Transform3D(-0.996513, 0, 0.0834344, 0, 1, 0, -0.0834344, 0, -0.996513, -1.74064, 2.71321, -26.7517)
+transform = Transform3D(-0.996513, 0, 0.0834344, 0, 1, 0, -0.0834344, 0, -0.996513, -1.72419, 2.79417, -26.7503)
 
 [node name="shower_gel10" parent="Items/Moveble" instance=ExtResource("43_v2q68")]
-transform = Transform3D(-0.912791, 0, 0.408426, 0, 1, 0, -0.408426, 0, -0.912791, -5.25227, 2.71192, -26.9664)
-
-[node name="shower_gel12" parent="Items/Moveble" instance=ExtResource("43_v2q68")]
-transform = Transform3D(-0.912791, 0, 0.408426, 0, 1, 0, -0.408426, 0, -0.912791, 2.76906, 2.73501, -25.0772)
-
-[node name="shower_gel13" parent="Items/Moveble" instance=ExtResource("43_v2q68")]
-transform = Transform3D(-0.966721, 0, -0.255834, 0, 1, 0, 0.255834, 0, -0.966721, 2.44986, 2.70764, -25.8034)
-
-[node name="shower_gel14" parent="Items/Moveble" instance=ExtResource("43_v2q68")]
-transform = Transform3D(0.901531, 0, 0.432715, 0, 1, 0, -0.432715, 0, 0.901531, 2.05559, 2.70856, -25.2234)
-
-[node name="shower_gel15" parent="Items/Moveble" instance=ExtResource("43_v2q68")]
-transform = Transform3D(-0.966721, 0, -0.255834, 0, 1, 0, 0.255834, 0, -0.966721, 3.36237, 2.7327, -25.7105)
-
-[node name="detergent" parent="Items/Moveble" instance=ExtResource("45_gotxk")]
-transform = Transform3D(-0.999679, 0, 0.0253394, 0, 1, 0, -0.0253394, 0, -0.999679, 2.84093, 1.87806, -26.836)
-
-[node name="detergent2" parent="Items/Moveble" instance=ExtResource("45_gotxk")]
-transform = Transform3D(-0.999679, 0, 0.0253394, 0, 1, 0, -0.0253394, 0, -0.999679, 2.1217, 1.87104, -27.1091)
-
-[node name="detergent3" parent="Items/Moveble" instance=ExtResource("45_gotxk")]
-transform = Transform3D(-0.943657, 0, -0.330926, 0, 1, 0, 0.330926, 0, -0.943657, 2.1217, 1.87104, -26.6036)
-
-[node name="detergent4" parent="Items/Moveble" instance=ExtResource("45_gotxk")]
-transform = Transform3D(-0.943657, 0, -0.330926, 0, 1, 0, 0.330926, 0, -0.943657, 3.32457, 1.87104, -26.6036)
-
-[node name="detergent5" parent="Items/Moveble" instance=ExtResource("45_gotxk")]
-transform = Transform3D(-0.943657, 0, -0.330926, 0, 1, 0, 0.330926, 0, -0.943657, 1.53433, 1.87104, -26.6036)
-
-[node name="detergent6" parent="Items/Moveble" instance=ExtResource("45_gotxk")]
-transform = Transform3D(-0.929899, 0, 0.367816, 0, 1, 0, -0.367816, 0, -0.929899, 1.36547, 1.87104, -27.0614)
-
-[node name="detergent7" parent="Items/Moveble" instance=ExtResource("45_gotxk")]
-transform = Transform3D(-0.999679, 0, 0.0253394, 0, 1, 0, -0.0253394, 0, -0.999679, 0.280726, 1.87806, -26.836)
-
-[node name="detergent8" parent="Items/Moveble" instance=ExtResource("45_gotxk")]
-transform = Transform3D(-0.999679, 0, 0.0253394, 0, 1, 0, -0.0253394, 0, -0.999679, -0.438508, 1.87104, -27.1091)
-
-[node name="detergent9" parent="Items/Moveble" instance=ExtResource("45_gotxk")]
-transform = Transform3D(-0.943657, 0, -0.330926, 0, 1, 0, 0.330926, 0, -0.943657, -1.77117, 1.84509, -26.6093)
-
-[node name="detergent10" parent="Items/Moveble" instance=ExtResource("45_gotxk")]
-transform = Transform3D(-0.943657, 0, -0.330926, 0, 1, 0, 0.330926, 0, -0.943657, 0.764366, 1.87104, -26.6036)
-
-[node name="detergent11" parent="Items/Moveble" instance=ExtResource("45_gotxk")]
-transform = Transform3D(-0.943657, 0, -0.330926, 0, 1, 0, 0.330926, 0, -0.943657, -1.02588, 1.87104, -26.6036)
-
-[node name="detergent12" parent="Items/Moveble" instance=ExtResource("45_gotxk")]
-transform = Transform3D(-0.929899, 0, 0.367816, 0, 1, 0, -0.367816, 0, -0.929899, -1.19473, 1.87104, -27.0614)
-
-[node name="detergent13" parent="Items/Moveble" instance=ExtResource("45_gotxk")]
-transform = Transform3D(-0.943657, 0, -0.330926, 0, 1, 0, 0.330926, 0, -0.943657, -0.419931, 1.87104, -26.6036)
-
-[node name="detergent14" parent="Items/Moveble" instance=ExtResource("45_gotxk")]
-transform = Transform3D(-0.943657, 0, -0.330926, 0, 1, 0, 0.330926, 0, -0.943657, -2.21017, 1.87104, -26.6036)
-
-[node name="detergent15" parent="Items/Moveble" instance=ExtResource("45_gotxk")]
-transform = Transform3D(-0.929899, 0, 0.367816, 0, 1, 0, -0.367816, 0, -0.929899, -2.37903, 1.87104, -27.0614)
-
-[node name="beans2" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(0.155555, 0, 0.987827, 0, 1, 0, -0.987827, 0, 0.155555, -5.54877, 2.50212, -21.6405)
-
-[node name="beans3" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(0.155555, 0, 0.987827, 0, 1, 0, -0.987827, 0, 0.155555, -5.1728, 2.50212, -21.4423)
-
-[node name="beans4" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(0.517684, 0, 0.855572, 0, 1, 0, -0.855572, 0, 0.517684, -5.26781, 2.50212, -21.835)
-
-[node name="beans5" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(-0.00504392, 0, 0.999987, 0, 1, 0, -0.999987, 0, -0.00504392, -4.95657, 2.50212, -21.3655)
-
-[node name="beans6" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(-0.00504392, 0, 0.999987, 0, 1, 0, -0.999987, 0, -0.00504392, -4.95657, 2.50212, -21.9273)
-
-[node name="beans7" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(-0.00504392, 0, 0.999987, 0, 1, 0, -0.999987, 0, -0.00504392, -5.62467, 2.50212, -22.2609)
-
-[node name="beans8" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(0.302919, 0, 0.953016, 0, 1, 0, -0.953016, 0, 0.302919, -5.306, 2.50212, -22.1911)
-
-[node name="beans9" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(0.155555, 0, 0.987827, 0, 1, 0, -0.987827, 0, 0.155555, -5.54877, 2.50212, -22.7449)
-
-[node name="beans10" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(0.155555, 0, 0.987827, 0, 1, 0, -0.987827, 0, 0.155555, -5.1728, 2.50212, -22.5467)
-
-[node name="beans11" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(0.517684, 0, 0.855572, 0, 1, 0, -0.855572, 0, 0.517684, -5.26781, 2.50212, -22.9394)
-
-[node name="beans23" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(-0.00504392, 0, 0.999987, 0, 1, 0, -0.999987, 0, -0.00504392, -5.62467, 2.50212, -24.9863)
-
-[node name="beans24" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(0.302919, 0, 0.953016, 0, 1, 0, -0.953016, 0, 0.302919, -5.306, 2.50212, -24.9166)
-
-[node name="beans25" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(0.155555, 0, 0.987827, 0, 1, 0, -0.987827, 0, 0.155555, -5.01941, 2.50212, -24.9224)
-
-[node name="beans26" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(0.517684, 0, 0.855572, 0, 1, 0, -0.855572, 0, 0.517684, -4.94957, 2.50212, -24.4293)
-
-[node name="beans27" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(-0.00504392, 0, 0.999987, 0, 1, 0, -0.999987, 0, -0.00504392, -5.62467, 2.50212, -25.4205)
-
-[node name="beans28" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(0.302919, 0, 0.953016, 0, 1, 0, -0.953016, 0, 0.302919, -5.306, 2.50212, -25.3508)
-
-[node name="beans29" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(0.155555, 0, 0.987827, 0, 1, 0, -0.987827, 0, 0.155555, -5.01941, 2.50212, -25.3566)
-
-[node name="beans30" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(-0.51417, 0, 0.857688, 0, 1, 0, -0.857688, 0, -0.51417, -4.94957, 2.50212, -25.7889)
-
-[node name="beans12" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(-0.00504392, 0, 0.999987, 0, 1, 0, -0.999987, 0, -0.00504392, -4.95657, 2.50212, -22.4699)
-
-[node name="beans13" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(-0.00504392, 0, 0.999987, 0, 1, 0, -0.999987, 0, -0.00504392, -4.95657, 2.50212, -23.0317)
-
-[node name="beans14" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(-0.00504392, 0, 0.999987, 0, 1, 0, -0.999987, 0, -0.00504392, -5.62467, 2.50212, -23.3653)
-
-[node name="beans15" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(0.302919, 0, 0.953016, 0, 1, 0, -0.953016, 0, 0.302919, -5.306, 2.50212, -23.2956)
-
-[node name="beans16" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(0.155555, 0, 0.987827, 0, 1, 0, -0.987827, 0, 0.155555, -5.54877, 2.50212, -23.6862)
-
-[node name="beans17" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(0.155555, 0, 0.987827, 0, 1, 0, -0.987827, 0, 0.155555, -5.1728, 2.50212, -23.4881)
-
-[node name="beans18" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(0.517684, 0, 0.855572, 0, 1, 0, -0.855572, 0, 0.517684, -5.26781, 2.50212, -23.8808)
-
-[node name="beans19" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(-0.00504392, 0, 0.999987, 0, 1, 0, -0.999987, 0, -0.00504392, -4.95657, 2.50212, -23.4112)
-
-[node name="beans20" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(-0.00504392, 0, 0.999987, 0, 1, 0, -0.999987, 0, -0.00504392, -4.95657, 2.50212, -23.9731)
-
-[node name="beans21" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(-0.00504392, 0, 0.999987, 0, 1, 0, -0.999987, 0, -0.00504392, -5.62467, 2.50212, -24.3066)
-
-[node name="beans22" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(0.302919, 0, 0.953016, 0, 1, 0, -0.953016, 0, 0.302919, -5.306, 2.50212, -24.2369)
+transform = Transform3D(-0.996513, 0, 0.0834344, 0, 1, 0, -0.0834344, 0, -0.996513, -5.25227, 2.80539, -26.9664)
 
 [node name="ball" parent="Items/Moveble" instance=ExtResource("9_k3ktp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.366617, 3.28301, -32.3176)
@@ -2006,9 +1858,6 @@ script = ExtResource("49_rubdf")
 
 [node name="Camera3D" type="Camera3D" parent="End"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.426121, 2.3025, -24.1676)
-
-[node name="flour" parent="." instance=ExtResource("50_x7pnd")]
-transform = Transform3D(-0.0286893, -0.0352338, 0.998967, 0, 0.999379, 0.0352484, -0.999588, 0.00101125, -0.0286715, -5.33271, 1.79852, -21.5822)
 
 [connection signal="body_entered" from="World/RingBellTrigger" to="World/RingBellTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="World/Bounds" to="World/Bounds" method="_on_body_entered"]
