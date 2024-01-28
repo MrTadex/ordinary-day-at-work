@@ -17,11 +17,12 @@ func timer_count():
 		print("started ", timer)
 
 func clicked():
-	if _audio.playing:
-		_audio.playing = false
-		timer_count()
-	else:
-		_audio.playing = true
+	if Logger.CanFish:
+		if _audio.playing:
+			_audio.playing = false
+			timer_count()
+		else:
+			_audio.playing = true
 		
 		
 func _process(_delta):

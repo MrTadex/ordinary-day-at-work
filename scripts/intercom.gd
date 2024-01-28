@@ -45,8 +45,9 @@ func _on_event(eventName):
 		"Stop Alarm":
 			play = "Audio_2" #plays intro
 			_timer.start(2)
-		"NarratorFishReact":
+		"SeeFish":
 			play = "Audio_3"
+			_timer.start(0)
 	pass
 
 func _on_timer_timeout():
@@ -57,6 +58,7 @@ func _on_audio_stream_player_3d_finished():
 		"Audio_1":
 			get_tree().call_group("EventListeners", "_on_event", "Can Stop Alarm")
 		"Audio_2":
+			get_tree().call_group("EventListeners", "_on_event", "Can Fish")
 			get_tree().call_group("EventListeners", "_on_event", "Player intro react")
 		"Audio_3":
 			get_tree().call_group("EventListeners", "_on_event", "Player intro fish react")

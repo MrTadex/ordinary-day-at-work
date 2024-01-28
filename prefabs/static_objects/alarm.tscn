@@ -50,7 +50,8 @@ animation = &"Idle"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_wtbws")
-volume_db = -10.0
+volume_db = -5.0
+max_distance = 40.0
 
 [node name="SpotLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0403352)

@@ -4,5 +4,6 @@ extends StaticBody3D
 @onready var _animator = $AnimatedSprite3D
 
 func _on_event(eventName):
-	
-	pass
+	match eventName:
+		_: 
+			print("defoult")
