@@ -6,6 +6,7 @@ extends Node
 @export var CanStopAlarm:bool = false
 @export var CanFish:bool = false
 @export var SeenFish:bool = false
+@export var AlarmOff:bool = false
 
 func _ready():
 	add_to_group("EventListeners")
