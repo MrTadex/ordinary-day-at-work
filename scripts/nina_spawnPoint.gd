@@ -5,5 +5,5 @@ extends Node3D
 func _on_event(eventName):
 	if eventName == "End":
 		nina.position = position
-		print(nina.position)
+		#print(nina.position)
 		#manager
