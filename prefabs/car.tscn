@@ -25,8 +25,7 @@ texture = ExtResource("1_iuy3s")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_ftrra")
-volume_db = -5.0
-max_db = 0.0
+volume_db = 5.0
 max_distance = 15.0
 
 [connection signal="finished" from="AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]
