@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 @export var mouse_sensitivity := 0.05 
 
-var held_object: Object
+var held_object: RigidBody3D
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -57,23 +57,12 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-func _process(_delta):
-	_camera.position = Vector3(position.x, position.y + 0.6, position.z)
-	
-	if _raycast.get_collider():
-		if _raycast.get_collider().name.contains("panties"):
-			#sproži event laugh panties
-			print(_raycast.get_collider())
-			if _audioReact.playing:
-				_audioReact.playing = false
-			else:
-				_audioReact.stream = array[3]
-				_audioReact.volume_db = 10
-				_audioReact.playing = true
-	
 	if Input.is_action_just_pressed("left_click"):
 		if held_object:
 			held_object.freeze = false
+			var forceDir = to_global(_raycast.target_position) - _raycast.global_position
+			print(forceDir + Vector3(0,2,0))
+			held_object.apply_central_impulse((forceDir + Vector3(0,2,0)) * 5)
 			held_object = null
 		else:
 			if _raycast.get_collider():
@@ -83,10 +72,20 @@ func _process(_delta):
 					print(held_object)
 				elif(_raycast.get_collider().is_in_group("Interactable")):
 					_raycast.get_collider().clicked()
-					#print(_raycast.get_collider())
 	
 	if held_object:
 		held_object.position = _holdPoint.global_transform.origin
+	
+func _process(_delta):
+	_camera.position = Vector3(position.x, position.y + 0.6, position.z)
+
+	if _raycast.get_collider():
+		if _raycast.get_collider().name.contains("panties") and _audioReact.playing == false:
+			#sproži event laugh panties
+			print(_raycast.get_collider())
+			_audioReact.stream = array[3]
+			_audioReact.volume_db = 10
+			_audioReact.playing = true
 	
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
