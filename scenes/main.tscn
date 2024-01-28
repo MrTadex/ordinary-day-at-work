@@ -2071,7 +2071,7 @@ gravity_point = true
 gravity_point_unit_distance = 10.0
 gravity_point_center = Vector3(0, 0, 0)
 gravity_direction = Vector3(0, 0, 0)
-gravity = -2.0
+gravity = -5.0
 script = ExtResource("53_4fpwo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Anomaly"]

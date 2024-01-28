@@ -23,6 +23,10 @@ Logger="*res://scripts/logger.gd"
 
 settings/commands/custom_commands=[]
 
+[display]
+
+window/size/mode=3
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/Mirror/plugin.cfg", "res://addons/phantom_camera/plugin.cfg")
