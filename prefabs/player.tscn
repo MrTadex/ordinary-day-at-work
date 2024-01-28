@@ -17,7 +17,6 @@ mouse_sensitivity = 0.1
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 top_level = true
-current = true
 fov = 90.0
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D"]

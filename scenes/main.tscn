@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=80 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
 [ext_resource type="Texture2D" uid="uid://dbdypo0n2qh3w" path="res://resources/ui_elements/kurzor.png" id="1_hs404"]
@@ -16,8 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://cdvk3t7kb8c7c" path="res://prefabs/objects/beans.tscn" id="10_b18vh"]
 [ext_resource type="PackedScene" uid="uid://bteobam7ogikl" path="res://prefabs/window.tscn" id="11_67w7t"]
 [ext_resource type="Texture2D" uid="uid://b44v443dy3hay" path="res://resources/objects/zaveza.png" id="11_p45aq"]
-[ext_resource type="PackedScene" path="res://prefabs/shelf.tscn" id="12_00r37"]
-[ext_resource type="PackedScene" path="res://prefabs/counter.tscn" id="13_kc2k6"]
+[ext_resource type="PackedScene" uid="uid://dsdpiy4qsh41o" path="res://prefabs/shelf.tscn" id="12_00r37"]
+[ext_resource type="PackedScene" uid="uid://cmssui21mqdhn" path="res://prefabs/counter.tscn" id="13_kc2k6"]
 [ext_resource type="PackedScene" uid="uid://bf32gt2dc4bxm" path="res://prefabs/hedge.tscn" id="14_1q581"]
 [ext_resource type="PackedScene" uid="uid://dr3wokdj1k7fe" path="res://prefabs/door.tscn" id="14_c7doo"]
 [ext_resource type="PackedScene" uid="uid://dnvm75kd26qa6" path="res://prefabs/static_objects/intercom.tscn" id="17_liwq8"]
@@ -27,7 +27,7 @@
 [ext_resource type="Script" path="res://scripts/back_door.gd" id="21_cw1nr"]
 [ext_resource type="PackedScene" uid="uid://dfk2g4crwafs" path="res://prefabs/interactable/ring_bell.tscn" id="22_fo05x"]
 [ext_resource type="Script" path="res://scripts/Eventer.gd" id="23_7rvqx"]
-[ext_resource type="PackedScene" uid="uid://cjrtwsuwmxoik" path="res://prefabs/interactable/radio.tscn" id="24_rcamu"]
+[ext_resource type="PackedScene" path="res://prefabs/interactable/radio.tscn" id="24_rcamu"]
 [ext_resource type="PackedScene" uid="uid://w5j7mfdfmk4l" path="res://prefabs/static_objects/alarm.tscn" id="25_pfxgi"]
 [ext_resource type="PackedScene" uid="uid://d1aanlqmjtxby" path="res://prefabs/static_objects/switch.tscn" id="26_qt6vl"]
 [ext_resource type="PackedScene" uid="uid://b443u28fysqbm" path="res://prefabs/static_objects/store_light.tscn" id="27_d07j5"]
@@ -36,7 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://b0lxkopgpaq5s" path="res://prefabs/static_objects/grandma_camera.tscn" id="31_2eof4"]
 [ext_resource type="PackedScene" uid="uid://dpdkog6f1e68m" path="res://prefabs/static_objects/shop_title.tscn" id="32_jww3n"]
 [ext_resource type="PackedScene" uid="uid://bpu3hwm1gt7bn" path="res://prefabs/objects/zuker.tscn" id="33_dh37d"]
-[ext_resource type="PackedScene" path="res://prefabs/static_objects/alarm_sign.tscn" id="34_ng66e"]
+[ext_resource type="PackedScene" uid="uid://ugqarug58q66" path="res://prefabs/static_objects/alarm_sign.tscn" id="34_ng66e"]
 [ext_resource type="PackedScene" uid="uid://b4jnvamuocin" path="res://prefabs/static_objects/hoop.tscn" id="35_tkqxu"]
 [ext_resource type="PackedScene" uid="uid://65tectj1g5lh" path="res://prefabs/objects/tea.tscn" id="36_2y2bh"]
 [ext_resource type="PackedScene" uid="uid://dggvv0mgqe2ft" path="res://prefabs/objects/toilet_paper.tscn" id="38_xpeaj"]
@@ -45,13 +45,14 @@
 [ext_resource type="PackedScene" uid="uid://dixyljc6wkstc" path="res://prefabs/objects/coffee.tscn" id="40_hk0f2"]
 [ext_resource type="PackedScene" uid="uid://b7mcqarm8d41r" path="res://prefabs/objects/shower_gel.tscn" id="43_v2q68"]
 [ext_resource type="PackedScene" uid="uid://dmnv4rgsvi8dl" path="res://prefabs/objects/deoderant.tscn" id="44_su6qr"]
-[ext_resource type="PackedScene" uid="uid://yser5as30e7e" path="res://prefabs/objects/deoderant2.tscn" id="45_0fbbn"]
+[ext_resource type="PackedScene" path="res://prefabs/objects/deoderant2.tscn" id="45_0fbbn"]
 [ext_resource type="PackedScene" uid="uid://brkexy8fdbdry" path="res://prefabs/objects/detergent.tscn" id="45_vibb1"]
 [ext_resource type="PackedScene" uid="uid://dxins27ormr5c" path="res://prefabs/objects/flour.tscn" id="46_egylu"]
 [ext_resource type="Script" path="res://scripts/RingBellTrigger.gd" id="47_8b16u"]
 [ext_resource type="PackedScene" uid="uid://c3s6iqo17b3jc" path="res://prefabs/nina_the_manager.tscn" id="48_pvova"]
 [ext_resource type="Script" path="res://scripts/nina_spawnPoint.gd" id="49_rubdf"]
-[ext_resource type="PackedScene" uid="uid://sb7xw5bsj3xd" path="res://prefabs/objects/david.tscn" id="51_3s6ym"]
+[ext_resource type="PackedScene" path="res://prefabs/objects/david.tscn" id="51_3s6ym"]
+[ext_resource type="Script" path="res://scripts/Anomaly.gd" id="53_4fpwo"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_elx5j"]
 panorama = ExtResource("3_j2l4q")
@@ -190,6 +191,9 @@ size = Vector3(1.00098, 2.00684, 0.102295)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_34nxj"]
 bounce = 0.5
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yhs0y"]
+radius = 2.0
 
 [node name="main" type="Node3D"]
 
@@ -2059,12 +2063,32 @@ nina = NodePath("../nina_the_manager")
 [node name="Camera3D" type="Camera3D" parent="End"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.426121, 2.3025, -24.1676)
 
+[node name="Anomaly" type="Area3D" parent="." groups=["EventListeners"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.02894, -26.3036)
+collision_mask = 15
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 10.0
+gravity_point_center = Vector3(0, 0, 0)
+gravity_direction = Vector3(0, 0, 0)
+gravity = -2.0
+script = ExtResource("53_4fpwo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Anomaly"]
+shape = SubResource("SphereShape3D_yhs0y")
+disabled = true
+
+[node name="Timer" type="Timer" parent="Anomaly"]
+wait_time = 0.1
+one_shot = true
+
 [connection signal="body_entered" from="World/RingBellTrigger" to="World/RingBellTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="World/Bounds" to="World/Bounds" method="_on_body_entered"]
 [connection signal="body_exited" from="World/Bounds" to="World/Bounds" method="_on_body_exited"]
 [connection signal="body_entered" from="World/shelf5/Area3D" to="World/shelf5/Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="World/shelf5/Area3D" to="World/shelf5/Area3D" method="_on_body_exited"]
 [connection signal="timeout" from="Timer" to="Eventer" method="_on_timer_timeout"]
+[connection signal="timeout" from="Anomaly/Timer" to="Anomaly" method="_on_timer_timeout"]
 
 [editable path="World/Clothes/Panties2/panties"]
 [editable path="World/Clothes/Panties2/panties2"]
