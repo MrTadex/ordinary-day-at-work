@@ -5,8 +5,9 @@ extends StaticBody3D
 @onready var _light = $SpotLight3D
 @onready var _timer = $Timer
 
-# Audio files of neretor
+# Audio files of narrator
 var Audio_1 = preload("res://resources/sound_music/narrator/script_33_nina_bloody_hell.ogg")
+var Audio_2 = preload("res://resources/sound_music/narrator/intro.wav")
 var Audio_2 = preload("res://resources/sound_music/narrator/intro.wav")
 #
 
@@ -22,7 +23,6 @@ func _process(_delta):
 		_light.visible = false
 		
 	if start:
-		print(play)
 		match play:
 			"Audio_1":
 				_audio.volume_db = 15
@@ -30,7 +30,6 @@ func _process(_delta):
 			"Audio_2":
 				_audio.volume_db = 10
 				_audio.stream = Audio_2
-				get_tree().call_group("EventListeners", "_on_event", "Player intro react")
 				
 		_audio.play()
 		start = false
@@ -41,8 +40,11 @@ func _on_event(eventName):
 		_timer.start(2)
 		
 	if eventName == "Stop Alarm":
-		play = "Audio_2"
+		play = "Audio_2" #plays intro
 		_timer.start(2)
+	
+	if eventName == "NarratorFishReact":
+		
 
 func _on_timer_timeout():
 	start = true
@@ -51,3 +53,5 @@ func _on_audio_stream_player_3d_finished():
 	match play:
 		"Audio_1":
 			get_tree().call_group("EventListeners", "_on_event", "Can Stop Alarm")
+		"Audio_2":
+			get_tree().call_group("EventListeners", "_on_event", "Player intro react")
