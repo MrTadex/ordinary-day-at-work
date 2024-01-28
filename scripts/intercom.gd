@@ -25,8 +25,10 @@ func _process(_delta):
 		print(play)
 		match play:
 			"Audio_1":
+				_audio.volume_db = 15
 				_audio.stream = Audio_1
 			"Audio_2":
+				_audio.volume_db = 10
 				_audio.stream = Audio_2
 				
 		_audio.play()
