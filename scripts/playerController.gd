@@ -151,7 +151,7 @@ func _on_event(eventName):
 		"Player intro fish react":
 			play_with_delay(array[6], 0)
 		"Radio love listening":
-			play_with_delay(array[8], 2)
+			play_with_delay(array[8], 4)
 		"End":
 			queue_free()
 
