@@ -34,7 +34,8 @@ var array = [
 				preload("res://resources/sound_music/player_sound/Ring_bell_first.ogg"),
 				preload("res://resources/sound_music/player_sound/script_13_fish_2.ogg"),
 				preload("res://resources/sound_music/player_sound/script_37_luka_yeah_boi.ogg"),
-				preload("res://resources/sound_music/player_sound/script_38_luka_love_the_tunes.ogg")
+				preload("res://resources/sound_music/player_sound/script_38_luka_love_the_tunes.ogg"),
+				preload("res://resources/sound_music/player_sound/script_20_drop_the_ball.ogg")
 			]
 
 func _ready():
@@ -77,7 +78,7 @@ func _physics_process(delta):
 			#print(forceDir + Vector3(0,2,0))
 			held_object.apply_central_impulse((forceDir + Vector3(0,2,0)) * 5)
 			held_object = null
-	
+	#
 	if Input.is_action_just_pressed("left_click"):
 		if held_object:
 			held_object.freeze = false
@@ -98,7 +99,7 @@ func _process(_delta):
 	_camera.position = Vector3(position.x, position.y + 0.6, position.z)
 
 	if _raycast.get_collider():
-		print(_raycast.get_collider().name)
+		#print(_raycast.get_collider().name)
 		if _audioReact.playing == false:
 			if _raycast.get_collider().name.contains("panties"):
 				if _audioPlayer.playing == false:
@@ -130,7 +131,9 @@ func _unhandled_input(event):
 func _on_event(eventName):
 	match eventName:
 		"Car React":
-			play_with_delay(array[1], 0)
+			#play_with_delay(array[1], 0)
+			_audioPlayer.stream = array[1]
+			_audioPlayer.playing = true
 		"Tree React":
 			play_with_delay(array[2], 1)
 		"Player intro react":
