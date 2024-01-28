@@ -47,6 +47,7 @@ func _on_event(eventName):
 		play = "Audio_3"
 		_timer.start(2)
 		
+		pass
 
 func _on_timer_timeout():
 	start = true
