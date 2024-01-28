@@ -18,3 +18,5 @@ texture = ExtResource("1_bs56p")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_yvnf2")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
