@@ -120,3 +120,5 @@ func _on_event(eventName):
 			_audioPlayer.stream = array[2]
 			#_audioPlayer.volume_db = 10
 			_audioPlayer.playing = true
+		"Narrator 1 ":
+			pass

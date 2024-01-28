@@ -3,6 +3,7 @@ extends StaticBody3D
 @export var _light:SpotLight3D
 
 @onready var _animator = $AnimatedSprite3D
+@onready var _audio = $AudioStreamPlayer3D
 
 func clicked():
 	if Logger.CanStopAlarm:
