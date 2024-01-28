@@ -27,7 +27,6 @@ var jumpArray = [
 				]
 
 var array = [
-				#preload("res://resources/sound_music/player_sound/script_16_fish_5_laugh1.ogg"),
 				preload("res://resources/sound_music/player_sound/script_36_luka_minecraft.ogg"),
 				preload("res://resources/sound_music/player_sound/script_29_vroom.ogg"),
 				preload("res://resources/sound_music/player_sound/script_36_luka_minecraft.ogg"),
@@ -120,5 +119,5 @@ func _on_event(eventName):
 			_audioPlayer.stream = array[2]
 			#_audioPlayer.volume_db = 10
 			_audioPlayer.playing = true
-		"Narrator 1 ":
+		"Narrator 1":
 			pass
