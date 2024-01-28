@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bnvl4sqvqypg6"]
+[gd_scene load_steps=6 format=3 uid="uid://bnvl4sqvqypg6"]
 
 [ext_resource type="Script" path="res://scripts/dropObject.gd" id="1_7pkjb"]
 
@@ -7,7 +7,11 @@ bounce = 1.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_wpd1l"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ctjyd"]
+albedo_color = Color(1, 0.396078, 0.309804, 1)
+
 [sub_resource type="SphereMesh" id="SphereMesh_7kpvy"]
+material = SubResource("StandardMaterial3D_ctjyd")
 
 [node name="ball" type="RigidBody3D"]
 disable_mode = 2
