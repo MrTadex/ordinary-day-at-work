@@ -19,3 +19,6 @@ func _process(delta):
 func _on_event(eventName):
 	if eventName == "Start":
 		open = !open
+		
+	if eventName == "End":
+		open = !open

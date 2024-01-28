@@ -131,3 +131,5 @@ func _on_event(eventName):
 		"Ring Bell Dialogue":
 			_audioPlayer.stream = array[5]
 			_audioPlayer.playing = true
+		"End":
+			queue_free()

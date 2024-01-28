@@ -222,6 +222,10 @@ environment = SubResource("Environment_7xour")
 
 [node name="World" type="Node" parent="."]
 
+[node name="nina_spawnPoint" type="Node3D" parent="World" groups=["EventListeners"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.415227, 1, -20.447)
+script = ExtResource("49_rubdf")
+
 [node name="RingBellTrigger" type="Area3D" parent="World"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0382373, 1.50439, -20.1116)
 collision_mask = 2
@@ -1850,14 +1854,7 @@ one_shot = true
 [node name="Eventer" type="Node" parent="."]
 script = ExtResource("23_7rvqx")
 
-[node name="End" type="Node" parent="."]
-
-[node name="nina_spawnPoint" type="Node3D" parent="End" node_paths=PackedStringArray("end") groups=["EventListeners"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.415227, 1, -20.447)
-script = ExtResource("49_rubdf")
-end = NodePath("..")
-
-[node name="Camera3D" type="Camera3D" parent="End"]
+[node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.426121, 2.3025, -24.1676)
 
 [connection signal="body_entered" from="World/RingBellTrigger" to="World/RingBellTrigger" method="_on_body_entered"]
@@ -1865,7 +1862,6 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.4261
 [connection signal="body_exited" from="World/Bounds" to="World/Bounds" method="_on_body_exited"]
 [connection signal="body_entered" from="World/shelf5/Area3D" to="World/shelf5/Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="World/shelf5/Area3D" to="World/shelf5/Area3D" method="_on_body_exited"]
-[connection signal="timeout" from="Timer" to="Eventer" method="_on_timer_timeout"]
 
 [editable path="World/Clothes/Panties2/panties"]
 [editable path="World/Clothes/Panties2/panties2"]
