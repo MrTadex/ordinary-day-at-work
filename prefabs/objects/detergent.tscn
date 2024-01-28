@@ -8,7 +8,7 @@ height = 0.310605
 radius = 0.106958
 
 [node name="detergent" type="RigidBody3D"]
-collision_layer = 4
+collision_layer = 12
 collision_mask = 7
 
 [node name="Sprite3D" type="Sprite3D" parent="."]

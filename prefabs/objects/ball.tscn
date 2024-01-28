@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnvl4sqvqypg6"]
+[gd_scene load_steps=5 format=3 uid="uid://bnvl4sqvqypg6"]
 
 [ext_resource type="Script" path="res://scripts/dropObject.gd" id="1_7pkjb"]
-[ext_resource type="AudioStream" uid="uid://drvicrcxd4ubx" path="res://resources/sound_music/fall_bonk_1.ogg" id="2_eaalj"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_58nsd"]
 bounce = 1.0
@@ -26,7 +25,5 @@ shape = SubResource("SphereShape3D_wpd1l")
 mesh = SubResource("SphereMesh_7kpvy")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("2_eaalj")
-volume_db = 41.951
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

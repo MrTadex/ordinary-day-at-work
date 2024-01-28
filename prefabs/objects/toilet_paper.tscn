@@ -7,7 +7,7 @@
 size = Vector3(1.34692, 0.721619, 1)
 
 [node name="toilet_paper" type="RigidBody3D"]
-collision_layer = 4
+collision_layer = 12
 collision_mask = 7
 
 [node name="Sprite3D" type="Sprite3D" parent="."]

@@ -7,7 +7,7 @@
 size = Vector3(1.25446, 0.764221, 0.665039)
 
 [node name="tea" type="RigidBody3D"]
-collision_layer = 4
+collision_layer = 12
 collision_mask = 7
 
 [node name="Sprite3D" type="Sprite3D" parent="."]

@@ -1,6 +1,6 @@
 extends RigidBody3D
 
-@onready var _audio = preload("res://resources/sound_music/player_sound/script_36_luka_minecraft.ogg")
+@onready var _audio = $AudioStreamPlayer3D
 
 var array = [
 				preload("res://resources/sound_music/fall_bonk_1.ogg"),
