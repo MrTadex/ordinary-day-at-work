@@ -25,5 +25,6 @@ shape = SubResource("SphereShape3D_wpd1l")
 mesh = SubResource("SphereMesh_7kpvy")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+max_distance = 20.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

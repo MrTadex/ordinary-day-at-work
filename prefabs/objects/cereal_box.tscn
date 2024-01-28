@@ -26,5 +26,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0388011, 0.0117376, -0.0001
 shape = SubResource("BoxShape3D_nswdp")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+max_distance = 15.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

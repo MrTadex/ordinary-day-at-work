@@ -18,6 +18,8 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var _audioPlayer = $AudioStreamPlayer3DStartUp
 @onready var _audioReact = $AudioStreamPlayer3DReact
 
+@onready var _timer = $Timer
+
 var array = [
 				#preload("res://resources/sound_music/player_sound/script_16_fish_5_laugh1.ogg"),
 				preload("res://resources/sound_music/player_sound/script_36_luka_minecraft.ogg"),
@@ -82,10 +84,10 @@ func _process(_delta):
 	if _raycast.get_collider():
 		if _raycast.get_collider().name.contains("panties") and _audioReact.playing == false:
 			#sproži event laugh panties
-			print(_raycast.get_collider())
 			_audioReact.stream = array[3]
 			_audioReact.volume_db = 10
 			_audioReact.playing = true
+			_timer.start(2)
 	
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:

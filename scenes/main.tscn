@@ -28,7 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://dfk2g4crwafs" path="res://prefabs/interactable/ring_bell.tscn" id="22_fo05x"]
 [ext_resource type="Script" path="res://scripts/Eventer.gd" id="23_7rvqx"]
 [ext_resource type="PackedScene" uid="uid://cjrtwsuwmxoik" path="res://prefabs/interactable/radio.tscn" id="24_rcamu"]
-[ext_resource type="PackedScene" uid="uid://w5j7mfdfmk4l" path="res://prefabs/static_objects/alarm.tscn" id="25_pfxgi"]
+[ext_resource type="PackedScene" uid="uid://4nyhx3a0bvtp" path="res://prefabs/static_objects/alarm.tscn" id="25_pfxgi"]
 [ext_resource type="PackedScene" uid="uid://d1aanlqmjtxby" path="res://prefabs/static_objects/switch.tscn" id="26_qt6vl"]
 [ext_resource type="PackedScene" uid="uid://b443u28fysqbm" path="res://prefabs/static_objects/store_light.tscn" id="27_d07j5"]
 [ext_resource type="PackedScene" uid="uid://brrdg1dqjfx3b" path="res://prefabs/static_objects/employe_of_the_month.tscn" id="29_xpyo0"]
