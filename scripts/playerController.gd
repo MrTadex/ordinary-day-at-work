@@ -129,6 +129,5 @@ func _on_event(eventName):
 			_audioPlayer.stream = array[4]
 			_audioPlayer.playing = true
 		"Ring Bell Dialogue":
-			print("Ring Bell Dialogue")
 			_audioPlayer.stream = array[5]
 			_audioPlayer.playing = true

@@ -1,0 +1,79 @@
+[gd_scene load_steps=11 format=3 uid="uid://c3s6iqo17b3jc"]
+
+[ext_resource type="Texture2D" uid="uid://b6knhvygi46k7" path="res://resources/objects/nina approves.png" id="1_y8fmf"]
+[ext_resource type="Texture2D" uid="uid://be3x4hrghfl3r" path="res://resources/objects/nina disapproves.png" id="2_3edb3"]
+[ext_resource type="Script" path="res://scripts/lookAtAnimatedSprite.gd" id="2_ocbqr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtsaa"]
+atlas = ExtResource("1_y8fmf")
+region = Rect2(0, 3610, 1876, 3610)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8w4b6"]
+atlas = ExtResource("1_y8fmf")
+region = Rect2(0, 7220, 1876, 3610)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w56ah"]
+atlas = ExtResource("2_3edb3")
+region = Rect2(0, 3610, 1876, 3610)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gntli"]
+atlas = ExtResource("2_3edb3")
+region = Rect2(0, 7220, 1876, 3610)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0na1"]
+atlas = ExtResource("1_y8fmf")
+region = Rect2(0, 0, 1876, 3610)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b50le"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wtsaa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8w4b6")
+}],
+"loop": true,
+"name": &"Approve",
+"speed": 0.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w56ah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gntli")
+}],
+"loop": true,
+"name": &"Disapprove",
+"speed": 0.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0na1")
+}],
+"loop": true,
+"name": &"DoorKick",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4dxs4"]
+
+[node name="nina_the_manager" type="StaticBody3D" groups=["EventListeners"]]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.743656, 0)
+pixel_size = 0.0005
+shaded = true
+alpha_cut = 2
+sprite_frames = SubResource("SpriteFrames_b50le")
+animation = &"Disapprove"
+frame_progress = 0.424251
+script = ExtResource("2_ocbqr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.997964, 0)
+shape = SubResource("CapsuleShape3D_4dxs4")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.997964, 0)
