@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=73 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
 [ext_resource type="Texture2D" uid="uid://dbdypo0n2qh3w" path="res://resources/ui_elements/kurzor.png" id="1_hs404"]
@@ -27,8 +27,8 @@
 [ext_resource type="Script" path="res://scripts/back_door.gd" id="21_cw1nr"]
 [ext_resource type="PackedScene" uid="uid://dfk2g4crwafs" path="res://prefabs/interactable/ring_bell.tscn" id="22_fo05x"]
 [ext_resource type="Script" path="res://scripts/Eventer.gd" id="23_7rvqx"]
-[ext_resource type="PackedScene" uid="uid://cjrtwsuwmxoik" path="res://prefabs/interactable/radio.tscn" id="24_rcamu"]
-[ext_resource type="PackedScene" uid="uid://4nyhx3a0bvtp" path="res://prefabs/static_objects/alarm.tscn" id="25_pfxgi"]
+[ext_resource type="PackedScene" path="res://prefabs/interactable/radio.tscn" id="24_rcamu"]
+[ext_resource type="PackedScene" uid="uid://w5j7mfdfmk4l" path="res://prefabs/static_objects/alarm.tscn" id="25_pfxgi"]
 [ext_resource type="PackedScene" uid="uid://d1aanlqmjtxby" path="res://prefabs/static_objects/switch.tscn" id="26_qt6vl"]
 [ext_resource type="PackedScene" uid="uid://b443u28fysqbm" path="res://prefabs/static_objects/store_light.tscn" id="27_d07j5"]
 [ext_resource type="PackedScene" uid="uid://brrdg1dqjfx3b" path="res://prefabs/static_objects/employe_of_the_month.tscn" id="29_xpyo0"]
@@ -45,7 +45,8 @@
 [ext_resource type="PackedScene" uid="uid://dixyljc6wkstc" path="res://prefabs/objects/coffee.tscn" id="40_hk0f2"]
 [ext_resource type="PackedScene" uid="uid://b7mcqarm8d41r" path="res://prefabs/objects/shower_gel.tscn" id="43_v2q68"]
 [ext_resource type="PackedScene" uid="uid://dmnv4rgsvi8dl" path="res://prefabs/objects/deoderant.tscn" id="44_su6qr"]
-[ext_resource type="PackedScene" uid="uid://cgidw1g681n1d" path="res://prefabs/objects/deoderatn.tscn" id="45_0fbbn"]
+[ext_resource type="PackedScene" path="res://prefabs/objects/deoderatn.tscn" id="45_0fbbn"]
+[ext_resource type="Script" path="res://scripts/RingBellTrigger.gd" id="47_8b16u"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_elx5j"]
 panorama = ExtResource("3_j2l4q")
@@ -181,6 +182,9 @@ size = Vector3(1.00098, 2.00684, 0.102295)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_34nxj"]
 bounce = 0.5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fulif"]
+size = Vector3(1.8559, 2.35889, 1)
 
 [node name="main" type="Node3D"]
 
@@ -1835,6 +1839,14 @@ one_shot = true
 
 [node name="Eventer" type="Node" parent="."]
 script = ExtResource("23_7rvqx")
+
+[node name="RingBellTrigger" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0382373, 1.50439, -20.1116)
+script = ExtResource("47_8b16u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RingBellTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35025, 0.679443, 0)
+shape = SubResource("BoxShape3D_fulif")
 
 [connection signal="body_entered" from="World/Bounds" to="World/Bounds" method="_on_body_entered"]
 [connection signal="body_exited" from="World/Bounds" to="World/Bounds" method="_on_body_exited"]
