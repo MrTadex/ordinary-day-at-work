@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=46 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
 [ext_resource type="Texture2D" uid="uid://dbdypo0n2qh3w" path="res://resources/ui_elements/kurzor.png" id="1_hs404"]
@@ -12,11 +12,11 @@
 [ext_resource type="PackedScene" uid="uid://bnvl4sqvqypg6" path="res://prefabs/objects/ball.tscn" id="9_k3ktp"]
 [ext_resource type="Texture2D" uid="uid://6i41ddtgls64" path="res://resources/textures/cabin wall.jpg" id="10_1d80j"]
 [ext_resource type="PackedScene" uid="uid://cdvk3t7kb8c7c" path="res://prefabs/objects/beans.tscn" id="10_b18vh"]
-[ext_resource type="PackedScene" uid="uid://bteobam7ogikl" path="res://prefabs/window.tscn" id="11_67w7t"]
+[ext_resource type="PackedScene" path="res://prefabs/window.tscn" id="11_67w7t"]
 [ext_resource type="Texture2D" uid="uid://b44v443dy3hay" path="res://resources/objects/zaveza.png" id="11_p45aq"]
-[ext_resource type="PackedScene" uid="uid://dsdpiy4qsh41o" path="res://prefabs/shelf.tscn" id="12_00r37"]
-[ext_resource type="PackedScene" uid="uid://cmssui21mqdhn" path="res://prefabs/counter.tscn" id="13_kc2k6"]
-[ext_resource type="PackedScene" path="res://prefabs/hedge.tscn" id="14_1q581"]
+[ext_resource type="PackedScene" path="res://prefabs/shelf.tscn" id="12_00r37"]
+[ext_resource type="PackedScene" path="res://prefabs/counter.tscn" id="13_kc2k6"]
+[ext_resource type="PackedScene" uid="uid://bwwd1ts2ry1v8" path="res://prefabs/hedge.tscn" id="14_1q581"]
 [ext_resource type="PackedScene" uid="uid://dr3wokdj1k7fe" path="res://prefabs/door.tscn" id="14_c7doo"]
 [ext_resource type="PackedScene" uid="uid://dnvm75kd26qa6" path="res://prefabs/static_objects/intercom.tscn" id="17_liwq8"]
 [ext_resource type="PackedScene" uid="uid://yduall5llvun" path="res://prefabs/fence.tscn" id="19_v8lx4"]
@@ -24,10 +24,15 @@
 [ext_resource type="Script" path="res://scripts/back_door.gd" id="21_cw1nr"]
 [ext_resource type="PackedScene" uid="uid://dfk2g4crwafs" path="res://prefabs/interactable/ring_bell.tscn" id="22_fo05x"]
 [ext_resource type="Script" path="res://scripts/Eventer.gd" id="23_7rvqx"]
-[ext_resource type="PackedScene" path="res://prefabs/interactable/radio.tscn" id="24_rcamu"]
-[ext_resource type="PackedScene" uid="uid://w5j7mfdfmk4l" path="res://prefabs/static_objects/alarm.tscn" id="25_pfxgi"]
-[ext_resource type="PackedScene" uid="uid://d1aanlqmjtxby" path="res://prefabs/static_objects/switch.tscn" id="26_qt6vl"]
+[ext_resource type="PackedScene" uid="uid://cjrtwsuwmxoik" path="res://prefabs/interactable/radio.tscn" id="24_rcamu"]
+[ext_resource type="PackedScene" uid="uid://4nyhx3a0bvtp" path="res://prefabs/static_objects/alarm.tscn" id="25_pfxgi"]
+[ext_resource type="PackedScene" path="res://prefabs/static_objects/switch.tscn" id="26_qt6vl"]
 [ext_resource type="PackedScene" uid="uid://b443u28fysqbm" path="res://prefabs/static_objects/store_light.tscn" id="27_d07j5"]
+[ext_resource type="PackedScene" uid="uid://ccvgdgdyuofh3" path="res://prefabs/static_objects/employe_of_the_month.tscn" id="29_xpyo0"]
+[ext_resource type="PackedScene" uid="uid://4ckdr63806k4" path="res://prefabs/static_objects/military_shirt.tscn" id="30_th6rp"]
+[ext_resource type="PackedScene" uid="uid://b0lxkopgpaq5s" path="res://prefabs/static_objects/grandma_camera.tscn" id="31_2eof4"]
+[ext_resource type="PackedScene" uid="uid://dpdkog6f1e68m" path="res://prefabs/static_objects/shop_title.tscn" id="32_jww3n"]
+[ext_resource type="PackedScene" uid="uid://cuxlbow4gmbfy" path="res://prefabs/objects/zuker.tscn" id="33_dh37d"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_elx5j"]
 panorama = ExtResource("3_j2l4q")
@@ -976,3 +981,19 @@ one_shot = true
 
 [node name="Eventer" type="Node" parent="."]
 script = ExtResource("23_7rvqx")
+
+[node name="employe_of_the_month" parent="." instance=ExtResource("29_xpyo0")]
+transform = Transform3D(-0.0147824, 0, 0.999891, 0, 1, 0, -0.999891, 0, -0.0147824, -5.96218, 3, -29.4973)
+
+[node name="military_shirt" parent="." instance=ExtResource("30_th6rp")]
+transform = Transform3D(0.537592, 0, 0, 0, 0.797276, 0, 0, 0, 1, 4.55937, 2.56746, -34.4698)
+
+[node name="grandma_camera" parent="." node_paths=PackedStringArray("player") instance=ExtResource("31_2eof4")]
+transform = Transform3D(-0.207783, 0, -1.00372, 0, 0.405921, 0, 0.424175, 0, -0.491673, 0.92061, 3.99563, -26.4717)
+player = NodePath("../player")
+
+[node name="Shop_title" parent="." instance=ExtResource("32_jww3n")]
+transform = Transform3D(1.43558, 0, 0, 0, 1.02535, 0, 0, 0, 1, 0.183643, 5.15012, -19.8471)
+
+[node name="zuker" parent="." instance=ExtResource("33_dh37d")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.94693, 2.6199, -26.2959)

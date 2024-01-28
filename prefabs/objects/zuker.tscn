@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuxlbow4gmbfy"]
+
+[ext_resource type="Texture2D" uid="uid://dmsmocvyjiy8k" path="res://resources/objects/zucker.png" id="1_pvptx"]
+[ext_resource type="Script" path="res://scripts/lookAtSprite.gd" id="2_7i8co"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t4j8h"]
+
+[node name="zuker" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 7
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(7.67006, 0, 0, 0, 7.80039, 0, 0, 0, 0.999779, 0, -0.00141869, 0)
+pixel_size = 0.0001
+alpha_cut = 2
+texture = ExtResource("1_pvptx")
+script = ExtResource("2_7i8co")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.358778, 0, 0, 0, 0.545288, 0, 0, 0, 0.242294, 0, 0.00349745, 0)
+shape = SubResource("BoxShape3D_t4j8h")

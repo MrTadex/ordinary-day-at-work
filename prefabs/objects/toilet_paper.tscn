@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxtx871ani7uk"]
+
+[ext_resource type="Texture2D" uid="uid://dt2pe3k3lyo4g" path="res://resources/objects/toilet_paper.png" id="1_fwxpi"]
+[ext_resource type="Script" path="res://scripts/lookAtSprite.gd" id="2_om7t2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t4j8h"]
+size = Vector3(1.34692, 0.721619, 1)
+
+[node name="toilet_paper" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 7
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(11.2576, 0, 0, 0, 11.8113, 0, 0, 0, 1, 0, -0.00141869, 0)
+pixel_size = 0.0001
+alpha_cut = 2
+texture = ExtResource("1_fwxpi")
+script = ExtResource("2_om7t2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.358778, 0, 0, 0, 0.545288, 0, 0, 0, 0.242294, -4.37964e-05, -0.0021438, 0)
+shape = SubResource("BoxShape3D_t4j8h")

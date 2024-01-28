@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dnvm75kd26qa6"]
 
 [ext_resource type="Script" path="res://scripts/intercom.gd" id="1_4r1dg"]
-[ext_resource type="Texture2D" uid="uid://6t3p0fihhccw" path="res://resources/objects/intercom.png" id="1_xjat0"]
+[ext_resource type="Texture2D" uid="uid://c2br2smve862c" path="res://resources/objects/intercom.png" id="1_xjat0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l6heb"]
 

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpdkog6f1e68m"]
+
+[ext_resource type="Texture2D" uid="uid://dgovffh7xud4d" path="res://resources/objects/shop.png" id="1_yc7n0"]
+
+[node name="Shop_title" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+pixel_size = 0.0015
+alpha_cut = 2
+texture = ExtResource("1_yc7n0")

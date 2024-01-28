@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0lxkopgpaq5s"]
+
+[ext_resource type="Script" path="res://scripts/lookAt.gd" id="1_7ghux"]
+[ext_resource type="Texture2D" uid="uid://c1njhhc5d4pob" path="res://resources/objects/kamera.png" id="1_bs56p"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yvnf2"]
+
+[node name="grandma_camera" type="StaticBody3D"]
+script = ExtResource("1_7ghux")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.708067, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+flip_v = true
+pixel_size = 0.0015
+alpha_cut = 2
+texture = ExtResource("1_bs56p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_yvnf2")
