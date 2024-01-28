@@ -10,11 +10,11 @@ extends StaticBody3D
 
 func timer_count():
 	count -= 1
-	print(count)
+	#print(count)
 	if count <= 0:
 		var timer = randi_range(min_time,max_time)
 		_timer.start(timer)
-		print("started ", timer)
+		#print("started ", timer)
 
 func clicked():
 	if Logger.CanFish:
@@ -33,7 +33,7 @@ func _process(_delta):
 
 
 func _on_timer_timeout():
-	print("timer timeout")
+	#print("timer timeout")
 	_audio.playing = true
 
 

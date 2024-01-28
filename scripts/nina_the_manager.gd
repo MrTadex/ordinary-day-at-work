@@ -24,7 +24,7 @@ func _process(_delta):
 func _on_event(eventName):
 	match eventName:
 		"End":
-			print("End")
+			#print("End")
 			if Logger.items_on_shelfs < 200:
 				bad = true
 			_timer.start(2)
@@ -43,7 +43,7 @@ func _on_timer_timeout():
 
 func _on_audio_stream_player_3d_finished():
 	if last:
-		print("last")
+		#print("last")
 		#get_tree().call_group("EventListeners", "_on_event", "Quit")
 		#get_tree().quit()
 		_timer.start(2)
