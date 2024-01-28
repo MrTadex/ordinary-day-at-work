@@ -61,5 +61,4 @@ func _on_audio_stream_player_3d_finished():
 			get_tree().call_group("EventListeners", "_on_event", "Can Fish")
 			get_tree().call_group("EventListeners", "_on_event", "Player intro react")
 		"Audio_3":
-			Logger.SeenFish = false
 			get_tree().call_group("EventListeners", "_on_event", "Player intro fish react")
