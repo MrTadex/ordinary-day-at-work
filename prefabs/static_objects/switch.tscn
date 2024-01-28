@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://d1aanlqmjtxby"]
+[gd_scene load_steps=8 format=3 uid="uid://d1aanlqmjtxby"]
 
 [ext_resource type="Script" path="res://scripts/switch.gd" id="1_2dhn2"]
 [ext_resource type="Texture2D" uid="uid://6epbpmccvq1t" path="res://resources/stikalo.png" id="1_enj3m"]
+[ext_resource type="AudioStream" uid="uid://biu08icvf3pjv" path="res://resources/sound_music/light_switch.wav" id="3_1yf7o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_auc24"]
 atlas = ExtResource("1_enj3m")
@@ -45,3 +46,6 @@ animation = &"On"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.11, 0, 0, 0, 0.18, 0, 0, 0, 0.02, 0, 0, 0)
 shape = SubResource("BoxShape3D_tcic3")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_1yf7o")

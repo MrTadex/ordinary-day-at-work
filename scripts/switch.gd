@@ -3,8 +3,10 @@ extends StaticBody3D
 @export var _light:SpotLight3D
 
 @onready var _animator = $AnimatedSprite3D
+@onready var _audio = $AudioStreamPlayer3D
 
 func clicked():
+	_audio.playing = true
 	if _animator.animation == "On":
 		_animator.play("Off")
 		_light.visible = false
