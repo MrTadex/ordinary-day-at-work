@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scripts/lookAtSprite.gd" id="3_2yh5x"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_trutb"]
-size = Vector3(2.64148, 2.35278, 1)
+size = Vector3(2.64148, 2.5105, 1)
 
 [node name="radio" type="StaticBody3D" groups=["Interactable"]]
 script = ExtResource("1_uc381")
@@ -24,7 +24,7 @@ autoplay = true
 max_distance = 60.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.1536, 0, 0, 0, 0.1272, 0, 0, 0, 0.128, 0.00426553, -0.0522783, 0)
+transform = Transform3D(0.187702, 0, 0, 0, 0.1272, 0, 0, 0, 0.198338, 0.00426553, -0.0422475, 0)
 shape = SubResource("BoxShape3D_trutb")
 
 [connection signal="finished" from="AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]

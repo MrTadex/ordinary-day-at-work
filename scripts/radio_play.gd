@@ -15,6 +15,7 @@ func clicked():
 		_audio.stream = array[randi_range(0,2)]
 		_audio.volume_db = -5
 		_audio.playing = true
+		get_tree().call_group("EventListeners", "_on_event", "Radio love listening")
 
 func _on_audio_stream_player_3d_finished():
 	_audio.stream = array[randi_range(0,2)]

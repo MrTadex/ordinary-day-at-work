@@ -32,7 +32,9 @@ var array = [
 				preload("res://resources/sound_music/player_sound/script_16_fish_5_laugh1.ogg"),
 				preload("res://resources/sound_music/player_sound/script_39_luka_on_it.ogg"),
 				preload("res://resources/sound_music/player_sound/Ring_bell_first.ogg"),
-				preload("res://resources/sound_music/player_sound/script_13_fish_2.ogg")
+				preload("res://resources/sound_music/player_sound/script_13_fish_2.ogg"),
+				preload("res://resources/sound_music/player_sound/script_37_luka_yeah_boi.ogg"),
+				preload("res://resources/sound_music/player_sound/script_38_luka_love_the_tunes.ogg")
 			]
 
 func _ready():
@@ -96,12 +98,18 @@ func _process(_delta):
 	_camera.position = Vector3(position.x, position.y + 0.6, position.z)
 
 	if _raycast.get_collider():
-		#print(_raycast.get_collider().name)
+		print(_raycast.get_collider().name)
 		if _audioReact.playing == false:
 			if _raycast.get_collider().name.contains("panties"):
-				get_tree().call_group("EventListeners", "_on_event", "SeePanties")
+				if _audioPlayer.playing == false:
+					_audioPlayer.stream = array[3]
+					_audioPlayer.play()
+			if _raycast.get_collider().name == "Mirror":
+				if _audioPlayer.playing == false:
+					_audioPlayer.stream = array[7]
+					_audioPlayer.play()
+
 			if _raycast.get_collider().name == "fish" and Logger.CanFish and !Logger.SeenFish:
-				print("Fish")
 				Logger.SeenFish = true
 				get_tree().call_group("EventListeners", "_on_event", "SeeFish")
 	
@@ -122,27 +130,25 @@ func _unhandled_input(event):
 func _on_event(eventName):
 	match eventName:
 		"Car React":
-			_audioPlayer.stream = array[1]
-			#_audioPlayer.volume_db = 10
-			_audioPlayer.playing = true
+			play_with_delay(array[1], 0)
 		"Tree React":
-			_audioPlayer.stream = array[2]
-			_audioPlayer.playing = true
+			play_with_delay(array[2], 1)
 		"Player intro react":
 			play_with_delay(array[4], 1)
 			#_audioPlayer.stream = array[4]
 			#_audioPlayer.playing = true
 		"Ring Bell Dialogue":
-			_audioPlayer.stream = array[5]
-			_audioPlayer.playing = true
+			play_with_delay(array[5], 1)
 		"SeeFish":
 			get_tree().call_group("EventListeners", "_on_event", "NarratorFishReact")
-		"SeePanties":
-			_audioReact.stream = array[3]
-			_audioReact.playing = true
+		#"SeePanties":
+			#print("panties")
+			#_audioPlayer.stream = array[3]
+			#_audioPlayer.playing = true
 		"Player intro fish react":
-			_audioPlayer.stream = array[6]
-			_audioPlayer.playing = true
+			play_with_delay(array[6], 0)
+		"Radio love listening":
+			play_with_delay(array[8], 2)
 		"End":
 			queue_free()
 
@@ -154,5 +160,7 @@ func play_with_delay(audioPath, time):
 	_timer.start(time)
 
 func _on_timer_timeout():
+	#_audioPlayer.volume_db = 20
+	#_audioPlayer.max_db = 10
 	_audioPlayer.stream = path
 	_audioPlayer.play()
