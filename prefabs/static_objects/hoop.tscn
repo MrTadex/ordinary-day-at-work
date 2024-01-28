@@ -107,11 +107,12 @@ skeleton = NodePath("")
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.888387, 2.406, -0.269981)
 shape = SubResource("ConcavePolygonShape3D_m836j")
 
-[node name="Area3D" type="Area3D" parent="." node_paths=PackedStringArray("textLable")]
+[node name="Area3D" type="Area3D" parent="." node_paths=PackedStringArray("textLable", "textLable1")]
 collision_layer = 4
 collision_mask = 12
 script = ExtResource("2_wp105")
 textLable = NodePath("../Text")
+textLable1 = NodePath("../Text2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 4.32837, 0)
@@ -119,6 +120,10 @@ shape = SubResource("CylinderShape3D_ftclf")
 
 [node name="Text" type="Label3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.11717, 3.42198, 0)
+shaded = true
+
+[node name="Text2" type="Label3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.0854309, 3.42198, 0)
 shaded = true
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

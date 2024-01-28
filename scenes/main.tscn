@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=64 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
 [ext_resource type="Texture2D" uid="uid://dbdypo0n2qh3w" path="res://resources/ui_elements/kurzor.png" id="1_hs404"]
@@ -7,33 +7,38 @@
 [ext_resource type="PackedScene" uid="uid://dgustjqc2lpbx" path="res://prefabs/tree.tscn" id="5_putjd"]
 [ext_resource type="Script" path="res://addons/Mirror/Mirror/Mirror.gd" id="6_nt65x"]
 [ext_resource type="PackedScene" uid="uid://c187jba8cyp46" path="res://prefabs/interactable/singing_fish.tscn" id="7_p3lnd"]
+[ext_resource type="Texture2D" uid="uid://ce363ap1iyg2i" path="res://resources/textures/wood.jpg" id="7_r6x2x"]
 [ext_resource type="PackedScene" uid="uid://dv8d25yq1je34" path="res://prefabs/house.tscn" id="8_3mivp"]
+[ext_resource type="Script" path="res://scripts/shelf.gd" id="8_4sux2"]
 [ext_resource type="Texture2D" uid="uid://c1dwaoyxnpo2q" path="res://resources/textures/grass.png" id="9_brbew"]
 [ext_resource type="PackedScene" uid="uid://bnvl4sqvqypg6" path="res://prefabs/objects/ball.tscn" id="9_k3ktp"]
 [ext_resource type="Texture2D" uid="uid://6i41ddtgls64" path="res://resources/textures/cabin wall.jpg" id="10_1d80j"]
 [ext_resource type="PackedScene" uid="uid://cdvk3t7kb8c7c" path="res://prefabs/objects/beans.tscn" id="10_b18vh"]
 [ext_resource type="PackedScene" uid="uid://bteobam7ogikl" path="res://prefabs/window.tscn" id="11_67w7t"]
 [ext_resource type="Texture2D" uid="uid://b44v443dy3hay" path="res://resources/objects/zaveza.png" id="11_p45aq"]
-[ext_resource type="PackedScene" path="res://prefabs/shelf.tscn" id="12_00r37"]
-[ext_resource type="PackedScene" path="res://prefabs/counter.tscn" id="13_kc2k6"]
+[ext_resource type="PackedScene" uid="uid://dsdpiy4qsh41o" path="res://prefabs/shelf.tscn" id="12_00r37"]
+[ext_resource type="PackedScene" uid="uid://cmssui21mqdhn" path="res://prefabs/counter.tscn" id="13_kc2k6"]
 [ext_resource type="PackedScene" uid="uid://bf32gt2dc4bxm" path="res://prefabs/hedge.tscn" id="14_1q581"]
 [ext_resource type="PackedScene" uid="uid://dr3wokdj1k7fe" path="res://prefabs/door.tscn" id="14_c7doo"]
 [ext_resource type="PackedScene" uid="uid://dnvm75kd26qa6" path="res://prefabs/static_objects/intercom.tscn" id="17_liwq8"]
+[ext_resource type="PackedScene" uid="uid://df5kmo4s3fnf0" path="res://prefabs/static_objects/panties.tscn" id="17_p24tm"]
 [ext_resource type="PackedScene" uid="uid://yduall5llvun" path="res://prefabs/fence.tscn" id="19_v8lx4"]
 [ext_resource type="PackedScene" uid="uid://b3ey61awn25d6" path="res://prefabs/car.tscn" id="21_0lrcf"]
 [ext_resource type="Script" path="res://scripts/back_door.gd" id="21_cw1nr"]
 [ext_resource type="PackedScene" uid="uid://dfk2g4crwafs" path="res://prefabs/interactable/ring_bell.tscn" id="22_fo05x"]
 [ext_resource type="Script" path="res://scripts/Eventer.gd" id="23_7rvqx"]
-[ext_resource type="PackedScene" uid="uid://cjrtwsuwmxoik" path="res://prefabs/interactable/radio.tscn" id="24_rcamu"]
-[ext_resource type="PackedScene" uid="uid://4nyhx3a0bvtp" path="res://prefabs/static_objects/alarm.tscn" id="25_pfxgi"]
+[ext_resource type="PackedScene" path="res://prefabs/interactable/radio.tscn" id="24_rcamu"]
+[ext_resource type="PackedScene" uid="uid://w5j7mfdfmk4l" path="res://prefabs/static_objects/alarm.tscn" id="25_pfxgi"]
 [ext_resource type="PackedScene" uid="uid://d1aanlqmjtxby" path="res://prefabs/static_objects/switch.tscn" id="26_qt6vl"]
 [ext_resource type="PackedScene" uid="uid://b443u28fysqbm" path="res://prefabs/static_objects/store_light.tscn" id="27_d07j5"]
 [ext_resource type="PackedScene" uid="uid://brrdg1dqjfx3b" path="res://prefabs/static_objects/employe_of_the_month.tscn" id="29_xpyo0"]
 [ext_resource type="PackedScene" uid="uid://4ckdr63806k4" path="res://prefabs/static_objects/military_shirt.tscn" id="30_th6rp"]
-[ext_resource type="PackedScene" uid="uid://b0lxkopgpaq5s" path="res://prefabs/static_objects/grandma_camera.tscn" id="31_2eof4"]
-[ext_resource type="PackedScene" uid="uid://dpdkog6f1e68m" path="res://prefabs/static_objects/shop_title.tscn" id="32_jww3n"]
+[ext_resource type="PackedScene" uid="uid://djapwg1iaeset" path="res://prefabs/static_objects/grandma_camera.tscn" id="31_2eof4"]
+[ext_resource type="PackedScene" uid="uid://7gllmvg8lya8" path="res://prefabs/static_objects/shop_title.tscn" id="32_jww3n"]
 [ext_resource type="PackedScene" uid="uid://bpu3hwm1gt7bn" path="res://prefabs/objects/zuker.tscn" id="33_dh37d"]
-[ext_resource type="PackedScene" path="res://prefabs/static_objects/alarm_sign.tscn" id="34_ng66e"]
+[ext_resource type="PackedScene" uid="uid://ugqarug58q66" path="res://prefabs/static_objects/alarm_sign.tscn" id="34_ng66e"]
+[ext_resource type="PackedScene" uid="uid://b4jnvamuocin" path="res://prefabs/static_objects/hoop.tscn" id="35_tkqxu"]
+[ext_resource type="Script" path="res://scripts/bounds.gd" id="39_g1mox"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_elx5j"]
 panorama = ExtResource("3_j2l4q")
@@ -49,6 +54,92 @@ ambient_light_color = Color(0.486275, 0.486275, 0.486275, 1)
 ambient_light_sky_contribution = 0.03
 ambient_light_energy = 0.0
 reflected_light_source = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r6nvj"]
+size = Vector3(12.9633, 3.91187, 0.894775)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ot8bu"]
+albedo_texture = ExtResource("7_r6x2x")
+uv1_scale = Vector3(0.275, 0.275, 0.275)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uajwy"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_a7aif"]
+_surfaces = [{
+"aabb": AABB(-6.51615, 0.584695, -0.929529, 13.2672, 0.240896, 1.92954),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0, 2, 0, 7, 0, 3, 0, 2, 0, 6, 0, 7, 0, 6, 0, 5, 0, 7, 0, 6, 0, 4, 0, 5, 0, 4, 0, 1, 0, 5, 0, 4, 0, 0, 0, 1, 0, 2, 0, 4, 0, 6, 0, 2, 0, 0, 0, 4, 0, 7, 0, 1, 0, 3, 0, 7, 0, 5, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 255, 255, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_57bwm"]
+resource_name = "samostoječa stalaža_Cube_001"
+_surfaces = [{
+"aabb": AABB(-6.51615, 0.584695, -0.929529, 13.2672, 0.240896, 1.92954),
+"attribute_data": PackedByteArray(255, 95, 255, 255, 255, 31, 255, 63, 255, 95, 0, 0, 255, 159, 255, 255, 255, 159, 0, 0, 255, 223, 255, 63, 255, 95, 255, 191, 255, 31, 255, 127, 255, 95, 255, 191, 255, 159, 255, 191, 255, 159, 255, 191, 255, 223, 255, 127, 255, 95, 255, 63, 255, 95, 255, 63, 255, 95, 255, 63, 255, 159, 255, 63, 255, 159, 255, 63, 255, 159, 255, 63, 255, 95, 255, 127, 255, 95, 255, 127, 255, 95, 255, 127, 255, 159, 255, 127, 255, 159, 255, 127, 255, 159, 255, 127),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 9, 0, 3, 0, 0, 0, 6, 0, 9, 0, 8, 0, 21, 0, 10, 0, 8, 0, 19, 0, 21, 0, 20, 0, 17, 0, 23, 0, 20, 0, 14, 0, 17, 0, 13, 0, 4, 0, 15, 0, 13, 0, 2, 0, 4, 0, 7, 0, 12, 0, 18, 0, 7, 0, 1, 0, 12, 0, 22, 0, 5, 0, 11, 0, 22, 0, 16, 0, 5, 0),
+"material": SubResource("StandardMaterial3D_uajwy"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 84, 213, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 255, 255, 254, 255, 84, 213, 0, 0, 255, 255, 254, 255, 255, 191, 0, 0, 255, 255, 254, 255, 255, 255, 0, 0, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 84, 213, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0, 254, 255, 255, 191, 255, 255, 0, 0, 254, 255, 255, 191, 255, 255, 0, 0, 254, 255, 84, 213, 255, 255, 255, 255, 254, 255, 255, 191, 255, 255, 255, 255, 254, 255, 255, 255, 255, 255, 255, 255, 254, 255, 84, 213, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 84, 213, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 84, 213, 84, 213, 84, 213, 0, 0, 255, 127, 255, 255, 255, 255, 84, 213, 84, 213, 255, 255, 255, 255, 255, 127, 255, 191, 84, 213, 84, 213, 0, 0, 255, 127, 255, 191, 255, 191, 84, 213, 84, 213, 255, 191, 255, 191, 255, 127, 255, 191, 0, 0, 255, 127, 255, 255, 255, 255, 170, 42, 170, 42, 255, 255, 255, 255, 255, 127, 255, 191, 170, 42, 170, 42, 0, 0, 255, 127, 255, 191, 255, 191, 170, 42, 170, 42, 255, 191, 255, 191, 255, 127, 255, 191, 170, 42, 170, 42)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_a7aif")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4fo7k"]
+data = PackedVector3Array(-6.5162, 0.5847, 1, -6.5162, 0.8256, -0.9295, -6.5162, 0.8256, 1, -6.5162, 0.5847, 1, -6.5162, 0.5847, -0.9295, -6.5162, 0.8256, -0.9295, -6.5162, 0.5847, -0.9295, 6.7511, 0.8256, -0.9295, -6.5162, 0.8256, -0.9295, -6.5162, 0.5847, -0.9295, 6.7511, 0.5847, -0.9295, 6.7511, 0.8256, -0.9295, 6.7511, 0.5847, -0.9295, 6.7511, 0.8256, 1, 6.7511, 0.8256, -0.9295, 6.7511, 0.5847, -0.9295, 6.7511, 0.5847, 1, 6.7511, 0.8256, 1, 6.7511, 0.5847, 1, -6.5162, 0.8256, 1, 6.7511, 0.8256, 1, 6.7511, 0.5847, 1, -6.5162, 0.5847, 1, -6.5162, 0.8256, 1, -6.5162, 0.5847, -0.9295, 6.7511, 0.5847, 1, 6.7511, 0.5847, -0.9295, -6.5162, 0.5847, -0.9295, -6.5162, 0.5847, 1, 6.7511, 0.5847, 1, 6.7511, 0.8256, -0.9295, -6.5162, 0.8256, 1, -6.5162, 0.8256, -0.9295, 6.7511, 0.8256, -0.9295, 6.7511, 0.8256, 1, -6.5162, 0.8256, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0cr7e"]
+albedo_texture = ExtResource("7_r6x2x")
+uv1_scale = Vector3(-0.195, -0.195, -0.195)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bbl7a"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4q37l"]
+_surfaces = [{
+"aabb": AABB(-6.51615, 0.584695, -0.929529, 13.2672, 0.240896, 3.0134),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0, 2, 0, 7, 0, 3, 0, 2, 0, 6, 0, 7, 0, 6, 0, 5, 0, 7, 0, 6, 0, 4, 0, 5, 0, 4, 0, 1, 0, 5, 0, 4, 0, 0, 0, 1, 0, 2, 0, 4, 0, 6, 0, 2, 0, 0, 0, 4, 0, 7, 0, 1, 0, 3, 0, 7, 0, 5, 0, 1, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 255, 255, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ss3xm"]
+resource_name = "samostoječa stalaža_Cube_003"
+_surfaces = [{
+"aabb": AABB(-6.51615, 0.584695, -0.929529, 13.2672, 0.240896, 3.0134),
+"attribute_data": PackedByteArray(255, 95, 255, 255, 255, 31, 255, 63, 255, 95, 0, 0, 255, 159, 255, 255, 255, 159, 0, 0, 255, 223, 255, 63, 255, 95, 255, 191, 255, 31, 255, 127, 255, 95, 255, 191, 255, 159, 255, 191, 255, 159, 255, 191, 255, 223, 255, 127, 255, 95, 255, 63, 255, 95, 255, 63, 255, 95, 255, 63, 255, 159, 255, 63, 255, 159, 255, 63, 255, 159, 255, 63, 255, 95, 255, 127, 255, 95, 255, 127, 255, 95, 255, 127, 255, 159, 255, 127, 255, 159, 255, 127, 255, 159, 255, 127),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 9, 0, 3, 0, 0, 0, 6, 0, 9, 0, 8, 0, 21, 0, 10, 0, 8, 0, 19, 0, 21, 0, 20, 0, 17, 0, 23, 0, 20, 0, 14, 0, 17, 0, 13, 0, 4, 0, 15, 0, 13, 0, 2, 0, 4, 0, 7, 0, 12, 0, 18, 0, 7, 0, 1, 0, 12, 0, 22, 0, 5, 0, 11, 0, 22, 0, 16, 0, 5, 0),
+"material": SubResource("StandardMaterial3D_bbl7a"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 84, 213, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 255, 255, 254, 255, 84, 213, 0, 0, 255, 255, 254, 255, 255, 191, 0, 0, 255, 255, 254, 255, 255, 255, 0, 0, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 84, 213, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 255, 255, 0, 0, 254, 255, 255, 191, 255, 255, 0, 0, 254, 255, 255, 191, 255, 255, 0, 0, 254, 255, 84, 213, 255, 255, 255, 255, 254, 255, 255, 191, 255, 255, 255, 255, 254, 255, 255, 255, 255, 255, 255, 255, 254, 255, 84, 213, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 84, 213, 255, 255, 254, 255, 0, 0, 255, 255, 255, 255, 254, 255, 0, 0, 255, 255, 255, 255, 254, 255, 0, 0, 84, 213, 84, 213, 84, 213, 0, 0, 255, 127, 255, 255, 255, 255, 84, 213, 84, 213, 255, 255, 255, 255, 255, 127, 255, 191, 84, 213, 84, 213, 0, 0, 255, 127, 255, 191, 255, 191, 84, 213, 84, 213, 255, 191, 255, 191, 255, 127, 255, 191, 0, 0, 255, 127, 255, 255, 255, 255, 170, 42, 170, 42, 255, 255, 255, 255, 255, 127, 255, 191, 170, 42, 170, 42, 0, 0, 255, 127, 255, 191, 255, 191, 170, 42, 170, 42, 255, 191, 255, 191, 255, 127, 255, 191, 170, 42, 170, 42)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_4q37l")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_oxxnq"]
+data = PackedVector3Array(-6.5162, 0.5847, 2.0838, -6.5162, 0.8256, -0.9295, -6.5162, 0.8256, 2.0838, -6.5162, 0.5847, 2.0838, -6.5162, 0.5847, -0.9295, -6.5162, 0.8256, -0.9295, -6.5162, 0.5847, -0.9295, 6.7511, 0.8256, -0.9295, -6.5162, 0.8256, -0.9295, -6.5162, 0.5847, -0.9295, 6.7511, 0.5847, -0.9295, 6.7511, 0.8256, -0.9295, 6.7511, 0.5847, -0.9295, 6.7511, 0.8256, 2.0838, 6.7511, 0.8256, -0.9295, 6.7511, 0.5847, -0.9295, 6.7511, 0.5847, 2.0838, 6.7511, 0.8256, 2.0838, 6.7511, 0.5847, 2.0838, -6.5162, 0.8256, 2.0838, 6.7511, 0.8256, 2.0838, 6.7511, 0.5847, 2.0838, -6.5162, 0.5847, 2.0838, -6.5162, 0.8256, 2.0838, -6.5162, 0.5847, -0.9295, 6.7511, 0.5847, 2.0838, 6.7511, 0.5847, -0.9295, -6.5162, 0.5847, -0.9295, -6.5162, 0.5847, 2.0838, 6.7511, 0.5847, 2.0838, 6.7511, 0.8256, -0.9295, -6.5162, 0.8256, 2.0838, -6.5162, 0.8256, -0.9295, 6.7511, 0.8256, -0.9295, 6.7511, 0.8256, 2.0838, -6.5162, 0.8256, 2.0838)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ai6a4"]
+size = Vector3(1.05347, 2.50067, 1.27405)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iqi58"]
 albedo_texture = ExtResource("9_brbew")
@@ -119,6 +210,21 @@ environment = SubResource("Environment_7xour")
 
 [node name="World" type="Node" parent="."]
 
+[node name="Bounds" type="Area3D" parent="World" node_paths=PackedStringArray("ball", "spawnPoint")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.46059, -28.7851)
+collision_layer = 4
+collision_mask = 512
+script = ExtResource("39_g1mox")
+ball = NodePath("../../Items/Moveble/ball")
+spawnPoint = NodePath("Point")
+
+[node name="Point" type="Node3D" parent="World/Bounds"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.391026, 0.802002, -3.51085)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Bounds"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 15.685, 0.158417, 0.323853, 1.01669)
+shape = SubResource("BoxShape3D_r6nvj")
+
 [node name="house" parent="World" instance=ExtResource("8_3mivp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.88177, 0.335269, -19.91)
 
@@ -133,6 +239,39 @@ transform = Transform3D(-2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, 
 
 [node name="shelf3" parent="World" instance=ExtResource("12_00r37")]
 transform = Transform3D(-0.5, 0, 4.37114e-08, 0, 0.5, 0, -4.37114e-08, 0, -0.5, 0.179569, 1.5, -25.6442)
+
+[node name="shelf5" type="StaticBody3D" parent="World"]
+transform = Transform3D(-0.255589, 0, 4.37114e-08, 0, 0.5, 0, -2.23443e-08, 0, -0.5, 3.16889, 2.61451, -34.1927)
+
+[node name="Cube_001" type="MeshInstance3D" parent="World/shelf5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.501677, 0.86184, -0.392423)
+material_override = SubResource("StandardMaterial3D_ot8bu")
+mesh = SubResource("ArrayMesh_57bwm")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/shelf5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.501677, 0.86184, -0.392423)
+shape = SubResource("ConcavePolygonShape3D_4fo7k")
+
+[node name="Cube_003" type="MeshInstance3D" parent="World/shelf5"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.498053, 1.09258, 0.0185572)
+material_override = SubResource("StandardMaterial3D_0cr7e")
+mesh = SubResource("ArrayMesh_ss3xm")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="World/shelf5"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.498053, 1.09258, 0.0185572)
+shape = SubResource("ConcavePolygonShape3D_oxxnq")
+
+[node name="Area3D" type="Area3D" parent="World/shelf5"]
+visible = false
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("8_4sux2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/shelf5/Area3D"]
+transform = Transform3D(12.5893, 0, 0, 0, 1, 0, 0, 0, 1.70731, -0.379585, 1.25119, -0.239152)
+shape = SubResource("BoxShape3D_ai6a4")
 
 [node name="shelf4" parent="World" instance=ExtResource("12_00r37")]
 transform = Transform3D(0.5, 0, -8.74228e-08, 0, 0.5, 0, 8.74228e-08, 0, 0.5, 0.551886, 1.5, -26.499)
@@ -882,13 +1021,147 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.54
 [node name="Shop_title" parent="World" instance=ExtResource("32_jww3n")]
 transform = Transform3D(1.43558, 0, 0, 0, 1.02535, 0, 0, 0, 1, 0.183643, 5.15012, -19.8471)
 
+[node name="Clothes" type="Node" parent="World"]
+
+[node name="Military" type="Node" parent="World/Clothes"]
+
+[node name="military_shirt" parent="World/Clothes/Military" instance=ExtResource("30_th6rp")]
+transform = Transform3D(-2.34989e-08, 0, -1, 0, 0.797276, 0, 0.537592, 0, -4.37114e-08, 4.72455, 2.85363, -34.0784)
+
+[node name="military_shirt2" parent="World/Clothes/Military" instance=ExtResource("30_th6rp")]
+transform = Transform3D(-2.34989e-08, 0, -1, 0, 0.797276, 0, 0.537592, 0, -4.37114e-08, 4.59572, 2.85363, -34.0784)
+
+[node name="military_shirt3" parent="World/Clothes/Military" instance=ExtResource("30_th6rp")]
+transform = Transform3D(-2.34989e-08, 0, -1, 0, 0.797276, 0, 0.537592, 0, -4.37114e-08, 4.46684, 2.85363, -34.0784)
+
+[node name="military_shirt4" parent="World/Clothes/Military" instance=ExtResource("30_th6rp")]
+transform = Transform3D(-2.34989e-08, 0, -1, 0, 0.797276, 0, 0.537592, 0, -4.37114e-08, 4.3688, 2.85363, -34.0784)
+
+[node name="military_shirt5" parent="World/Clothes/Military" instance=ExtResource("30_th6rp")]
+transform = Transform3D(-2.34989e-08, 0, -1, 0, 0.797276, 0, 0.537592, 0, -4.37114e-08, 4.27655, 2.85363, -34.0784)
+
+[node name="military_shirt6" parent="World/Clothes/Military" instance=ExtResource("30_th6rp")]
+transform = Transform3D(-2.34989e-08, 0, -1, 0, 0.797276, 0, 0.537592, 0, -4.37114e-08, 4.21928, 2.85363, -34.0784)
+
+[node name="military_shirt7" parent="World/Clothes/Military" instance=ExtResource("30_th6rp")]
+transform = Transform3D(-2.34989e-08, 0, -1, 0, 0.797276, 0, 0.537592, 0, -4.37114e-08, 4.15332, 2.85363, -34.0784)
+
+[node name="military_shirt8" parent="World/Clothes/Military" instance=ExtResource("30_th6rp")]
+transform = Transform3D(-2.34989e-08, 0, -1, 0, 0.797276, 0, 0.537592, 0, -4.37114e-08, 4.0377, 2.85363, -34.0784)
+
+[node name="military_shirt9" parent="World/Clothes/Military" instance=ExtResource("30_th6rp")]
+transform = Transform3D(-2.34989e-08, 0, -1, 0, 0.797276, 0, 0.537592, 0, -4.37114e-08, 3.91471, 2.85363, -34.0784)
+
+[node name="military_shirt10" parent="World/Clothes/Military" instance=ExtResource("30_th6rp")]
+transform = Transform3D(-2.34989e-08, 0, -1, 0, 0.797276, 0, 0.537592, 0, -4.37114e-08, 3.77454, 2.85363, -34.0784)
+
+[node name="military_shirt11" parent="World/Clothes/Military" instance=ExtResource("30_th6rp")]
+transform = Transform3D(-2.34989e-08, 0, -1, 0, 0.797276, 0, 0.537592, 0, -4.37114e-08, 3.65377, 2.85363, -34.0784)
+
+[node name="military_shirt12" parent="World/Clothes/Military" instance=ExtResource("30_th6rp")]
+transform = Transform3D(-2.34989e-08, 0, -1, 0, 0.797276, 0, 0.537592, 0, -4.37114e-08, 3.54061, 2.85363, -34.0784)
+
+[node name="military_shirt13" parent="World/Clothes/Military" instance=ExtResource("30_th6rp")]
+transform = Transform3D(-2.34989e-08, 0, -1, 0, 0.797276, 0, 0.537592, 0, -4.37114e-08, 3.54102, 2.85776, -34.0791)
+
+[node name="Panties" type="Node" parent="World/Clothes"]
+
+[node name="panties" parent="World/Clothes/Panties" instance=ExtResource("17_p24tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89999, 3.20185, -34.4835)
+
+[node name="panties2" parent="World/Clothes/Panties" instance=ExtResource("17_p24tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89999, 3.20185, -34.3497)
+
+[node name="panties3" parent="World/Clothes/Panties" instance=ExtResource("17_p24tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89999, 3.20185, -34.2253)
+
+[node name="panties4" parent="World/Clothes/Panties" instance=ExtResource("17_p24tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89999, 3.20185, -34.1188)
+
+[node name="panties5" parent="World/Clothes/Panties" instance=ExtResource("17_p24tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89999, 3.20185, -34.0014)
+
+[node name="panties6" parent="World/Clothes/Panties" instance=ExtResource("17_p24tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89999, 3.20185, -33.8671)
+
+[node name="panties7" parent="World/Clothes/Panties" instance=ExtResource("17_p24tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89999, 3.20185, -33.7409)
+
+[node name="panties8" parent="World/Clothes/Panties" instance=ExtResource("17_p24tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89999, 3.20185, -33.6155)
+
+[node name="panties9" parent="World/Clothes/Panties" instance=ExtResource("17_p24tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89999, 3.20185, -33.6155)
+
+[node name="Panties2" type="Node" parent="World/Clothes"]
+
+[node name="panties" parent="World/Clothes/Panties2" instance=ExtResource("17_p24tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.53098, 3.20048, -34.4835)
+
+[node name="Sprite3D" parent="World/Clothes/Panties2/panties" index="0"]
+modulate = Color(0, 1, 1, 1)
+
+[node name="panties2" parent="World/Clothes/Panties2" instance=ExtResource("17_p24tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.53098, 3.20048, -34.3276)
+
+[node name="Sprite3D" parent="World/Clothes/Panties2/panties2" index="0"]
+modulate = Color(0, 1, 1, 1)
+
+[node name="panties3" parent="World/Clothes/Panties2" instance=ExtResource("17_p24tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.53098, 3.20048, -34.2083)
+
+[node name="Sprite3D" parent="World/Clothes/Panties2/panties3" index="0"]
+modulate = Color(0, 1, 1, 1)
+
+[node name="panties4" parent="World/Clothes/Panties2" instance=ExtResource("17_p24tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.53098, 3.20048, -34.1186)
+
+[node name="Sprite3D" parent="World/Clothes/Panties2/panties4" index="0"]
+modulate = Color(0, 1, 1, 1)
+
+[node name="panties5" parent="World/Clothes/Panties2" instance=ExtResource("17_p24tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.53098, 3.20048, -34.0104)
+
+[node name="Sprite3D" parent="World/Clothes/Panties2/panties5" index="0"]
+modulate = Color(0, 1, 1, 1)
+
+[node name="panties6" parent="World/Clothes/Panties2" instance=ExtResource("17_p24tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.53098, 3.20048, -33.9285)
+
+[node name="Sprite3D" parent="World/Clothes/Panties2/panties6" index="0"]
+modulate = Color(0, 1, 1, 1)
+
+[node name="panties7" parent="World/Clothes/Panties2" instance=ExtResource("17_p24tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.53098, 3.20048, -33.8496)
+
+[node name="Sprite3D" parent="World/Clothes/Panties2/panties7" index="0"]
+modulate = Color(0, 1, 1, 1)
+
+[node name="panties8" parent="World/Clothes/Panties2" instance=ExtResource("17_p24tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.53098, 3.20048, -33.7752)
+
+[node name="Sprite3D" parent="World/Clothes/Panties2/panties8" index="0"]
+modulate = Color(0, 1, 1, 1)
+
+[node name="panties9" parent="World/Clothes/Panties2" instance=ExtResource("17_p24tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.53098, 3.20048, -33.6611)
+
+[node name="Sprite3D" parent="World/Clothes/Panties2/panties9" index="0"]
+modulate = Color(0, 1, 1, 1)
+
+[node name="panties10" parent="World/Clothes/Panties2" instance=ExtResource("17_p24tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.53098, 3.20048, -33.6127)
+
+[node name="Sprite3D" parent="World/Clothes/Panties2/panties10" index="0"]
+modulate = Color(0, 1, 1, 1)
+
+[node name="hoop" parent="World" instance=ExtResource("35_tkqxu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.499685, -0.943941, -29.4743)
+
 [node name="Items" type="Node" parent="."]
 
 [node name="employe_of_the_month" parent="Items" instance=ExtResource("29_xpyo0")]
 transform = Transform3D(-0.0147824, 0, 0.999891, 0, 1, 0, -0.999891, 0, -0.0147824, -5.96218, 3, -29.4973)
-
-[node name="military_shirt" parent="Items" instance=ExtResource("30_th6rp")]
-transform = Transform3D(0.537592, 0, 0, 0, 0.797276, 0, 0, 0, 1, 4.55937, 2.56746, -34.4698)
 
 [node name="grandma_camera" parent="Items" node_paths=PackedStringArray("player") instance=ExtResource("31_2eof4")]
 transform = Transform3D(-0.207783, 0, -1.00372, 0, 0.405921, 0, 0.424175, 0, -0.491673, 0.92061, 3.99563, -26.4717)
@@ -952,10 +1225,10 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.920
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.94693, 2.6199, -26.2959)
 
 [node name="beans" parent="Items/Moveble" instance=ExtResource("10_b18vh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, -18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.26943, 2.53102, -24.5846)
 
 [node name="ball" parent="Items/Moveble" instance=ExtResource("9_k3ktp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 8.28301, -17)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.366617, 3.28301, -32.3176)
 physics_material_override = SubResource("PhysicsMaterial_34nxj")
 
 [node name="Light" type="Node" parent="."]
@@ -1018,3 +1291,19 @@ one_shot = true
 
 [node name="Eventer" type="Node" parent="."]
 script = ExtResource("23_7rvqx")
+
+[connection signal="body_entered" from="World/Bounds" to="World/Bounds" method="_on_body_entered"]
+[connection signal="body_exited" from="World/Bounds" to="World/Bounds" method="_on_body_exited"]
+[connection signal="body_entered" from="World/shelf5/Area3D" to="World/shelf5/Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="World/shelf5/Area3D" to="World/shelf5/Area3D" method="_on_body_exited"]
+
+[editable path="World/Clothes/Panties2/panties"]
+[editable path="World/Clothes/Panties2/panties2"]
+[editable path="World/Clothes/Panties2/panties3"]
+[editable path="World/Clothes/Panties2/panties4"]
+[editable path="World/Clothes/Panties2/panties5"]
+[editable path="World/Clothes/Panties2/panties6"]
+[editable path="World/Clothes/Panties2/panties7"]
+[editable path="World/Clothes/Panties2/panties8"]
+[editable path="World/Clothes/Panties2/panties9"]
+[editable path="World/Clothes/Panties2/panties10"]
