@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=77 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
 [ext_resource type="Texture2D" uid="uid://dbdypo0n2qh3w" path="res://resources/ui_elements/kurzor.png" id="1_hs404"]
@@ -50,6 +50,7 @@
 [ext_resource type="PackedScene" uid="uid://dxins27ormr5c" path="res://prefabs/objects/flour.tscn" id="46_egylu"]
 [ext_resource type="Script" path="res://scripts/RingBellTrigger.gd" id="47_8b16u"]
 [ext_resource type="Script" path="res://scripts/nina_spawnPoint.gd" id="49_rubdf"]
+[ext_resource type="PackedScene" path="res://prefabs/objects/david.tscn" id="51_3s6ym"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_elx5j"]
 panorama = ExtResource("3_j2l4q")
@@ -1913,6 +1914,57 @@ transform = Transform3D(-0.353426, 0, 0.935463, 0, 1, 0, -0.935463, 0, -0.353426
 [node name="flour3" parent="Items/Moveble" instance=ExtResource("46_egylu")]
 transform = Transform3D(-0.353426, 0, 0.935463, 0, 1, 0, -0.935463, 0, -0.353426, -4.93994, 1.79068, -21.9521)
 
+[node name="flour4" parent="Items/Moveble" instance=ExtResource("46_egylu")]
+transform = Transform3D(0.454923, 0, 0.890531, 0, 1, 0, -0.890531, 0, 0.454923, -5.44667, 1.79068, -21.9521)
+
+[node name="flour5" parent="Items/Moveble" instance=ExtResource("46_egylu")]
+transform = Transform3D(-0.353426, 0, 0.935463, 0, 1, 0, -0.935463, 0, -0.353426, -5.33286, 1.79068, -22.7015)
+
+[node name="flour6" parent="Items/Moveble" instance=ExtResource("46_egylu")]
+transform = Transform3D(-0.353426, 0, 0.935463, 0, 1, 0, -0.935463, 0, -0.353426, -5.0641, 1.79068, -22.4505)
+
+[node name="flour7" parent="Items/Moveble" instance=ExtResource("46_egylu")]
+transform = Transform3D(-0.353426, 0, 0.935463, 0, 1, 0, -0.935463, 0, -0.353426, -4.93994, 1.79068, -23.1068)
+
+[node name="flour8" parent="Items/Moveble" instance=ExtResource("46_egylu")]
+transform = Transform3D(0.454923, 0, 0.890531, 0, 1, 0, -0.890531, 0, 0.454923, -5.44667, 1.79068, -23.1068)
+
+[node name="flour9" parent="Items/Moveble" instance=ExtResource("46_egylu")]
+transform = Transform3D(-0.353426, 0, 0.935463, 0, 1, 0, -0.935463, 0, -0.353426, -5.33286, 1.79068, -23.7506)
+
+[node name="flour10" parent="Items/Moveble" instance=ExtResource("46_egylu")]
+transform = Transform3D(-0.353426, 0, 0.935463, 0, 1, 0, -0.935463, 0, -0.353426, -5.0641, 1.79068, -23.4996)
+
+[node name="flour11" parent="Items/Moveble" instance=ExtResource("46_egylu")]
+transform = Transform3D(-0.353426, 0, 0.935463, 0, 1, 0, -0.935463, 0, -0.353426, -4.93994, 1.79068, -24.1559)
+
+[node name="flour12" parent="Items/Moveble" instance=ExtResource("46_egylu")]
+transform = Transform3D(0.454923, 0, 0.890531, 0, 1, 0, -0.890531, 0, 0.454923, -5.44667, 1.79068, -24.1559)
+
+[node name="flour13" parent="Items/Moveble" instance=ExtResource("46_egylu")]
+transform = Transform3D(-0.353426, 0, 0.935463, 0, 1, 0, -0.935463, 0, -0.353426, -5.33286, 1.79068, -24.8719)
+
+[node name="flour14" parent="Items/Moveble" instance=ExtResource("46_egylu")]
+transform = Transform3D(-0.353426, 0, 0.935463, 0, 1, 0, -0.935463, 0, -0.353426, -5.0641, 1.79068, -24.621)
+
+[node name="flour15" parent="Items/Moveble" instance=ExtResource("46_egylu")]
+transform = Transform3D(-0.353426, 0, 0.935463, 0, 1, 0, -0.935463, 0, -0.353426, -4.93994, 1.79068, -25.2772)
+
+[node name="flour16" parent="Items/Moveble" instance=ExtResource("46_egylu")]
+transform = Transform3D(0.454923, 0, 0.890531, 0, 1, 0, -0.890531, 0, 0.454923, -5.44667, 1.79068, -25.2772)
+
+[node name="flour17" parent="Items/Moveble" instance=ExtResource("46_egylu")]
+transform = Transform3D(-0.353426, 0, 0.935463, 0, 1, 0, -0.935463, 0, -0.353426, -5.33286, 1.79068, -25.9661)
+
+[node name="flour18" parent="Items/Moveble" instance=ExtResource("46_egylu")]
+transform = Transform3D(-0.353426, 0, 0.935463, 0, 1, 0, -0.935463, 0, -0.353426, -5.0641, 1.79068, -25.7151)
+
+[node name="flour19" parent="Items/Moveble" instance=ExtResource("46_egylu")]
+transform = Transform3D(-0.353426, 0, 0.935463, 0, 1, 0, -0.935463, 0, -0.353426, -4.93994, 1.79068, -26.3714)
+
+[node name="flour20" parent="Items/Moveble" instance=ExtResource("46_egylu")]
+transform = Transform3D(0.454923, 0, 0.890531, 0, 1, 0, -0.890531, 0, 0.454923, -5.44667, 1.79068, -26.3714)
+
 [node name="ball" parent="Items/Moveble" instance=ExtResource("9_k3ktp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.366617, 3.28301, -32.3176)
 physics_material_override = SubResource("PhysicsMaterial_34nxj")
@@ -1987,6 +2039,9 @@ end = NodePath("..")
 
 [node name="Camera3D" type="Camera3D" parent="End"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.426121, 2.3025, -24.1676)
+
+[node name="David" parent="." instance=ExtResource("51_3s6ym")]
+transform = Transform3D(-0.017627, 0, 0.999845, 0.023905, 0.999714, 0.000421438, -0.999559, 0.0239087, -0.0176219, -4.83608, 2.78999, -27.0155)
 
 [connection signal="body_entered" from="World/RingBellTrigger" to="World/RingBellTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="World/Bounds" to="World/Bounds" method="_on_body_entered"]
