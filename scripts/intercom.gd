@@ -30,24 +30,24 @@ func _process(_delta):
 			"Audio_2":
 				_audio.volume_db = 10
 				_audio.stream = Audio_2
+			"Audio_3":
+				_audio.volume_db = 10
+				_audio.stream = Audio_3
 				
 		_audio.play()
 		start = false
 
 func _on_event(eventName):
-	if eventName == "Start":
-		play = "Audio_1"
-		_timer.start(2)
-		
-	if eventName == "Stop Alarm":
-		play = "Audio_2" #plays intro
-		_timer.start(2)
-		
-	if eventName == "NarratorFishReact":
-		play = "Audio_3"
-		_timer.start(2)
-		
-		pass
+	match(eventName):
+		"Start":
+			play = "Audio_1"
+			_timer.start(2)
+		"Stop Alarm":
+			play = "Audio_2" #plays intro
+			_timer.start(2)
+		"NarratorFishReact":
+			play = "Audio_3"
+	pass
 
 func _on_timer_timeout():
 	start = true
