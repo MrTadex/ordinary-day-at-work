@@ -32,7 +32,8 @@ var array = [
 				preload("res://resources/sound_music/player_sound/script_36_luka_minecraft.ogg"),
 				preload("res://resources/sound_music/player_sound/script_16_fish_5_laugh1.ogg"),
 				preload("res://resources/sound_music/player_sound/script_39_luka_on_it.ogg"),
-				preload("res://resources/sound_music/player_sound/Ring_bell_first.ogg")
+				preload("res://resources/sound_music/player_sound/Ring_bell_first.ogg"),
+				preload("res://resources/sound_music/player_sound/script_16_fish_5_laugh1.ogg")
 			]
 
 func _ready():
@@ -96,11 +97,12 @@ func _process(_delta):
 	_camera.position = Vector3(position.x, position.y + 0.6, position.z)
 
 	if _raycast.get_collider():
-		if _raycast.get_collider().name.contains("panties") and _audioReact.playing == false:
-			#sproži event laugh panties
-			_audioReact.stream = array[3]
-			_audioReact.volume_db = 10
-			_audioReact.playing = true
+		print(_raycast.get_collider().name)
+		if _audioReact.playing == false:
+			if _raycast.get_collider().name.contains("panties"):
+				get_tree().call_group("EventListeners", "_on_event", "SeePanties")
+			if _raycast.get_collider().name.contains("fish"):
+				get_tree().call_group("EventListeners", "_on_event", "SeeFish")
 	
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -131,5 +133,12 @@ func _on_event(eventName):
 		"Ring Bell Dialogue":
 			_audioPlayer.stream = array[5]
 			_audioPlayer.playing = true
+		"SeeFish":
+			get_tree().call_group("EventListeners", "_on_event", "NarratorFishReact")
+			#_audioReact.stream = array[6]
+			#_audioReact.playing = true
+		"SeePanties":
+			_audioReact.stream = array[3]
+			_audioReact.playing = true
 		"End":
 			queue_free()
