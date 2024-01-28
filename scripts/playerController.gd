@@ -66,12 +66,17 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-	if Input.is_action_just_pressed("left_click"):
+	if Input.is_action_just_pressed("right_click"):
 		if held_object:
 			held_object.freeze = false
 			var forceDir = to_global(_raycast.target_position) - _raycast.global_position
-			print(forceDir + Vector3(0,2,0))
+			#print(forceDir + Vector3(0,2,0))
 			held_object.apply_central_impulse((forceDir + Vector3(0,2,0)) * 5)
+			held_object = null
+	
+	if Input.is_action_just_pressed("left_click"):
+		if held_object:
+			held_object.freeze = false
 			held_object = null
 		else:
 			if _raycast.get_collider():
