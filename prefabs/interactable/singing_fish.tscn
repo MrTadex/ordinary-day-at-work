@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/singing_fish.gd" id="1_3gvjc"]
 [ext_resource type="Texture2D" uid="uid://blby6anqsfxyv" path="res://resources/singing_fish.png" id="1_33ylr"]
-[ext_resource type="AudioStream" uid="uid://c6gmnm5o6agt1" path="res://resources/sound_music/sea shanty.wav" id="2_4r3iw"]
+[ext_resource type="AudioStream" uid="uid://dk2sswo7vumwh" path="res://resources/sound_music/sea shanty.wav" id="2_4r3iw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vftp5"]
 atlas = ExtResource("1_33ylr")

@@ -42,8 +42,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 
 [node name="AudioStreamPlayer3DWalk" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_48fcs")
-volume_db = -10.0
-max_db = 0.0
+volume_db = -15.0
+max_db = -1.0
 
 [node name="AudioStreamPlayer3DReact" type="AudioStreamPlayer3D" parent="."]
 
