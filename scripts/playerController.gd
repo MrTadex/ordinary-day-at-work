@@ -87,7 +87,7 @@ func _physics_process(delta):
 				if(_raycast.get_collider().get_class() == "RigidBody3D"):
 					held_object = _raycast.get_collider()
 					held_object.freeze = true
-					print(held_object)
+					#print(held_object)
 				elif(_raycast.get_collider().is_in_group("Interactable")):
 					_raycast.get_collider().clicked()
 	
@@ -98,7 +98,7 @@ func _process(_delta):
 	_camera.position = Vector3(position.x, position.y + 0.6, position.z)
 
 	if _raycast.get_collider():
-		print(_raycast.get_collider().name)
+		#print(_raycast.get_collider().name)
 		if _audioReact.playing == false:
 			if _raycast.get_collider().name.contains("panties"):
 				if _audioPlayer.playing == false:

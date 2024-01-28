@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=80 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
 [ext_resource type="Texture2D" uid="uid://dbdypo0n2qh3w" path="res://resources/ui_elements/kurzor.png" id="1_hs404"]
@@ -52,6 +52,7 @@
 [ext_resource type="PackedScene" uid="uid://c3s6iqo17b3jc" path="res://prefabs/nina_the_manager.tscn" id="48_pvova"]
 [ext_resource type="Script" path="res://scripts/nina_spawnPoint.gd" id="49_rubdf"]
 [ext_resource type="PackedScene" path="res://prefabs/objects/david.tscn" id="51_3s6ym"]
+[ext_resource type="Script" path="res://scripts/Anomaly.gd" id="53_4fpwo"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_elx5j"]
 panorama = ExtResource("3_j2l4q")
@@ -190,6 +191,9 @@ size = Vector3(1.00098, 2.00684, 0.102295)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_34nxj"]
 bounce = 0.5
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yhs0y"]
+radius = 2.0
 
 [node name="main" type="Node3D"]
 
@@ -2059,12 +2063,32 @@ nina = NodePath("../nina_the_manager")
 [node name="Camera3D" type="Camera3D" parent="End"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.426121, 2.3025, -24.1676)
 
+[node name="Anomaly" type="Area3D" parent="." groups=["EventListeners"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.02894, -26.3036)
+collision_mask = 15
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 10.0
+gravity_point_center = Vector3(0, 0, 0)
+gravity_direction = Vector3(0, 0, 0)
+gravity = -2.0
+script = ExtResource("53_4fpwo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Anomaly"]
+shape = SubResource("SphereShape3D_yhs0y")
+disabled = true
+
+[node name="Timer" type="Timer" parent="Anomaly"]
+wait_time = 0.1
+one_shot = true
+
 [connection signal="body_entered" from="World/RingBellTrigger" to="World/RingBellTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="World/Bounds" to="World/Bounds" method="_on_body_entered"]
 [connection signal="body_exited" from="World/Bounds" to="World/Bounds" method="_on_body_exited"]
 [connection signal="body_entered" from="World/shelf5/Area3D" to="World/shelf5/Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="World/shelf5/Area3D" to="World/shelf5/Area3D" method="_on_body_exited"]
 [connection signal="timeout" from="Timer" to="Eventer" method="_on_timer_timeout"]
+[connection signal="timeout" from="Anomaly/Timer" to="Anomaly" method="_on_timer_timeout"]
 
 [editable path="World/Clothes/Panties2/panties"]
 [editable path="World/Clothes/Panties2/panties2"]
