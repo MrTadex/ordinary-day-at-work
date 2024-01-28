@@ -1,6 +1,10 @@
 extends StaticBody3D
 
 @export var player:Node
+@onready var _audio = $AudioStreamPlayer3D
+
+func clicked():
+	_audio.playing = true
 
 # get player
 func _ready():

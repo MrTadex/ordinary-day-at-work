@@ -17,8 +17,8 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var _audio = $AudioStreamPlayer3DWalk
 
 var array = [
-				preload("res://resources/sound_music/player_sound/script_16_fish_5_laugh1.ogg"),
-				preload("res://resources/sound_music/radio_2.ogg"),
+				#preload("res://resources/sound_music/player_sound/script_16_fish_5_laugh1.ogg"),
+				preload("res://resources/sound_music/player_sound/script_36_luka_minecraft.ogg"),
 				preload("res://resources/sound_music/radio_3.ogg")
 			]
 
@@ -60,11 +60,11 @@ func _process(_delta):
 	
 	#print(_raycast.get_collider())
 	if _raycast.get_collider():
-		if _raycast.get_collider().name == 'fish':
+		if _raycast.get_collider().name in 'tree':
 			#sproži event
-			#_audioNarrator.stream = array[0]
-			#_audioNarrator.volume_db = -5
-			#_audioNarrator.playing = true
+			#_audio.stream = array[0]
+			#_audio.volume_db = 10
+			#_audio.playing = true
 			pass
 	
 	if Input.is_action_just_pressed("left_click"):
