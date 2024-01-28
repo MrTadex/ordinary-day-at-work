@@ -15,11 +15,12 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var _holdPoint:Node3D = _camera.get_node("./HoldPoint")
 
 @onready var _audio = $AudioStreamPlayer3DWalk
+@onready var _audioPlayer = $AudioStreamPlayerStartUp
 
 var array = [
 				#preload("res://resources/sound_music/player_sound/script_16_fish_5_laugh1.ogg"),
 				preload("res://resources/sound_music/player_sound/script_36_luka_minecraft.ogg"),
-				preload("res://resources/sound_music/radio_3.ogg")
+				preload("res://resources/sound_music/player_sound/script_29_vroom.ogg")
 			]
 
 func _ready():
@@ -95,3 +96,9 @@ func _unhandled_input(event):
 		rotation_degrees.y -= event.relative.x * mouse_sensitivity
 		rotation_degrees.y = wrapf(rotation_degrees.y, 0.0, 360.0)
 	pass
+
+func _on_event(eventName):
+	if eventName == "Car React":
+		_audioPlayer.stream = array[1]
+		#_audioPlayer.volume_db = 10
+		_audioPlayer.playing = true

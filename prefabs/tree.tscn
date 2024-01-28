@@ -8,7 +8,7 @@
 height = 2.05242
 radius = 0.0323458
 
-[node name="tree" type="StaticBody3D" groups=["Interactable"]]
+[node name="tree" type="StaticBody3D" groups=["EventListeners", "Interactable"]]
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 script = ExtResource("1_s6wkq")
