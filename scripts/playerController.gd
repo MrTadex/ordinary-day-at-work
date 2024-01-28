@@ -20,6 +20,12 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @onready var _timer = $Timer
 
+var jumpArray = [
+					preload("res://resources/sound_music/player_sound/script_24_huah1.ogg"),
+					preload("res://resources/sound_music/player_sound/script_25_huah2.ogg"),
+					preload("res://resources/sound_music/player_sound/script_26_huah3.ogg")
+				]
+
 var array = [
 				#preload("res://resources/sound_music/player_sound/script_16_fish_5_laugh1.ogg"),
 				preload("res://resources/sound_music/player_sound/script_36_luka_minecraft.ogg"),
@@ -40,6 +46,8 @@ func _physics_process(delta):
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		_audio.stop()
+		_audioReact.stream = jumpArray[randi_range(0,2)]
+		_audioReact.playing = true
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
@@ -87,7 +95,6 @@ func _process(_delta):
 			_audioReact.stream = array[3]
 			_audioReact.volume_db = 10
 			_audioReact.playing = true
-			_timer.start(2)
 	
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
