@@ -7,5 +7,9 @@ func play_dialogue(AudioPath):
 	_audio.play()
 
 func _process(_delta):
-	#light logic
+	# light logic
+	pass
+
+
+func _on_event():
 	pass
