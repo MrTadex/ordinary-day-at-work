@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxtx871ani7uk"]
+[gd_scene load_steps=4 format=3 uid="uid://dggvv0mgqe2ft"]
 
 [ext_resource type="Texture2D" uid="uid://dt2pe3k3lyo4g" path="res://resources/objects/toilet_paper.png" id="1_fwxpi"]
 [ext_resource type="Script" path="res://scripts/lookAtSprite.gd" id="2_om7t2"]
@@ -13,6 +13,7 @@ collision_mask = 7
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(11.2576, 0, 0, 0, 11.8113, 0, 0, 0, 1, 0, -0.00141869, 0)
 pixel_size = 0.0001
+shaded = true
 alpha_cut = 2
 texture = ExtResource("1_fwxpi")
 script = ExtResource("2_om7t2")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://d1aanlqmjtxby"]
 
+[ext_resource type="Script" path="res://scripts/switch.gd" id="1_2dhn2"]
 [ext_resource type="Texture2D" uid="uid://6epbpmccvq1t" path="res://resources/stikalo.png" id="1_enj3m"]
-[ext_resource type="Script" path="res://prefabs/static_objects/switch.gd" id="1_fhlcv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_auc24"]
 atlas = ExtResource("1_enj3m")
@@ -32,8 +32,8 @@ animations = [{
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tcic3"]
 
-[node name="switch" type="StaticBody3D" groups=["Interactable"]]
-script = ExtResource("1_fhlcv")
+[node name="switch" type="StaticBody3D" groups=["EventListeners", "Interactable"]]
+script = ExtResource("1_2dhn2")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 pixel_size = 0.0005

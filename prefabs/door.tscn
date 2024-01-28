@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://dr3wokdj1k7fe"]
+[gd_scene load_steps=12 format=3 uid="uid://dr3wokdj1k7fe"]
 
 [ext_resource type="Script" path="res://scripts/front_door.gd" id="1_4clkm"]
 [ext_resource type="Texture2D" uid="uid://ce363ap1iyg2i" path="res://resources/textures/wood.jpg" id="1_hmfks"]
+[ext_resource type="Texture2D" uid="uid://dj2cyoa8ki2xp" path="res://resources/objects/keyhole.png" id="3_sms0e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bfw18"]
 
@@ -98,3 +99,17 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.829639, 0, 0, 0, 1.08842, 0, 0, 0, -0.0644292, -0.788014, 1.11515, 0.00380014)
 shape = SubResource("BoxShape3D_ayuqf")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34945, 0.91812, 0.0720285)
+pixel_size = 0.0003
+shaded = true
+alpha_cut = 2
+texture = ExtResource("3_sms0e")
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34945, 0.91812, -0.0601572)
+pixel_size = 0.0003
+shaded = true
+alpha_cut = 2
+texture = ExtResource("3_sms0e")

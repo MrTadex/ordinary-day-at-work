@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dl4ou25rgk6ym"]
+[gd_scene load_steps=4 format=3 uid="uid://b7mcqarm8d41r"]
 
 [ext_resource type="Texture2D" uid="uid://dvy1u8cc3b4t4" path="res://resources/objects/shower_gel.png" id="1_fs7rv"]
 [ext_resource type="Script" path="res://scripts/lookAtSprite.gd" id="2_ocqq7"]
@@ -12,6 +12,7 @@ collision_mask = 7
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(8.56199, 0, 0, 0, 12.2599, 0, 0, 0, 0.999779, 0, -0.00141869, 0)
 pixel_size = 0.0001
+shaded = true
 alpha_cut = 2
 texture = ExtResource("1_fs7rv")
 script = ExtResource("2_ocqq7")

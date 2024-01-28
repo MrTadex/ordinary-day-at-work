@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ugqarug58q66"]
+
+[ext_resource type="Texture2D" uid="uid://db82oykv4i0rt" path="res://resources/objects/alarem.png" id="1_pyg0n"]
+
+[node name="alarm_sign" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="." groups=["EventListeners"]]
+pixel_size = 0.0002
+shaded = true
+alpha_cut = 2
+texture = ExtResource("1_pyg0n")

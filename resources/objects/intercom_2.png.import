@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db82oykv4i0rt"
-path.s3tc="res://.godot/imported/alarem.png-8677c5dd0a4ac725b738ec8e5ed5094f.s3tc.ctex"
+uid="uid://bglpy4a347qqn"
+path.s3tc="res://.godot/imported/intercom_2.png-f5f7fc5a328a0830fb9f2af0c9a7e248.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://resources/objects/alarem.png"
-dest_files=["res://.godot/imported/alarem.png-8677c5dd0a4ac725b738ec8e5ed5094f.s3tc.ctex"]
+source_file="res://resources/objects/intercom_2.png"
+dest_files=["res://.godot/imported/intercom_2.png-f5f7fc5a328a0830fb9f2af0c9a7e248.s3tc.ctex"]
 
 [params]
 

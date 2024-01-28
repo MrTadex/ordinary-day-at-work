@@ -1,25 +1,66 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnvm75kd26qa6"]
+[gd_scene load_steps=7 format=3 uid="uid://dnvm75kd26qa6"]
 
 [ext_resource type="Script" path="res://scripts/intercom.gd" id="1_4r1dg"]
-[ext_resource type="Texture2D" uid="uid://c2br2smve862c" path="res://resources/objects/intercom.png" id="1_xjat0"]
+[ext_resource type="Texture2D" uid="uid://bglpy4a347qqn" path="res://resources/objects/intercom_2.png" id="2_rl05b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gv8c6"]
+atlas = ExtResource("2_rl05b")
+region = Rect2(0, 0, 540, 696)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70ip5"]
+atlas = ExtResource("2_rl05b")
+region = Rect2(0, 696, 540, 696)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nxr3i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gv8c6")
+}],
+"loop": true,
+"name": &"Off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70ip5")
+}],
+"loop": true,
+"name": &"On",
+"speed": 5.0
+}]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l6heb"]
 
-[node name="intercom" type="StaticBody3D"]
+[node name="intercom" type="StaticBody3D" groups=["EventListeners"]]
 collision_layer = 4
 collision_mask = 7
 script = ExtResource("1_4r1dg")
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(16.7232, 0, 0, 0, 15.6125, 0, 0, 0, 1, 0, 0, 0)
 pixel_size = 0.0001
 shaded = true
 alpha_cut = 2
-texture = ExtResource("1_xjat0")
+sprite_frames = SubResource("SpriteFrames_nxr3i")
+animation = &"Off"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-max_distance = 15.0
+volume_db = 80.0
+max_db = 6.0
+attenuation_filter_db = 0.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.8, 0, 0, 0, 1, 0, 0, 0, 0.0368841, 0, 0, 0)
 shape = SubResource("BoxShape3D_l6heb")
+
+[node name="SpotLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.332553, -0.436161, 0.00290619)
+light_color = Color(0.231373, 0.168627, 1, 1)
+light_energy = 0.5
+omni_range = 3.0
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

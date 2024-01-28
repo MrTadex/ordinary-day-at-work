@@ -13,6 +13,7 @@ collision_mask = 7
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 pixel_size = 0.0001
+shaded = true
 alpha_cut = 2
 texture = ExtResource("1_usndj")
 script = ExtResource("2_mwglb")

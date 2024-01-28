@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://b0lxkopgpaq5s"]
+[gd_scene load_steps=4 format=3 uid="uid://djapwg1iaeset"]
 
 [ext_resource type="Script" path="res://scripts/lookAt.gd" id="1_7ghux"]
 [ext_resource type="Texture2D" uid="uid://c1njhhc5d4pob" path="res://resources/objects/kamera.png" id="1_bs56p"]
@@ -12,6 +12,7 @@ script = ExtResource("1_7ghux")
 transform = Transform3D(0.708067, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 flip_v = true
 pixel_size = 0.0015
+shaded = true
 alpha_cut = 2
 texture = ExtResource("1_bs56p")
 

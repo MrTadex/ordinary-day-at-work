@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3hqukj0xmx6v"]
+[gd_scene load_steps=4 format=3 uid="uid://corum0h304tpr"]
 
 [ext_resource type="Script" path="res://scripts/lookAtSprite.gd" id="2_7mng5"]
 [ext_resource type="Texture2D" uid="uid://dhb7x7pwop35f" path="res://resources/objects/Custom-Cereal-Box.png" id="2_tnamk"]
@@ -12,6 +12,7 @@ collision_mask = 7
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 pixel_size = 0.0009
+shaded = true
 alpha_cut = 2
 texture = ExtResource("2_tnamk")
 script = ExtResource("2_7mng5")

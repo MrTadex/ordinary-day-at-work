@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwi56ap0u78x7"]
+[gd_scene load_steps=4 format=3 uid="uid://65tectj1g5lh"]
 
 [ext_resource type="Texture2D" uid="uid://b355ugkjam2o6" path="res://resources/objects/tea.png" id="1_vmb5p"]
 [ext_resource type="Script" path="res://scripts/lookAtSprite.gd" id="2_pqy3b"]
@@ -13,6 +13,7 @@ collision_mask = 7
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(6.40138, 0, 0, 0, 6.51015, 0, 0, 0, 0.999779, 0, -0.00141869, 0)
 pixel_size = 0.0001
+shaded = true
 alpha_cut = 2
 texture = ExtResource("1_vmb5p")
 script = ExtResource("2_pqy3b")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://fpdvks0a1x0g"]
+[gd_scene load_steps=4 format=3 uid="uid://dixyljc6wkstc"]
 
 [ext_resource type="Texture2D" uid="uid://uwltg02ngiud" path="res://resources/objects/coffee.png" id="2_oqckg"]
 [ext_resource type="Script" path="res://scripts/lookAtSprite.gd" id="2_ptrfj"]
@@ -13,6 +13,7 @@ collision_mask = 7
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 pixel_size = 0.0005
+shaded = true
 alpha_cut = 2
 texture = ExtResource("2_oqckg")
 script = ExtResource("2_ptrfj")

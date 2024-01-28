@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://4nyhx3a0bvtp"]
+[gd_scene load_steps=8 format=3 uid="uid://w5j7mfdfmk4l"]
 
 [ext_resource type="Texture2D" uid="uid://dxmph5vi38lxt" path="res://resources/objects/luč rudeča siren.png" id="1_hhygg"]
 [ext_resource type="Script" path="res://scripts/alarm.gd" id="1_ju17u"]
@@ -38,13 +38,24 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="alarm" type="Node3D"]
+[node name="alarm" type="Node3D" groups=["EventListeners"]]
 script = ExtResource("1_ju17u")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 pixel_size = 0.001
+shaded = true
+alpha_cut = 2
 sprite_frames = SubResource("SpriteFrames_s1362")
 animation = &"Idle"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_wtbws")
+volume_db = -10.0
+
+[node name="SpotLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0403352)
+light_color = Color(0.784314, 0.0352941, 0.192157, 1)
+light_energy = 5.0
+light_specular = 0.0
+shadow_enabled = true
+omni_range = 10.0
