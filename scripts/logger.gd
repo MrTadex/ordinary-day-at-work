@@ -4,4 +4,5 @@ extends Node
 
 
 func _process(_delta):
-	print(items_on_shelfs)
+	#print(items_on_shelfs)
+	pass
