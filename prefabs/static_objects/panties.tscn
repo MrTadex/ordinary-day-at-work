@@ -1,11 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://df5kmo4s3fnf0"]
+[gd_scene load_steps=3 format=3 uid="uid://df5kmo4s3fnf0"]
 
 [ext_resource type="Texture2D" uid="uid://b6ebhgpvi8phl" path="res://resources/objects/panties.png" id="1_wherp"]
 
-[node name="panties" type="Node3D"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_qmbb5"]
+
+[node name="panties" type="StaticBody3D"]
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 pixel_size = 0.0003
 shaded = true
 alpha_cut = 2
 texture = ExtResource("1_wherp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_qmbb5")

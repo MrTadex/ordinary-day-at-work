@@ -15,13 +15,17 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var _holdPoint:Node3D = _camera.get_node("./HoldPoint")
 
 @onready var _audio = $AudioStreamPlayer3DWalk
-@onready var _audioPlayer = $AudioStreamPlayerStartUp
+@onready var _audioPlayer = $AudioStreamPlayer3DStartUp
+@onready var _audioReact = $AudioStreamPlayer3DReact
+
+@onready var _timer = $Timer
 
 var array = [
 				#preload("res://resources/sound_music/player_sound/script_16_fish_5_laugh1.ogg"),
 				preload("res://resources/sound_music/player_sound/script_36_luka_minecraft.ogg"),
 				preload("res://resources/sound_music/player_sound/script_29_vroom.ogg"),
-				preload("res://resources/sound_music/player_sound/script_36_luka_minecraft.ogg")
+				preload("res://resources/sound_music/player_sound/script_36_luka_minecraft.ogg"),
+				preload("res://resources/sound_music/player_sound/script_16_fish_5_laugh1.ogg")
 			]
 
 func _ready():
@@ -76,6 +80,14 @@ func _physics_process(delta):
 	
 func _process(_delta):
 	_camera.position = Vector3(position.x, position.y + 0.6, position.z)
+
+	if _raycast.get_collider():
+		if _raycast.get_collider().name.contains("panties") and _audioReact.playing == false:
+			#sproži event laugh panties
+			_audioReact.stream = array[3]
+			_audioReact.volume_db = 10
+			_audioReact.playing = true
+			_timer.start(2)
 	
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
