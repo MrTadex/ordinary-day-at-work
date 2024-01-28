@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmnv4rgsvi8dl"]
+[gd_scene load_steps=5 format=3 uid="uid://dmnv4rgsvi8dl"]
 
+[ext_resource type="Script" path="res://scripts/dropObject.gd" id="1_48yl8"]
 [ext_resource type="Texture2D" uid="uid://c2f403s5tvc34" path="res://resources/objects/deodorant.png" id="1_usndj"]
 [ext_resource type="Script" path="res://scripts/lookAtSprite.gd" id="2_mwglb"]
 
@@ -10,6 +11,9 @@ radius = 0.106958
 [node name="deoderant" type="RigidBody3D"]
 collision_layer = 12
 collision_mask = 7
+max_contacts_reported = 1
+contact_monitor = true
+script = ExtResource("1_48yl8")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 pixel_size = 0.0001
@@ -21,3 +25,7 @@ script = ExtResource("2_mwglb")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00207876, 0)
 shape = SubResource("CylinderShape3D_26g64")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
