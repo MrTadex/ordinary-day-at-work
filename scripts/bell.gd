@@ -14,6 +14,6 @@ func clicked():
 
 	_audio.playing = true
 
-func _process(delta):
+func _process(_delta):
 	#print(timer.time_left)
 	pass

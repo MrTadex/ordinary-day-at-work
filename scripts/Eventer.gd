@@ -7,7 +7,7 @@ var current_event = null
 func _on_event(eventName):
 	pass
 
-func _process(delta):
+func _process(_delta):
 	var timeLeft = timer.time_left
 	if timeLeft > 0:
 		pass

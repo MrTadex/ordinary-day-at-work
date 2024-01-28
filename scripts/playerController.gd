@@ -22,8 +22,6 @@ var array = [
 				preload("res://resources/sound_music/radio_3.ogg")
 			]
 
-@onready var _audioNarrator = $AudioStreamPlayerSartUp
-
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	pass

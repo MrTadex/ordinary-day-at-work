@@ -11,7 +11,7 @@ func _ready():
 	#player = get_node("../player")
 	pass
 
-func _process(delta):
+func _process(_delta):
 	# get transform
 	# rotate on y (mebe) towards 
 	if player != null:

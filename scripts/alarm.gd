@@ -6,7 +6,7 @@ extends Node3D
 
 var alarm = false
 
-func _process(delta):
+func _process(_delta):
 	if alarm:
 		if !_audio.playing:
 			_audio.play()

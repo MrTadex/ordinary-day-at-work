@@ -6,7 +6,7 @@ extends Sprite3D
 func _ready():
 	player = get_tree().get_nodes_in_group("Player")[0]
 
-func _process(delta):
+func _process(_delta):
 	# get transform
 	# rotate on y (mebe) towards 
 	if player != null:

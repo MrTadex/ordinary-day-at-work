@@ -4,12 +4,9 @@ extends StaticBody3D
 @export var min_time:int = 5
 @export var max_time:int = 10
 
-@onready var _beforeTouch = $AudioStreamPlayer
 @onready var _audio = $AudioStreamPlayer3D
 @onready var _animation = $AnimatedSprite3D
 @onready var _timer = $Timer
-
-
 
 func timer_count():
 	count -= 1
@@ -41,8 +38,3 @@ func _on_timer_timeout():
 
 func _on_audio_stream_player_3d_finished():
 	timer_count()
-
-func _on_input_event(camera, event, position, normal, shape_idx):
-	print('true')
-	#_beforeTouch.stream = preload("res://resources/sound_music/alarm_noise.wav")
-	#_beforeTouch.playing = true
