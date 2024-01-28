@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://m2wducn7r3x5"]
+[gd_scene load_steps=78 format=3 uid="uid://m2wducn7r3x5"]
 
 [ext_resource type="PackedScene" uid="uid://pk368nidnrxg" path="res://prefabs/player.tscn" id="1_a7ose"]
 [ext_resource type="Texture2D" uid="uid://dbdypo0n2qh3w" path="res://resources/ui_elements/kurzor.png" id="1_hs404"]
@@ -27,7 +27,7 @@
 [ext_resource type="Script" path="res://scripts/back_door.gd" id="21_cw1nr"]
 [ext_resource type="PackedScene" uid="uid://dfk2g4crwafs" path="res://prefabs/interactable/ring_bell.tscn" id="22_fo05x"]
 [ext_resource type="Script" path="res://scripts/Eventer.gd" id="23_7rvqx"]
-[ext_resource type="PackedScene" uid="uid://cjrtwsuwmxoik" path="res://prefabs/interactable/radio.tscn" id="24_rcamu"]
+[ext_resource type="PackedScene" path="res://prefabs/interactable/radio.tscn" id="24_rcamu"]
 [ext_resource type="PackedScene" uid="uid://w5j7mfdfmk4l" path="res://prefabs/static_objects/alarm.tscn" id="25_pfxgi"]
 [ext_resource type="PackedScene" uid="uid://d1aanlqmjtxby" path="res://prefabs/static_objects/switch.tscn" id="26_qt6vl"]
 [ext_resource type="PackedScene" uid="uid://b443u28fysqbm" path="res://prefabs/static_objects/store_light.tscn" id="27_d07j5"]
@@ -45,10 +45,11 @@
 [ext_resource type="PackedScene" uid="uid://dixyljc6wkstc" path="res://prefabs/objects/coffee.tscn" id="40_hk0f2"]
 [ext_resource type="PackedScene" uid="uid://b7mcqarm8d41r" path="res://prefabs/objects/shower_gel.tscn" id="43_v2q68"]
 [ext_resource type="PackedScene" uid="uid://dmnv4rgsvi8dl" path="res://prefabs/objects/deoderant.tscn" id="44_su6qr"]
-[ext_resource type="PackedScene" uid="uid://yser5as30e7e" path="res://prefabs/objects/deoderant2.tscn" id="45_0fbbn"]
+[ext_resource type="PackedScene" path="res://prefabs/objects/deoderant2.tscn" id="45_0fbbn"]
 [ext_resource type="PackedScene" uid="uid://brkexy8fdbdry" path="res://prefabs/objects/detergent.tscn" id="45_vibb1"]
 [ext_resource type="PackedScene" uid="uid://dxins27ormr5c" path="res://prefabs/objects/flour.tscn" id="46_egylu"]
 [ext_resource type="Script" path="res://scripts/RingBellTrigger.gd" id="47_8b16u"]
+[ext_resource type="PackedScene" uid="uid://c3s6iqo17b3jc" path="res://prefabs/nina_the_manager.tscn" id="48_pvova"]
 [ext_resource type="Script" path="res://scripts/nina_spawnPoint.gd" id="49_rubdf"]
 [ext_resource type="PackedScene" path="res://prefabs/objects/david.tscn" id="51_3s6ym"]
 
@@ -2047,10 +2048,13 @@ script = ExtResource("23_7rvqx")
 
 [node name="End" type="Node" parent="."]
 
-[node name="nina_spawnPoint" type="Node3D" parent="End" node_paths=PackedStringArray("end") groups=["EventListeners"]]
+[node name="nina_the_manager" parent="End" instance=ExtResource("48_pvova")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19484, 14.4671)
+
+[node name="nina_spawnPoint" type="Node3D" parent="End" node_paths=PackedStringArray("nina") groups=["EventListeners"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.415227, 1, -20.447)
 script = ExtResource("49_rubdf")
-end = NodePath("..")
+nina = NodePath("../nina_the_manager")
 
 [node name="Camera3D" type="Camera3D" parent="End"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.426121, 2.3025, -24.1676)

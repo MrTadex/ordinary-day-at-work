@@ -5,8 +5,6 @@ extends StaticBody3D
 @onready var _timer = $Timer
 
 var bad = false
-var next = false
-
 var last = false
 
 var audio = [
@@ -34,21 +32,24 @@ func _on_event(eventName):
 func _on_timer_timeout():
 	if last:
 		get_tree().quit()
-	
-	if !bad:
-		_audio.stream = audio[2]
-		_audio.play()
-		last = true
 	else:
-		_audio.stream = audio[0]
-		_audio.play()
+		if !bad:
+			_audio.stream = audio[2]
+			_audio.play()
+			last = true
+		else:
+			_audio.stream = audio[0]
+			_audio.play()
 
 func _on_audio_stream_player_3d_finished():
-	if next:
+	if last:
+		print("last")
+		#get_tree().call_group("EventListeners", "_on_event", "Quit")
+		#get_tree().quit()
+		_timer.start(2)
+	else:
 		_audio.stream = audio[1]
 		_audio.play()
-		next = false
-		last = last
+		last = true
 		
-	if last:
-		_timer.start(2)
+

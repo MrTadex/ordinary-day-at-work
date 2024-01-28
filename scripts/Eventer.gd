@@ -4,8 +4,10 @@ extends Node
 
 var current_event = null
 
-func _on_event(eventName):
-	pass
+#func _on_event(eventName):
+	#match eventName:
+		#"Quit":
+			#get_tree().quit()
 
 func _process(_delta):
 	var timeLeft = timer.time_left
