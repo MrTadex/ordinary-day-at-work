@@ -96,11 +96,13 @@ func _process(_delta):
 	_camera.position = Vector3(position.x, position.y + 0.6, position.z)
 
 	if _raycast.get_collider():
-		print(_raycast.get_collider().name)
+		#print(_raycast.get_collider().name)
 		if _audioReact.playing == false:
 			if _raycast.get_collider().name.contains("panties"):
 				get_tree().call_group("EventListeners", "_on_event", "SeePanties")
-			if _raycast.get_collider().name == "fish":
+			if _raycast.get_collider().name == "fish" and Logger.CanFish and !Logger.SeenFish:
+				print("Fish")
+				Logger.SeenFish = true
 				get_tree().call_group("EventListeners", "_on_event", "SeeFish")
 	
 func _unhandled_input(event):
