@@ -30,7 +30,9 @@ var array = [
 				preload("res://resources/sound_music/player_sound/script_36_luka_minecraft.ogg"),
 				preload("res://resources/sound_music/player_sound/script_29_vroom.ogg"),
 				preload("res://resources/sound_music/player_sound/script_36_luka_minecraft.ogg"),
-				preload("res://resources/sound_music/player_sound/script_16_fish_5_laugh1.ogg")
+				preload("res://resources/sound_music/player_sound/script_16_fish_5_laugh1.ogg"),
+				preload("res://resources/sound_music/player_sound/script_39_luka_on_it.ogg"),
+				preload("res://resources/sound_music/player_sound/Ring_bell_first.ogg")
 			]
 
 func _ready():
@@ -122,7 +124,11 @@ func _on_event(eventName):
 			_audioPlayer.playing = true
 		"Tree React":
 			_audioPlayer.stream = array[2]
-			#_audioPlayer.volume_db = 10
 			_audioPlayer.playing = true
-		"Narrator 1":
-			pass
+		"Player intro react":
+			_audioPlayer.stream = array[4]
+			_audioPlayer.playing = true
+		"Ring Bell Dialogue":
+			print("Ring Bell Dialogue")
+			_audioPlayer.stream = array[5]
+			_audioPlayer.playing = true

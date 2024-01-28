@@ -30,6 +30,7 @@ func _process(_delta):
 			"Audio_2":
 				_audio.volume_db = 10
 				_audio.stream = Audio_2
+				get_tree().call_group("EventListeners", "_on_event", "Player intro react")
 				
 		_audio.play()
 		start = false

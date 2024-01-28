@@ -6,8 +6,6 @@ extends StaticBody3D
 func clicked():
 	_audio.playing = true
 
-
-
 func _on_audio_stream_player_3d_finished():
 	get_tree().call_group("EventListeners", "_on_event", "Tree React")
 

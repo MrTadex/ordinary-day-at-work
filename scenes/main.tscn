@@ -223,6 +223,7 @@ environment = SubResource("Environment_7xour")
 
 [node name="RingBellTrigger" type="Area3D" parent="World"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0382373, 1.50439, -20.1116)
+collision_mask = 2
 script = ExtResource("47_8b16u")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/RingBellTrigger"]
