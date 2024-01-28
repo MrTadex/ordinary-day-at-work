@@ -43,11 +43,13 @@ func _on_event(eventName):
 			play = "Audio_1"
 			_timer.start(2)
 		"Stop Alarm":
-			play = "Audio_2" #plays intro
-			_timer.start(2)
+			if !Logger.AlarmOff:
+				play = "Audio_2" #plays intro
+				_timer.start(2)
+				Logger.AlarmOff = true
 		"SeeFish":
 			play = "Audio_3"
-			_timer.start(0)
+			_timer.start(.1)
 	pass
 
 func _on_timer_timeout():
