@@ -4,7 +4,7 @@ extends AnimatedSprite3D
 
 # get player
 func _ready():
-	player = get_tree().get_nodes_in_group("Player")[0]
+	pass
 
 func _process(_delta):
 	# get transform

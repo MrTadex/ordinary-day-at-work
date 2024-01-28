@@ -140,3 +140,5 @@ func _on_event(eventName):
 		"SeePanties":
 			_audioReact.stream = array[3]
 			_audioReact.playing = true
+		"End":
+			queue_free()

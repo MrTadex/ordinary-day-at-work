@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://c3s6iqo17b3jc"]
 
+[ext_resource type="Script" path="res://scripts/nina_the_manager.gd" id="1_twhq8"]
 [ext_resource type="Texture2D" uid="uid://b6knhvygi46k7" path="res://resources/objects/nina approves.png" id="1_y8fmf"]
 [ext_resource type="Texture2D" uid="uid://be3x4hrghfl3r" path="res://resources/objects/nina disapproves.png" id="2_3edb3"]
-[ext_resource type="Script" path="res://scripts/lookAtAnimatedSprite.gd" id="2_ocbqr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wtsaa"]
 atlas = ExtResource("1_y8fmf")
@@ -60,16 +60,16 @@ animations = [{
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4dxs4"]
 
 [node name="nina_the_manager" type="StaticBody3D" groups=["EventListeners"]]
+script = ExtResource("1_twhq8")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.743656, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.87659, 0)
 pixel_size = 0.0005
 shaded = true
 alpha_cut = 2
 sprite_frames = SubResource("SpriteFrames_b50le")
-animation = &"Disapprove"
-frame_progress = 0.424251
-script = ExtResource("2_ocbqr")
+animation = &"DoorKick"
+frame_progress = 0.347666
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.997964, 0)

@@ -8,7 +8,7 @@ var start = true
 
 func clicked():
 	if start:
-		timer.start(900)
+		timer.start(600)
 		start = false
 		get_tree().call_group("EventListeners", "_on_event", "Start")
 

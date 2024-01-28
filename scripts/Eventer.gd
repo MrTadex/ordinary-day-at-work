@@ -11,5 +11,6 @@ func _process(_delta):
 	var timeLeft = timer.time_left
 	if timeLeft > 0:
 		pass
-		#if timeLeft == 900:
-			#get_tree().call_group("EventListeners", "_on_event", "Start")
+
+func _on_timer_timeout():
+	get_tree().call_group("EventListeners", "_on_event", "End")
