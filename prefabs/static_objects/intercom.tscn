@@ -63,4 +63,5 @@ omni_range = 3.0
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
+[connection signal="finished" from="AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -45,3 +45,8 @@ func _on_event(eventName):
 
 func _on_timer_timeout():
 	start = true
+
+func _on_audio_stream_player_3d_finished():
+	match play:
+		"Audio_1":
+			get_tree().call_group("EventListeners", "_on_event", "Can Stop Alarm")
